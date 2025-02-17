@@ -1,11 +1,9 @@
 <script setup>
-
+import HeroSection from './components/HeroSection.vue'
 </script>
 
 <template>
- <h1>WORKK</h1>
+  <HeroSection />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
