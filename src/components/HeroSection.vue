@@ -1,7 +1,13 @@
-<script setup></script>
+<script setup>
+const fullImgPath1 = `${import.meta.env.BASE_URL}hero-background.png`
+const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
+</script>
 
 <template>
-  <section class="hero-section">
+  <section
+    class="hero-section"
+    :style="{ '--bg-url': `url(${fullImgPath1})`, '--bg-clear-url': `url(${fullImgPath2})` }"
+  >
     <div class="gradient"></div>
     <h1 class="heading">
       Заголовок карточки <br />
@@ -30,7 +36,7 @@
   position: absolute;
   content: '';
   inset: 0;
-  background: url('hero-background.png');
+  background: var(--bg-url);
   background-position: center;
   background-size: 80% 100%;
   /* background-size: 80% 100%; */
@@ -52,7 +58,7 @@
   width: 48%;
   z-index: 1;
   height: 75vh;
-  background: url('clear-bg.png');
+  background: var(--bg-clear-url);
   background-position: left -10px bottom 0px;
   background-size: 88% 102%;
   background-repeat: no-repeat;
