@@ -41,7 +41,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   background-size: 80% 100%;
   /* background-size: 80% 100%; */
   background-repeat: no-repeat;
-  filter: blur(5px);
+  filter: blur(4px);
   z-index: -1;
 }
 .gradient {
@@ -49,7 +49,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   inset: 0;
   z-index: -1;
   mix-blend-mode: multiply;
-  background: linear-gradient(to bottom, rgba(0, 0, 0) 15%, rgba(192, 220, 236) 130%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
 }
 .clear-img {
   position: absolute;
