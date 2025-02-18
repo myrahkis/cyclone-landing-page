@@ -29,7 +29,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  padding: 35px;
+  padding: 3.5rem;
   color: var(--white-color);
 }
 .hero-section::before {
@@ -53,31 +53,31 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
 }
 .clear-img {
   position: absolute;
-  bottom: 40px;
-  right: 50px;
+  bottom: 4rem;
+  right: 5rem;
   width: 48%;
   z-index: 1;
   height: 75vh;
   background: var(--bg-clear-url);
-  background-position: left -10px bottom 0px;
+  background-position: left -1rem bottom 0;
   background-size: 88% 102%;
   background-repeat: no-repeat;
-  border: 4px solid white;
-  border-radius: 59px;
+  border: 3px solid white;
+  border-radius: 4.5rem;
 }
 .text {
-  font-size: 35px;
+  font-size: 3.5rem;
   width: 45%;
 }
 .order-btn {
   margin-top: auto;
-  width: 300px;
-  font-size: 35px;
+  width: 30rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #383b3c;
   background-color: var(--brand-blue-color);
-  border-radius: 20px;
+  border-radius: 2rem;
   border: none;
-  padding: 20px;
+  padding: 2rem;
 }
 </style>

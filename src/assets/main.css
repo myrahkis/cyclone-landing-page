@@ -1,9 +1,8 @@
 @import './fonts.css';
 
 :root {
-  --white-color: #FFFFFF;
-  --brand-blue-color: #C0DCEC;
-
+  --white-color: #ffffff;
+  --brand-blue-color: #c0dcec;
 }
 
 *,
@@ -15,7 +14,7 @@
 }
 
 html {
-  /* font-size: 65%; */
+  font-size: 62.5%;
 }
 
 body {
@@ -26,8 +25,29 @@ body {
 }
 
 h1 {
-  font-size: 100px;
-  line-height: 100px;
+  font-size: 10rem;
+  line-height: 10rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
+}
+h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 5.5rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+p {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
 }
