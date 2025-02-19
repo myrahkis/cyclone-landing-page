@@ -46,9 +46,10 @@
 }
 .desc-grid {
   display: grid;
-  grid-template-columns: repeat(2, 0.5fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 0.7fr;
   gap: 2rem;
+  min-width: 100%;
   height: 100%;
 }
 .grid-cell {
