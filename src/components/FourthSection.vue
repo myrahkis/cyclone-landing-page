@@ -44,7 +44,6 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
   min-width: 100%;
-  /* height: 100%; */
 }
 
 .grid-cell {
