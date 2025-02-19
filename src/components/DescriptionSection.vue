@@ -85,7 +85,7 @@
   inset: 0;
   background: radial-gradient(
     ellipse 50% 120% at bottom,
-    /* Чистый белый в центре */ #ffffff 0%,
+    #ffffff 0%,
     #f0f0f0 40%,
     #bbbbbb 50%,
     transparent 90%
