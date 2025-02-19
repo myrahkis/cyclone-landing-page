@@ -1,8 +1,10 @@
-<script setup></script>
+<script setup>
+import SkrewImg from '@/ui/SkrewImg.vue'
+</script>
 
 <template>
   <section class="description-section">
-    <img src="/10.png" alt="" class="skrew-img" />
+    <SkrewImg />
     <h2>Заголовок раздела</h2>
     <div class="desc-grid">
       <div class="grid-cell cell-wide">
@@ -37,12 +39,6 @@
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
   color: white;
   padding: 3.5rem;
-}
-.skrew-img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 35rem;
 }
 .desc-grid {
   display: grid;

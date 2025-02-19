@@ -1,7 +1,10 @@
-<script setup></script>
+<script setup>
+import SkrewImg from '@/ui/SkrewImg.vue'
+</script>
 
 <template>
   <section class="fourth-section">
+    <SkrewImg />
     <h2>Заголовок раздела</h2>
     <div class="fourth-grid">
       <div class="grid-cell img-cell">
@@ -32,6 +35,7 @@
 
 <style scoped>
 .fourth-section {
+  position: relative;
   min-height: 100vh;
   color: white;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
