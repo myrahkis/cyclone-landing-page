@@ -33,7 +33,7 @@
 <style scoped>
 .description-section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
   color: white;
   padding: 3.5rem;
@@ -46,13 +46,15 @@
 }
 .desc-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 0.5fr);
+  grid-template-rows: auto 0.7fr;
   gap: 2rem;
+  height: 100%;
 }
 .grid-cell {
   position: relative;
   display: flex;
+  min-height: 0;
   flex-direction: column;
   border: 3px solid white;
   border-radius: 1.9rem;
@@ -67,12 +69,14 @@
 }
 .des-img {
   position: relative;
-  align-self: center;
-  width: 45rem;
   height: 100%;
+  object-fit: contain;
 }
 .cell-img {
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
 }
 .cell-img::before {
   content: '';
