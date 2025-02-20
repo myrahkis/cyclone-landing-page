@@ -2,7 +2,7 @@
 
 <template>
   <section class="contacts-section">
-    <img src="/spanner-bottom-half.png" alt="" class="spanner" />
+    <!-- <img src="/spanner-bottom-half.png" alt="" class="spanner" /> -->
     <h2>Заголовок раздела</h2>
     <div class="container">
       <div class="contacts-info">

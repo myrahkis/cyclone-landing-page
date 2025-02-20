@@ -7,6 +7,7 @@ import FifthSection from './components/FifthSection.vue'
 import VideoSection from './components/VideoSection.vue'
 import AboutUsSection from './components/AboutUsSection.vue'
 import ContactsSection from './components/ContactsSection.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import ContactsSection from './components/ContactsSection.vue'
   <VideoSection />
   <AboutUsSection />
   <ContactsSection />
+  <Footer />
 </template>
 
 <style scoped></style>
