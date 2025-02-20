@@ -20,9 +20,9 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </div>
-    <img src="/skrew-full-big.png" alt="" class="skrew-big" />
-    <img src="/skrew-full-sm.png" alt="" class="skrew-sm" />
-    <img src="/spanner-top-half.png" alt="" class="spanner" />
+    <img src="/11.png" alt="" class="skrew-big" />
+    <img src="/12.png" alt="" class="skrew-sm" />
+    <img src="/brand-character.png" alt="" class="spanner" />
   </section>
 </template>
 
@@ -48,20 +48,20 @@
 
 .skrew-big {
   position: absolute;
-  top: 3rem;
-  right: 8rem;
-  width: 35rem;
+  top: 0;
+  right: 45rem;
+  width: 40rem;
 }
 .skrew-sm {
   position: absolute;
-  bottom: 13rem;
-  right: 2rem;
-  width: 25rem;
+  top: 13rem;
+  right: 38rem;
+  width: 18rem;
 }
 .spanner {
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: 80rem;
+  right: 5rem;
+  width: 50rem;
 }
 </style>
