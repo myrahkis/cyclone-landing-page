@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="contacts-section">
+  <section class="contacts-section" id="contacts">
     <!-- <img src="/spanner-bottom-half.png" alt="" class="spanner" /> -->
     <h2>Заголовок раздела</h2>
     <div class="container">

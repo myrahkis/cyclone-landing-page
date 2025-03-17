@@ -3,7 +3,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
 </script>
 
 <template>
-  <section class="video-section">
+  <section class="video-section" id="overviews">
     <SkrewImg />
     <h2>Заголовок раздела</h2>
     <div class="video-cards">

@@ -7,6 +7,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   <section
     class="hero-section"
     :style="{ '--bg-url': `url(${fullImgPath1})`, '--bg-clear-url': `url(${fullImgPath2})` }"
+    id="home"
   >
     <div class="gradient"></div>
     <h1 class="heading">
@@ -28,8 +29,9 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   padding: 3.5rem;
+  padding-top: 15rem;
   color: var(--white-color);
 }
 .hero-section::before {
@@ -37,7 +39,8 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   content: '';
   inset: 0;
   background: var(--bg-url);
-  background-position: center;
+  /* background-position: center; */
+  background-position: right 6rem bottom 0;
   background-size: 80% 100%;
   /* background-size: 80% 100%; */
   background-repeat: no-repeat;
@@ -53,14 +56,14 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
 }
 .clear-img {
   position: absolute;
-  bottom: 4rem;
+  bottom: 5rem;
   right: 5rem;
   width: 48%;
   z-index: 1;
   height: 75vh;
   background: var(--bg-clear-url);
-  background-position: left -1rem bottom 0;
-  background-size: 88% 102%;
+  background-position: right -1rem bottom 0;
+  background-size: 100% 125%;
   background-repeat: no-repeat;
   border: 3px solid white;
   border-radius: 4.5rem;

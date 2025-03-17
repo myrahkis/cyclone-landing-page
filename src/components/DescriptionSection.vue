@@ -5,24 +5,28 @@ import SkrewImg from '@/ui/SkrewImg.vue'
 <template>
   <section class="description-section">
     <SkrewImg />
-    <h2>Заголовок раздела</h2>
+    <h2>Циклонный фильтр для пылесоса SN50T3/<br />Циклонный фильтр с двойной фильтрацией</h2>
     <div class="desc-grid">
       <div class="grid-cell cell-wide">
-        <h3>Заголовок раздела</h3>
+        <h3>Циклонный фильтр для пылесоса SN50T3</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt
-          convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla
-          tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Praesent enim orci,
-          iaculis at sem eget, gravida porttitor urna. Mauris a interdum diam. Donec nec faucibus
-          neque. Aenean ac felis vitae tellus viverra blandit sed et nisi.
+          Циклонный фильтр для пылесоса SN50T3 позволяет отделять влажные и сухие частицы пыли до
+          97%, что снижает загрязнение фильтра и мешка пылесоса, тем самым продлевая их срок службы.
+          При этом фильтр пылесоса практически не забивается.
         </p>
       </div>
       <div class="grid-cell">
-        <h3>Заголовок раздела</h3>
+        <h3>Циклонный фильтр с двойной фильтрацией</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt
-          convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla
-          tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo.
+          Циклонный фильтр с двухступенчатой системой фильтрации очищает проходимый через него
+          воздух до 99%. Крупная и средняя фракция отсеивается через фильтр SN50N3, а
+          мелкодисперционная пыль оседает в колбе второй ступени фильтрации.
+        </p>
+        <p>
+          Данная система способна скидывать в ёмкость даже самую мелкодисперсионную пыль - мука,
+          пыль после зашкуривания шпаклёвки или дерева и т.п. А то, небольшое количество
+          мелкодисперсионной пыли, которое при работе обычного циклона, попадало в пылесос, в данной
+          системе попадает в колбу второй ступени фильтрации.
         </p>
       </div>
       <div class="grid-cell cell-img">
@@ -52,6 +56,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   position: relative;
   display: flex;
   min-height: 0;
+  gap: 1rem;
   flex-direction: column;
   border: 3px solid white;
   border-radius: 1.9rem;

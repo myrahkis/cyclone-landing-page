@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="about-us-section">
+  <section class="about-us-section" id="about-us">
     <div class="about-us">
       <h2>Заголовок раздела</h2>
       <div class="info">
