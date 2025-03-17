@@ -8,6 +8,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
     class="hero-section"
     :style="{ '--bg-url': `url(${fullImgPath1})`, '--bg-clear-url': `url(${fullImgPath2})` }"
     id="home"
+    ref="mainRef"
   >
     <div class="gradient"></div>
     <h1 class="heading">

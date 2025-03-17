@@ -1,17 +1,25 @@
 <script setup>
+// import { onMounted, onUnmounted, ref } from 'vue'
+
 const btns = [
   { href: '', name: 'В магазин' },
   { href: '#how-works', name: 'Принцип работы' },
   { href: '#advantages', name: 'Преимущества' },
-  { href: '#accessory', name: 'Аксессуары'},
+  { href: '#accessory', name: 'Аксессуары' },
   { href: '#overviews', name: 'Обзоры' },
   { href: '#contacts', name: 'Контакты' },
   { href: '#about-us', name: 'О нас' },
 ]
+
+// const headerRef = ref(null)
+
+// defineExpose({
+//   offsetHeight: headerRef,
+// })
 </script>
 
 <template>
-  <header class="header">
+  <header class="header" ref="headerRef">
     <a href="#home" class="logo-link">
       <div class="logo-wrapper">
         <img src="/logo-color.png" alt="logo-color" class="logo" />
@@ -42,9 +50,10 @@ const btns = [
   padding: 1.8rem 3.5rem;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(9px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
   color: white;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.7);
 }
 .logo-wrapper {
   display: flex;
