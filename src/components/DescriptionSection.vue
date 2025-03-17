@@ -40,7 +40,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
 .description-section {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   color: white;
   padding: 3.5rem;
 }

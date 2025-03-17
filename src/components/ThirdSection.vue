@@ -29,7 +29,7 @@
 .third-section {
   height: 100vh;
   color: white;
-  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   padding: 3.5rem;
 }
 .thrid-grid {

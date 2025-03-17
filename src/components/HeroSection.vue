@@ -11,14 +11,25 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   >
     <div class="gradient"></div>
     <h1 class="heading">
-      Заголовок карточки <br />
-      в две строки
+      Циклонные фильтры <br />
+      Циклонные системы <br />
+      двойной фильтрации
     </h1>
-    <p class="text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt
-      convallis.
-    </p>
-    <button class="order-btn">Заказать</button>
+    <h3 class="text">
+      Чистота на всех уровнях — <br />
+      двойная защита для вашего оборудования!
+    </h3>
+    <div class="texts">
+      <p>
+        Циклонный фильтр может работать абсолютно с любым пылесосом - строительным, бытовым,
+        промышленным.
+      </p>
+      <p>
+        Кроме того... циклонный фильтр — может собирать в ёмкость влажные отходы или даже воду, но
+        пылесос в данном случае должен иметь функцию влажной уборки или иметь статус моющего.
+      </p>
+    </div>
+    <!-- <button class="order-btn">Заказать</button> -->
     <div class="clear-img"></div>
   </section>
 </template>
@@ -52,21 +63,30 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   inset: 0;
   z-index: -1;
   mix-blend-mode: multiply;
-  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 .clear-img {
   position: absolute;
   bottom: 5rem;
   right: 5rem;
-  width: 48%;
+  width: 42%;
   z-index: 1;
-  height: 75vh;
+  height: 90vh;
   background: var(--bg-clear-url);
-  background-position: right -1rem bottom 0;
-  background-size: 100% 125%;
+  background-position: left -2rem bottom -3rem;
+  background-size: 100% 110%;
   background-repeat: no-repeat;
   border: 3px solid white;
   border-radius: 4.5rem;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+  margin-top: 2rem;
+  font-size: 3.5rem;
+  width: 40%;
 }
 .text {
   font-size: 3.5rem;

@@ -38,7 +38,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   position: relative;
   min-height: 100vh;
   color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   padding: 3.5rem;
 }
 

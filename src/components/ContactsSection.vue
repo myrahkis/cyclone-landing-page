@@ -60,7 +60,7 @@
   height: 100vh;
   padding: 3.5rem;
   color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 
 .container {

@@ -45,7 +45,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   color: white;
   padding: 3.5rem;
   height: 100vh;
-  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 .video-cards {
   display: flex;
