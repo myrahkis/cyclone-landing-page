@@ -1,33 +1,50 @@
 <script setup>
 import SkrewImg from '@/ui/SkrewImg.vue'
+
+const equipments = [
+  'Циклон SN50T3 - 1шт',
+  'Циклон второй ступени фильтрации - 1шт',
+  'Емкость: ≈20л',
+  'Муфта 50-56мм - 2шт',
+  'Хомут 42-58мм - 2шт',
+  'Угловой фланец с крышкой - 1шт',
+  'Крепёжный болт, гайка, шайба - 8шт',
+  'Крепёж для подвеса на стену - 4шт',
+  'Шланг ПВХ с фитингами, 1,5 метра - 2шт',
+  'Поворотные колеса - 4шт',
+]
 </script>
 
 <template>
   <section class="fourth-section">
     <SkrewImg />
-    <h2>Заголовок раздела</h2>
+    <h2>
+      Двухфункциональная система <br />
+      двойной фильтрации
+    </h2>
     <div class="fourth-grid">
       <div class="grid-cell img-cell">
         <img src="" alt="" />
       </div>
       <div class="grid-cell top-cell">
-        <h3>Заголовок раздела</h3>
+        <!-- <h3>Заголовок раздела</h3> -->
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt
-          convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla
-          tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce
-          consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante
-          iaculis nisl, et tincidunt odio leo in leo.
+          Двухфункциональная циклонная система двойной фильтрации — позволяет отделять как сухой,
+          так и влажный мусор до 99%, что многократно снижает расход мешков и фильтров вашего
+          пылесоса.
+        </p>
+        <p>
+          Особенностью двухфункциональной циклонной системы является специальная конструкция
+          ёмкости, которая может работать либо в напольном варианте, на входящих в комплект колёсах,
+          либо в настенном (стационарном) варианте, при помощи входящего в комплект разъёмного
+          кронштейна и специальной угловой горловине для сброса мусора в стороннюю ёмкость (ведро,
+          мусорный пакет, коробку и т.п.)
         </p>
       </div>
       <div class="grid-cell last-cell">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt
-          convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla
-          tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit.
-        </p>
+        <ul class="equipment">
+          <li v-for="item in equipments" :key="item">{{ item }}</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -38,7 +55,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   position: relative;
   min-height: 100vh;
   color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   padding: 3.5rem;
 }
 
@@ -68,5 +85,10 @@ import SkrewImg from '@/ui/SkrewImg.vue'
 .last-cell {
   grid-column: 2 / -1;
   grid-row: 2 / 2;
+}
+
+.equipment {
+  font-size: 2rem;
+  margin-left: 1.8rem;
 }
 </style>

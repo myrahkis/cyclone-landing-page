@@ -15,7 +15,7 @@
       <div class="grid-cell cell-img">
         <img src="/how-filter-works.png" alt="" class="how-works-img" />
       </div>
-      <div class="grid-cell">
+      <div class="grid-cell info-cell">
         <p>
           Циклонный этап: На первом этапе загрязненный поток (воздух или жидкость) поступает в
           корпус системы, где он под воздействием центробежных сил начинает вращаться. Это вращение
@@ -60,10 +60,6 @@
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-
-  &:last-child {
-    padding: 0;
-  }
 }
 .cell-wide {
   grid-column: 1 / -1;
