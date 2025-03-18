@@ -5,8 +5,8 @@ const { gradientDirection, rowDirection, floorVarientTexts, characteristic } = d
   gradientDirection: { type: String, required: true },
   rowDirection: { type: String, required: true },
   floorVarientTexts: { type: Array, required: true },
-  characteristic: Object,
-  equipment: Object,
+  characteristic: { type: Object, required: false, default: () => ({}) },
+  equipment: { type: Object, required: false, default: () => ({}) },
 })
 
 const gradientStyle = computed(() => ({
@@ -21,7 +21,7 @@ const rowStyle = computed(() => ({
   <section :style="gradientStyle" class="floor-varient-section">
     <div :style="rowStyle" class="floor-varient-flex">
       <div class="info-cell">
-        <h3 style="margin-bottom: 0;">Напольное исполнение</h3>
+        <h3 style="margin-bottom: 0">Напольное исполнение</h3>
         <p v-for="text in floorVarientTexts" :key="text">
           {{ text }}
         </p>

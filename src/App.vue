@@ -11,6 +11,7 @@ import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 import OperationPrinciple from './components/OperationPrinciple.vue'
 import FloorVarientSection from './components/FloorVarientSection.vue'
+import AccessoriesSection from './components/AccessoriesSection.vue'
 // import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 
 const floorVarientTexts = [
@@ -80,9 +81,22 @@ const equipment = {
       gradientDirection="to bottom"
       rowDirection="row-reverse"
       :floor-varient-texts="floorVarientTexts"
-      characteristic=""
-      equipment=""
     />
+    <AccessoriesSection
+      gradientDirection="to top"
+      topText="Металлическая (железная) бочка с крышкой — 
+это идеальная ёмкость для работы в связке 
+с циклонными фильтрами. Съёмная крышка надёжно крепится хомутом из оцинкованной стали, создавая полную герметичность. Разный объём бочек (10/20/30/50 литров) позволяет подобрать наиболее комфортный размер для ваших задач. Мы рекомендуем использовать емкости 10/20л для сбора тяжёлых отходов (бетонная крошка, песок, шлак, абразив, штукатурка, шпатлёвка 
+и т.п.), 30/50л для сбора лёгких отходов (опилки, 
+стружка, резиновая или пенопластовая крошка и т.п.)"
+      bottomText="Пластиковые бочки — Так же могут использоваться как ёмкость для сбора мусора. Они имеют такой же литраж, и так же герметичны, но, в отличии 
+от железной, не обладают необходимой жёсткостью для работы с циклоном. Пластиковую бочку может «схлопнуть» во время работы (сбора мусора) или даже на холостом ходу работы пылесоса, если пылесос окажется достаточно мощным или входящее отверстие недостаточно широким. 
+Мы НЕ РЕКОМЕНДУЕМ использовать ПЛАСТИКОВЫЕ БОЧКИ для работы 
+в связке с циклоном, но не можем Вам отказать в их продаже. Во избежание «схлопывания» пластиковой бочки, во время работы с циклонным фильтром, вам придётся делать внутри неё жёсткий каркас (из дерева или металла), 
+что усложняет возможность использования циклона «из коробки», либо устанавливать на крышке ёмкости обратный клапан, что так же требует дополнительных как финансовых так и трудозатрат."
+    />
+    <ThirdSection />
+    <!-- <AccessoriesSection gradientDirection="to bottom" topText="" /> -->
     <FifthSection />
     <VideoSection />
     <AboutUsSection />
