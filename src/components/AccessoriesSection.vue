@@ -13,7 +13,7 @@ const gradientStyle = computed(() => ({
 </script>
 
 <template>
-  <section :style="gradientStyle" class="third-section">
+  <section :style="gradientStyle" class="third-section" id="accessory">
     <h2>Аксессуары и дополнительное оборудование</h2>
     <div class="thrid-grid">
       <div class="grid-cell first-cell">
@@ -37,6 +37,7 @@ const gradientStyle = computed(() => ({
   min-height: 100vh;
   color: white;
   padding: 3.5rem;
+  background: linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 
 .thrid-grid {

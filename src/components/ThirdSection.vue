@@ -1,30 +1,30 @@
 <script setup>
-const equipments1 = [
-  'Циклон SN50T3 - 1шт',
-  'Циклон второй ступени',
-  'фильтрации - 1шт',
-  'Соединительный кронштейн - 1шт',
-  'Муфта 50-56 - 2шт',
-  'Хомут 42-58 - 2шт',
-  'Фланец крепления: 1шт',
-  'Крепёжные болты и гайки - 4 комплекта',
-  'Прокладка - 1шт',
-]
-const equipments2 = [
-  'Насадка на циклонный фильтр - 1шт',
-  'Муфта 50-56мм - 2шт',
-  'Крепёжный болт, гайка, шайба - 4шт',
-]
+import { computed } from 'vue'
+
+const { gradientDirection, equipments1, equipments2, text1, text2 } = defineProps({
+  gradientDirection: { type: String, requied: true },
+  equipments1: { type: Object, default: () => ({}) },
+  equipments2: { type: Object, default: () => ({}) },
+  text1: { type: String },
+  text2: { type: String },
+})
+
+const gradientStyle = computed(() => ({
+  background: `linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4))`,
+}))
 </script>
 
 <template>
-  <section class="third-section">
+  <section :style="gradientStyle" class="third-section">
     <div class="thrid-grid">
       <div class="grid-cell">
-        <h3>Циклонный фильтр с двойной фильтрацией</h3>
-        <p>Комплектация:</p>
-        <ul class="equipment">
-          <li v-for="item in equipments1" :key="item">{{ item }}</li>
+        <h3 v-if="equipments1.header">{{ equipments1.header }}</h3>
+        <p v-if="equipments1.subheader">{{ equipments1.subheader }}:</p>
+        <p v-else>
+          {{ text1 }}
+        </p>
+        <ul class="equipment" v-if="equipments1.equip">
+          <li v-for="item in equipments1.equip" :key="item">{{ item }}</li>
         </ul>
       </div>
       <div class="grid-cell img-cell-1">
@@ -34,10 +34,15 @@ const equipments2 = [
         <img src="/full-height.png" alt="" class="img" />
       </div>
       <div class="grid-cell last-cell">
-        <h3>Насадка на циклонный фильтр SN50T3 — вторая ступень фильтрации</h3>
-        <p>Комплектация:</p>
-        <ul class="equipment">
-          <li v-for="item in equipments2" :key="item">{{ item }}</li>
+        <h3 v-if="equipments1.header">
+          Насадка на циклонный фильтр SN50T3 — вторая ступень фильтрации
+        </h3>
+        <p v-if="equipments1.subheader">Комплектация:</p>
+        <p v-if="text2">
+          {{ text2 }}
+        </p>
+        <ul class="equipment" v-if="equipments2.equip">
+          <li v-for="item in equipments2.equip" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
@@ -48,7 +53,6 @@ const equipments2 = [
 .third-section {
   height: 100vh;
   color: white;
-  background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   padding: 3.5rem;
 }
 .thrid-grid {
