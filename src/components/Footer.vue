@@ -78,7 +78,7 @@ function goUp() {
   padding: 3.5rem;
   border: 3px solid white;
   border-radius: 1.9rem;
-  height: 50vh;
+  height: 48vh;
   width: 100%;
 }
 .sections {
@@ -138,6 +138,8 @@ function goUp() {
 }
 
 .up-btn {
+  position: relative;
+  z-index: 2;
   /* width: 10rem; */
   font-size: 2.1rem;
   background-color: transparent;
