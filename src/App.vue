@@ -145,7 +145,6 @@ leo ut rutrum."
       text2="Доп блок Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo."
       layoutVariant="reverse"
     />
-    <!-- <AccessoriesSection gradientDirection="to bottom" topText="" /> -->
     <FifthSection />
     <VideoSection />
     <AboutUsSection />

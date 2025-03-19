@@ -66,9 +66,6 @@ const gridStyle = computed(() => ({
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
-  /* grid-template-areas:
-    'text img1 img2'
-    'last last last'; */
   gap: 2rem;
   min-width: 100%;
   height: 100%;

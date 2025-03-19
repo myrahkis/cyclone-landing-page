@@ -3,21 +3,28 @@
 <template>
   <section class="about-us-section" id="about-us">
     <div class="about-us">
-      <h2>Заголовок раздела</h2>
+      <h2>О нас</h2>
       <div class="info">
-        <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-          voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-          cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
-          est laborum et dolorum fuga.
+        <p class="text">
+          Компания Иной Инструмент работает на рынке с 2016 года и знает, как важно нашим клиентам
+          упростить задачу по утилизации производственных отходов. Именно поэтому мы первые, кто
+          предлагает инновационный, доработанный инструмент для повышения эффективности производства
+          и, что немаловажно, для его экономии.
         </p>
-        <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-          voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
-          cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
-          est laborum et dolorum fuga.
+        <p class="text">
+          Мы рекомендуем использовать именно циклонную систему двойной фильтрации, т.к. циклонный
+          фильтр SN50T3 эффективен только для удаления крупных и(или) тяжёлых загрязняющих частиц
+          (опилки, стружка, бетонный бой, песок, шлак, абразив, резиновая или пенопластовая крошка и
+          т.п.). Мелкие же частицы (такие как бытовая пыль, мука от шлифовки шпатлёвки или дерева),
+          могут пройти через систему в пылесос. Циклонная система двойной фильтрации обеспечивает
+          гораздо более высокую степень очистки, поскольку вторая ступень фильтрации задерживает
+          даже мельчайшие частицы, что делает систему подходящей для более строгих требований к
+          качеству очищаемого потока.
         </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="text">
+          Циклонный фильтр двойной фильтрации — это идеальное решение для обеспечения высокой
+          чистоты потоков с минимальными затратами на эксплуатацию и обслуживание.
+        </p>
       </div>
     </div>
     <img src="/11.png" alt="" class="skrew-big" />
@@ -38,30 +45,32 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 50%;
+  width: 46%;
 }
 .info {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
-
+.text {
+  font-size: 2.05rem;
+}
 .skrew-big {
   position: absolute;
   top: 0;
-  right: 45rem;
-  width: 40rem;
+  right: 53rem;
+  width: 35rem;
 }
 .skrew-sm {
   position: absolute;
-  top: 13rem;
-  right: 38rem;
-  width: 18rem;
+  top: 17rem;
+  right: 48rem;
+  width: 20rem;
 }
 .spanner {
   position: absolute;
   bottom: 0;
   right: 5rem;
-  width: 50rem;
+  width: 45rem;
 }
 </style>
