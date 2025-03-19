@@ -93,7 +93,12 @@ const equipment = {
     <HeroSection :mainRef="mainRef" />
     <DescriptionSection />
     <OperationPrinciple />
-    <ThirdSection gradientDirection="to top" :equipments1="equipments1" :equipments2="equipments2" />
+    <ThirdSection
+      gradientDirection="to top"
+      :equipments1="equipments1"
+      :equipments2="equipments2"
+      layoutVariant="default"
+    />
     <FourthSection />
     <FloorVarientSection
       gradientDirection="to top"
@@ -131,6 +136,14 @@ const equipment = {
 и любого пылесосного шланга), является ребристая внутренняя поверхность, что создаёт риск засорения. Данный шланг 
 может быть вставлен сам в себя, таким 
 образом можно соединить несколько 1,5 метровых отрезков для получения необходимой вам длинны."
+      layoutVariant="default"
+    />
+    <ThirdSection
+      gradientDirection="to top"
+      text1="Доп блок Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed 
+leo ut rutrum."
+      text2="Доп блок Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo."
+      layoutVariant="reverse"
     />
     <!-- <AccessoriesSection gradientDirection="to bottom" topText="" /> -->
     <FifthSection />

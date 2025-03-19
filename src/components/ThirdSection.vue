@@ -1,23 +1,30 @@
 <script setup>
 import { computed } from 'vue'
 
-const { gradientDirection, equipments1, equipments2, text1, text2 } = defineProps({
-  gradientDirection: { type: String, requied: true },
+const { gradientDirection, equipments1, equipments2, text1, text2, layoutVariant } = defineProps({
+  gradientDirection: { type: String, required: true },
   equipments1: { type: Object, default: () => ({}) },
   equipments2: { type: Object, default: () => ({}) },
   text1: { type: String },
   text2: { type: String },
+  layoutVariant: { type: String, required: true },
 })
 
 const gradientStyle = computed(() => ({
   background: `linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4))`,
 }))
+const gridStyle = computed(() => ({
+  gridTemplateAreas:
+    layoutVariant === 'reverse'
+      ? `"img-cell-1 img-cell-1 text-cell-1" "text-cell-2 img-cell-2 img-cell-2"`
+      : `"text-cell-1 img-cell-1 img-cell-1" "img-cell-2 img-cell-2 text-cell-2"`,
+}))
 </script>
 
 <template>
   <section :style="gradientStyle" class="third-section">
-    <div class="thrid-grid">
-      <div class="grid-cell">
+    <div class="thrid-grid" :style="gridStyle">
+      <div class="grid-cell text-cell-1">
         <h3 v-if="equipments1.header">{{ equipments1.header }}</h3>
         <p v-if="equipments1.subheader">{{ equipments1.subheader }}:</p>
         <p v-else>
@@ -27,13 +34,13 @@ const gradientStyle = computed(() => ({
           <li v-for="item in equipments1.equip" :key="item">{{ item }}</li>
         </ul>
       </div>
-      <div class="grid-cell img-cell-1">
+      <div class="grid-cell img-cell-1" :style="{ gridColumn: photoPos1 }">
         <img src="/desc-img.png" alt="" class="img" />
       </div>
-      <div class="grid-cell img-cell-2">
+      <div class="grid-cell img-cell-2" :style="{ gridColumn: photoPos2 }">
         <img src="/full-height.png" alt="" class="img" />
       </div>
-      <div class="grid-cell last-cell">
+      <div class="grid-cell text-cell-2">
         <h3 v-if="equipments1.header">
           Насадка на циклонный фильтр SN50T3 — вторая ступень фильтрации
         </h3>
@@ -58,7 +65,10 @@ const gradientStyle = computed(() => ({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 0.5fr);
+  grid-template-rows: auto auto;
+  /* grid-template-areas:
+    'text img1 img2'
+    'last last last'; */
   gap: 2rem;
   min-width: 100%;
   height: 100%;
@@ -77,15 +87,20 @@ const gradientStyle = computed(() => ({
     padding-top: 0;
   }
 }
+.text-cell-1 {
+  grid-area: text-cell-1;
+}
 .img-cell-1 {
-  grid-column: 2 / -1;
+  grid-area: img-cell-1;
 }
 .img-cell-2 {
-  grid-column: 1 / 3;
+  grid-area: img-cell-2;
+}
+.text-cell-2 {
+  grid-area: text-cell-2;
 }
 .img {
   height: 100%;
-  /* width: 100%; */
   object-fit: contain;
 }
 .equipment {
