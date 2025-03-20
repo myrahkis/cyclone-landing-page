@@ -1,15 +1,6 @@
 <script setup>
+import BtnsLinksList from '@/ui/BtnsLinksList.vue';
 import SocialsIcons from './SocialsIcons.vue'
-
-const btns = [
-  { href: '', name: 'В магазин' },
-  { href: '#how-works', name: 'Принцип работы' },
-  { href: '#advantages', name: 'Преимущества' },
-  { href: '#accessory', name: 'Аксессуары' },
-  { href: '#overviews', name: 'Обзоры' },
-  { href: '#contacts', name: 'Контакты' },
-  { href: '#about-us', name: 'О нас' },
-]
 
 function goUp() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -24,13 +15,7 @@ function goUp() {
     <img src="/13.png" alt="" class="bg-pic big-skrew">
     <button class="up-btn" @click="goUp">Наверх</button>
     <div class="container">
-      <ul class="sections">
-        <li v-for="btn in btns" :key="btn">
-          <a :href="btn.href" class="link">
-            {{ btn.name }}
-          </a>
-        </li>
-      </ul>
+      <BtnsLinksList width="100%" fontSize="2rem" />
       <div class="lower-footer">
         <div class="info-block">
           <div class="idk">
@@ -80,23 +65,6 @@ function goUp() {
   border-radius: 1.9rem;
   height: 48vh;
   width: 100%;
-}
-.sections {
-  display: flex;
-  justify-content: space-between;
-  font-size: 2rem;
-  list-style: none;
-
-  li {
-    cursor: pointer;
-  }
-}
-.link {
-  &:link,
-  &:visited {
-    color: white;
-    text-decoration: none;
-  }
 }
 
 .lower-footer {

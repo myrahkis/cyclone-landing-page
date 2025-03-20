@@ -1,15 +1,12 @@
 <script setup>
-// import { onMounted, onUnmounted, ref } from 'vue'
+import BtnsLinksList from '@/ui/BtnsLinksList.vue'
 
-const btns = [
-  { href: '', name: 'В магазин' },
-  { href: '#how-works', name: 'Принцип работы' },
-  { href: '#advantages', name: 'Преимущества' },
-  { href: '#accessory', name: 'Аксессуары' },
-  { href: '#overviews', name: 'Обзоры' },
-  { href: '#contacts', name: 'Контакты' },
-  { href: '#about-us', name: 'О нас' },
-]
+const { width, fontSize } = defineProps({
+  width: { type: String, required: true },
+  fontSize: { type: String, required: true },
+})
+
+// import { onMounted, onUnmounted, ref } from 'vue'
 
 // const headerRef = ref(null)
 
@@ -29,13 +26,7 @@ const btns = [
         </p>
       </div>
     </a>
-    <ul class="btns-list">
-      <a :href="btn.href" v-for="btn in btns" :key="btn" class="link">
-        <li class="btn-item">
-          {{ btn.name }}
-        </li>
-      </a>
-    </ul>
+    <BtnsLinksList width="60%" font-size="1.8rem" />
   </header>
 </template>
 
@@ -72,40 +63,5 @@ const btns = [
     color: white;
     text-decoration: none;
   }
-}
-.btns-list {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
-  gap: 2.5rem;
-  width: 60%;
-  list-style: none;
-}
-.btn-item {
-  width: fit-content;
-  font-size: 1.8rem;
-}
-.link {
-  &:visited,
-  &:link {
-    color: white;
-    text-decoration: none;
-  }
-
-  &:active {
-    color: #fff6bf;
-  }
-}
-.link::after {
-  content: '';
-  width: 0px;
-  height: 1px;
-  display: block;
-  background: white;
-  transition: 300ms;
-}
-
-.link:hover::after {
-  width: 100%;
 }
 </style>
