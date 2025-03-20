@@ -1,6 +1,5 @@
 <script setup>
-import SocialsIcons from './SocialsIcons.vue';
-
+import SocialsIcons from './SocialsIcons.vue'
 </script>
 
 <template>
@@ -102,6 +101,8 @@ import SocialsIcons from './SocialsIcons.vue';
   margin-top: 2rem;
 }
 .white-border-btn {
+  position: relative;
+  z-index: 2;
   background-color: transparent;
   color: white;
   width: 50%;
