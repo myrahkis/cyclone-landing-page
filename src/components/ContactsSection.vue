@@ -36,7 +36,14 @@ import SocialsIcons from './SocialsIcons.vue'
           нам по любым вопросам — будь то консультация по выбору инструмента, детали заказа или
           техническая поддержка.
         </p>
-        <div class="map">map</div>
+        <div class="map">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A251189b0d152a15f05ac87119644b8e58fe04752b0c72ff8a62ee92c3c7d9ff6&amp;source=constructor"
+            width="100%"
+            height="100%"
+            frameborder="0"
+          ></iframe>
+        </div>
       </div>
     </div>
     <div class="btns-wrapper">
@@ -78,6 +85,7 @@ import SocialsIcons from './SocialsIcons.vue'
   width: 70%;
 }
 .map {
+  overflow: hidden;
   flex-grow: 1;
   border: 3px solid white;
   border-radius: 1.9rem;
