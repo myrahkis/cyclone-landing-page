@@ -1,8 +1,20 @@
 <script setup>
+import { ref } from 'vue'
 import SocialsIcons from './SocialsIcons.vue'
+import BgBlurModal from '@/ui/BgBlurModal.vue'
+import CallbackForm from './CallbackForm.vue'
+
+const isModalOpen = ref(false)
+
+function closeModal() {
+  return isModalOpen.value = false;
+}
 </script>
 
 <template>
+  <BgBlurModal v-if="isModalOpen">
+    <CallbackForm :isModalOpen="closeModal" />
+  </BgBlurModal>
   <section class="contacts-section" id="contacts">
     <!-- <img src="/spanner-bottom-half.png" alt="" class="spanner" /> -->
     <h2>Контактная информация</h2>
@@ -48,7 +60,7 @@ import SocialsIcons from './SocialsIcons.vue'
     </div>
     <div class="btns-wrapper">
       <button class="white-border-btn">Перейти в магазин</button>
-      <button class="white-border-btn">Обратный звонок</button>
+      <button class="white-border-btn" @click="isModalOpen = true">Обратный звонок</button>
     </div>
   </section>
 </template>

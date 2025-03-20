@@ -1,10 +1,10 @@
 <script setup>
 import BtnsLinksList from '@/ui/BtnsLinksList.vue'
 
-const { width, fontSize } = defineProps({
-  width: { type: String, required: true },
-  fontSize: { type: String, required: true },
-})
+// const { width, fontSize } = defineProps({
+//   width: { type: String, required: true },
+//   fontSize: { type: String, required: true },
+// })
 
 // import { onMounted, onUnmounted, ref } from 'vue'
 
