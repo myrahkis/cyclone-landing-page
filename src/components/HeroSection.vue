@@ -1,6 +1,6 @@
 <script setup>
-const fullImgPath1 = `${import.meta.env.BASE_URL}hero-background.png`
-const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
+const fullImgPath1 = `${import.meta.env.BASE_URL}2025-02-13-bg.png`
+const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
 </script>
 
 <template>
@@ -13,8 +13,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
     <div class="gradient"></div>
     <h1 class="heading">
       Циклонные фильтры <br />
-      Циклонные системы <br />
-      двойной фильтрации
+      Циклонные системы двойной фильтрации
     </h1>
     <h3 class="text">
       Чистота на всех уровнях — <br />
@@ -41,7 +40,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 120vh;
+  height: 130vh;
   padding: 3.5rem;
   padding-top: 15rem;
   color: var(--white-color);
@@ -52,8 +51,8 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
   inset: 0;
   background: var(--bg-url);
   /* background-position: center; */
-  background-position: right 6rem bottom 0;
-  background-size: 80% 100%;
+  background-position: center bottom 0;
+  background-size: 75%;
   /* background-size: 80% 100%; */
   background-repeat: no-repeat;
   filter: blur(4px);
@@ -69,13 +68,13 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}clear-bg.png`
 .clear-img {
   position: absolute;
   bottom: 5rem;
-  right: 5rem;
-  width: 42%;
+  right: 10rem;
+  width: 45%;
   z-index: 1;
-  height: 90vh;
+  height: 73vh;
   background: var(--bg-clear-url);
-  background-position: left -2rem bottom -3rem;
-  background-size: 100% 110%;
+  background-position: left 0 bottom -1rem;
+  background-size: 86%;
   background-repeat: no-repeat;
   border: 3px solid white;
   border-radius: 4.5rem;
