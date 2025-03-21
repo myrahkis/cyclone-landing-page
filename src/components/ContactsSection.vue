@@ -7,7 +7,7 @@ import CallbackForm from './CallbackForm.vue'
 const isModalOpen = ref(false)
 
 function closeModal() {
-  return isModalOpen.value = false;
+  return (isModalOpen.value = false)
 }
 </script>
 
@@ -59,7 +59,13 @@ function closeModal() {
       </div>
     </div>
     <div class="btns-wrapper">
-      <button class="white-border-btn">Перейти в магазин</button>
+      <a
+        class="white-border-btn"
+        type="button"
+        href="https://othertool.ru/home_master/tsiklonnye-filtry-dlja-pylesosa"
+        target="_blank"
+        >Перейти в магазин</a
+      >
       <button class="white-border-btn" @click="isModalOpen = true">Обратный звонок</button>
     </div>
   </section>
@@ -127,9 +133,11 @@ function closeModal() {
   color: white;
   width: 50%;
   padding: 2.7rem 0;
+  text-decoration: none;
+  text-align: center;
   font-size: 1.8rem;
-  letter-spacing: 0.1rem;
   font-weight: 600;
+  letter-spacing: 0.1rem;
   border: 3px solid white;
   border-radius: 1.9rem;
   transition: all 0.3s;

@@ -5,9 +5,9 @@ const { width, fontSize } = defineProps({
 })
 
 const btns = [
-  { href: '', name: 'В магазин' },
+  { href: 'https://othertool.ru/home_master/tsiklonnye-filtry-dlja-pylesosa', name: 'В магазин' },
   { href: '#how-works', name: 'Принцип работы' },
-  { href: '#advantages', name: 'Преимущества' },
+  // { href: '#advantages', name: 'Преимущества' },
   { href: '#accessory', name: 'Аксессуары' },
   { href: '#overviews', name: 'Обзоры' },
   { href: '#contacts', name: 'Контакты' },
@@ -17,7 +17,13 @@ const btns = [
 
 <template>
   <ul class="btns-list" :style="{ width, fontSize }">
-    <a :href="btn.href" v-for="btn in btns" :key="btn" class="link">
+    <a
+      :href="btn.href"
+      v-for="btn in btns"
+      :key="btn"
+      class="link"
+      :target="btn.name === 'В магазин' ? '_blank' : '_self'"
+    >
       <li class="btn-item">
         {{ btn.name }}
       </li>

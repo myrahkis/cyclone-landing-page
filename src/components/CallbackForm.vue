@@ -1,15 +1,23 @@
 <script setup>
 import { useOutsideClick } from '@/hooks/useOutsideClick'
+import axios from 'axios'
 import { ref } from 'vue'
 const { isModalOpen } = defineProps({ isModalOpen: { type: Function, required: true } })
 
 const formRef = useOutsideClick(isModalOpen)
 
-const name = ref('')
-const telephone = ref('')
+const formData = ref({
+  name: '',
+  telephone: '',
+})
 
-function submitHandle() {
-  console.log({ name, telephone })
+async function submitHandle() {
+  try {
+    await axios.post("http://localhost:3000/send-mail", formData.value);
+    alert('Сообщение отправлено!')
+  } catch (error) {
+    alert('Ошибка при отправке.')
+  }
 }
 </script>
 
@@ -17,9 +25,16 @@ function submitHandle() {
   <form ref="formRef" @submit.prevent="submitHandle" class="callback-form" @click.stop>
     <button class="close-btn" @click="isModalOpen">&#x274c;</button>
     <h3 class="heading">Заказать звонок</h3>
-    <input v-model="name" class="input" type="text" name="name" placeholder="Имя*" required />
     <input
-      v-model="telephone"
+      v-model="formData.name"
+      class="input"
+      type="text"
+      name="name"
+      placeholder="Имя*"
+      required
+    />
+    <input
+      v-model="formData.telephone"
       class="input"
       type="tel"
       name="phone"
