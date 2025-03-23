@@ -12,7 +12,7 @@ function closeModal() {
 </script>
 
 <template>
-  <BgBlurModal v-if="isModalOpen">
+  <BgBlurModal :closeModal="closeModal" v-if="isModalOpen" key="callback">
     <CallbackForm :isModalOpen="closeModal" />
   </BgBlurModal>
   <section class="contacts-section" id="contacts">

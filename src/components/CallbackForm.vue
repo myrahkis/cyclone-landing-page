@@ -1,27 +1,57 @@
 <script setup>
-import { useOutsideClick } from '@/hooks/useOutsideClick'
 import axios from 'axios'
 import { ref } from 'vue'
+import PersonalDataProcessingModal from './PersonalDataProcessingModal.vue'
+import BgBlurModal from '@/ui/BgBlurModal.vue'
+import PublicOfferAgrModal from './PublicOfferAgrModal.vue'
+
 const { isModalOpen } = defineProps({ isModalOpen: { type: Function, required: true } })
 
-const formRef = useOutsideClick(isModalOpen)
+const validationError = ref('')
+const isPersDataModalOpen = ref(false)
+const isPublicOfferAgrModalOpen = ref(false)
 
 const formData = ref({
   name: '',
   telephone: '',
 })
 
+const validatePhone = () => {
+  if (!/^\d{10,15}$/.test(formData.value.telephone)) {
+    validationError.value = 'Введите корректный номер (10-15 цифр)'
+    return false
+  } else {
+    validationError.value = ''
+    return true
+  }
+}
+
 async function submitHandle() {
+  if (!validatePhone()) return
+
   try {
-    await axios.post("http://localhost:3000/send-mail", formData.value);
+    await axios.post('http://localhost:3000/send-mail', formData.value)
     alert('Сообщение отправлено!')
   } catch (error) {
     alert('Ошибка при отправке.')
   }
 }
+
+function closePersDataModal() {
+  return (isPersDataModalOpen.value = false)
+}
+function closePublicOfferAgrModal() {
+  return (isPublicOfferAgrModalOpen.value = false)
+}
 </script>
 
 <template>
+  <BgBlurModal :closeModal="closePersDataModal" v-if="isPersDataModalOpen">
+    <PersonalDataProcessingModal />
+  </BgBlurModal>
+  <BgBlurModal :closeModal="closePublicOfferAgrModal" v-else-if="isPublicOfferAgrModalOpen">
+    <PublicOfferAgrModal />
+  </BgBlurModal>
   <form ref="formRef" @submit.prevent="submitHandle" class="callback-form" @click.stop>
     <button class="close-btn" @click="isModalOpen">&#x274c;</button>
     <h3 class="heading">Заказать звонок</h3>
@@ -41,8 +71,25 @@ async function submitHandle() {
       placeholder="Номер телефона*"
       required
     />
+    <p v-if="validationError" class="valid-error">{{ validationError }}</p>
     <p class="processing-policy">
-      Соглашаюсь на обработку персональных данных и ознакомлен с договором публичной оферты *
+      Соглашаюсь на
+      <a
+        type="button"
+        href=""
+        @click.prevent="isPersDataModalOpen = true"
+        class="processing-policy-link"
+        >обработку персональных данных</a
+      >
+      и ознакомлен с
+      <a
+        type="button"
+        href=""
+        class="processing-policy-link"
+        @click.prevent="isPublicOfferAgrModalOpen = true"
+        >договором публичной оферты</a
+      >
+      *
     </p>
     <button class="call-btn">Заказать звонок</button>
   </form>
@@ -59,7 +106,7 @@ async function submitHandle() {
   width: fit-content;
   padding: 4rem;
   border-radius: 2rem;
-  /* width: 35%; */
+  width: 52rem;
 }
 .heading {
   align-self: flex-start;
@@ -102,6 +149,23 @@ async function submitHandle() {
 
   &:hover {
     background-color: #f9df1b;
+  }
+}
+.valid-error {
+  text-align: start;
+  width: 100%;
+  font-size: 1.3rem;
+  color: red;
+  margin-top: -1rem;
+}
+.processing-policy-link {
+  &:link,
+  &:visited {
+    color: var(--gray-color);
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 }
 </style>

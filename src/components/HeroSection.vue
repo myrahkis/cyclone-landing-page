@@ -71,7 +71,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
   right: 10rem;
   width: 45%;
   z-index: 1;
-  height: 73vh;
+  height: 74vh;
   background: var(--bg-clear-url);
   background-position: left 0 bottom -1rem;
   background-size: 86%;

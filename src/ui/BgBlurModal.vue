@@ -1,10 +1,13 @@
 <script setup>
+const { closeModal } = defineProps({ closeModal: Function })
 </script>
 
 <template>
-  <div class="modal-bg">
-    <slot></slot>
-  </div>
+  <!-- <Teleport to="body"> -->
+    <div class="modal-bg" @click.stop="closeModal">
+      <slot></slot>
+    </div>
+  <!-- </Teleport> -->
 </template>
 
 <style scoped>
