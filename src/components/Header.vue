@@ -1,5 +1,6 @@
 <script setup>
 import BtnsLinksList from '@/ui/BtnsLinksList.vue'
+import SocialsIcons from './SocialsIcons.vue'
 
 // const { width, fontSize } = defineProps({
 //   width: { type: String, required: true },
@@ -26,7 +27,23 @@ import BtnsLinksList from '@/ui/BtnsLinksList.vue'
         </p>
       </div>
     </a>
-    <BtnsLinksList width="60%" font-size="1.8rem" />
+    <!-- <BtnsLinksList width="60%" font-size="1.8rem" /> -->
+    <div class="contacts-wrapper">
+      <div class="contacts">
+        <p>+7 495 641-55-66</p>
+        <p>example@othertool.pro</p>
+        <p>Пн-Пт: 09:00 – 19:00, Сб: 10:00 – 18:00, Вс — выходной</p>
+      </div>
+      <div class="btns-wrapper">
+        <a
+          href="https://othertool.ru/home_master/tsiklonnye-filtry-dlja-pylesosa"
+          target="_blank"
+          class="to-shop-btn"
+          >В магазин</a
+        >
+        <SocialsIcons iconWidth="3.8rem" />
+      </div>
+    </div>
   </header>
 </template>
 
@@ -62,6 +79,43 @@ import BtnsLinksList from '@/ui/BtnsLinksList.vue'
   &:link {
     color: white;
     text-decoration: none;
+  }
+}
+
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1.5rem;
+}
+.contacts {
+  display: flex;
+  gap: 3.5rem;
+}
+
+.btns-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.to-shop-btn {
+  transition: all 0.2s;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    border: 2px solid white;
+    border-radius: 1.6rem;
+    padding: 1rem 2rem;
+  }
+
+  &:hover {
+    border: 2px solid var(--brand-blue-color);
+    background-color: var(--brand-blue-color);
+    color: black;
   }
 }
 </style>
