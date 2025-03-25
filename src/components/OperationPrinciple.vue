@@ -46,7 +46,7 @@
 .operation-principle-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 0.8fr;
+  grid-template-rows: auto auto;
   gap: 2rem;
   min-width: 100%;
   height: 100%;
@@ -66,8 +66,8 @@
 }
 .how-works-img {
   position: relative;
-  height: 100%;
-  width: 57rem;
+  height: auto;
+  max-width: 100%;
   object-fit: contain;
 }
 .cell-img {
@@ -76,5 +76,12 @@
   justify-content: center;
 
   /* overflow: hidden; */
+}
+
+@media (max-width: 767px) {
+  .operation-principle-grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

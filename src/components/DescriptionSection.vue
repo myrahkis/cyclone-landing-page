@@ -30,7 +30,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
         </p>
       </div>
       <div class="grid-cell cell-img">
-        <img src="/desc-img.png" alt="" class="des-img" />
+        <img src="/desc-filter-img.png" alt="" class="des-img" />
       </div>
     </div>
   </section>
@@ -47,7 +47,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
 .desc-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 0.7fr;
+  grid-template-rows: auto auto;
   gap: 2rem;
   min-width: 100%;
   height: 100%;
@@ -71,8 +71,10 @@ import SkrewImg from '@/ui/SkrewImg.vue'
 }
 .des-img {
   position: relative;
+  max-width: 100%;
   height: 100%;
   object-fit: contain;
+  /* margin-bottom: -13rem; */
 }
 .cell-img {
   display: flex;
@@ -85,11 +87,19 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    ellipse 50% 120% at bottom,
-    #ffffff 0%,
-    #f0f0f0 40%,
-    #bbbbbb 50%,
-    transparent 90%
+    ellipse 70% 120% at bottom,
+    #d6d6d6 1%,
+    #bbbbbb 10%,
+    #8f8f8f 20%,
+    transparent 80%
   );
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .desc-grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

@@ -128,7 +128,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
 @media (max-width: 1023px) {
   .texts {
     width: 100%;
-    flex-direction: row;
+    /* flex-direction: row; */
   }
   .text {
     width: 100%;
@@ -147,6 +147,9 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
   .texts,
   .text {
     width: 100%;
+  }
+  .texts {
+    gap: 1rem;
   }
   .text {
     font-size: 2.3rem;

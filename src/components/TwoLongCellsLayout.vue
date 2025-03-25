@@ -58,7 +58,7 @@ const gridStyle = computed(() => ({
 
 <style scoped>
 .third-section {
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   padding: 3.5rem;
 }
@@ -105,5 +105,16 @@ const gridStyle = computed(() => ({
   flex-direction: column;
   font-size: 1.5rem;
   margin-left: 1rem;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .thrid-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-cell-2 {
+    order: 4;
+  }
 }
 </style>
