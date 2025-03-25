@@ -1,12 +1,17 @@
 <script setup>
 const fullImgPath1 = `${import.meta.env.BASE_URL}2025-02-13-bg.png`
 const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
+const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 </script>
 
 <template>
   <section
     class="hero-section"
-    :style="{ '--bg-url': `url(${fullImgPath1})`, '--bg-clear-url': `url(${fullImgPath2})` }"
+    :style="{
+      '--bg-url': `url(${fullImgPath1})`,
+      '--bg-clear-url': `url(${fullImgPath2})`,
+      '--bg-clear-mob-url': `url(${fullImgPath3})`,
+    }"
     id="home"
     ref="mainRef"
   >
@@ -31,6 +36,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
     </div>
     <!-- <button class="order-btn">Заказать</button> -->
     <div class="clear-img"></div>
+    <div class="clear-img-mobile"></div>
   </section>
 </template>
 
@@ -67,7 +73,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
 }
 .clear-img {
   position: absolute;
-  display: inline-block;
+  /* display: inline-block; */
   bottom: 5.2%;
   /* bottom: 5rem; */
   right: 6%;
@@ -84,6 +90,10 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
   background-repeat: no-repeat;
   border: 3px solid white;
   border-radius: 4.5rem;
+}
+.clear-img-mobile {
+  display: none;
+  background: var(--bg-clear-mob-url);
 }
 .texts {
   display: flex;
@@ -126,6 +136,29 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
 
 /* (768px–1023px) */
 @media (max-width: 1023px) {
+  .hero-section {
+    height: 155vh;
+  }
+  .clear-img {
+    display: none;
+  }
+  .clear-img-mobile {
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: 8%;
+    width: 72%;
+    transform: translate(-50%);
+    z-index: 1;
+    height: auto;
+    padding-bottom: 40%;
+    background: var(--bg-clear-mob-url);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 3px solid white;
+    border-radius: 4.5rem;
+  }
   .texts {
     width: 100%;
     /* flex-direction: row; */
@@ -135,14 +168,27 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
   }
 }
 
+@media (min-width: 858px) and (max-width: 930px) {
+  .hero-section {
+    height: 145vh;
+  }
+  .clear-img-mobile {
+    bottom: 7.5%;
+  }
+}
+@media (min-width: 767px) and (max-width: 858px) {
+  .hero-section {
+    height: 140vh;
+  }
+  .clear-img-mobile {
+    bottom: 7%;
+  }
+}
+
 /* (480px–767px) */
 @media (max-width: 767px) {
   .hero-section {
-    height: 103vh;
-  }
-  .clear-img {
-    bottom: 3%;
-    padding-bottom: 34.5%;
+    height: 118vh;
   }
   .texts,
   .text {
@@ -159,7 +205,39 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
 /* (до 479px) */
 @media (max-width: 638px) {
   .hero-section {
-    height: 98vh;
+    height: 115vh;
+  }
+  .hero-section::before {
+    background-size: 90%;
+  }
+  .clear-img-mobile {
+    bottom: 9%;
+    width: 90%;
+    padding-bottom: 42%;
+  }
+}
+
+@media (min-width: 406px) and (max-width: 521px) {
+  .hero-section {
+    height: 105vh;
+  }
+  .clear-img-mobile {
+    bottom: 8%;
+  }
+}
+@media (min-width: 320px) and (max-width: 406px) {
+  .hero-section {
+    height: 105vh;
+  }
+  h1 {
+    font-size: 2.9rem;
+  }
+  .text {
+    font-size: 2rem;
+  }
+  .clear-img-mobile {
+    bottom: 4%;
+    padding-bottom: 55%;
   }
 }
 </style>

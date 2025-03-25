@@ -35,7 +35,7 @@ const gridStyle = computed(() => ({
         </ul>
       </div>
       <div class="grid-cell img-cell-1" :style="{ gridColumn: photoPos1 }">
-        <img src="/desc-img.png" alt="" class="img" />
+        <img src="/desc-filter-img.png" alt="" class="img" />
       </div>
       <div class="grid-cell img-cell-2" :style="{ gridColumn: photoPos2 }">
         <img src="/full-height.png" alt="" class="img" />
