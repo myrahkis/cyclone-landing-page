@@ -7,6 +7,14 @@ import VideoSection from './components/VideoSection.vue'
 import AboutUsSection from './components/AboutUsSection.vue'
 import ContactsSection from './components/ContactsSection.vue'
 import Footer from './components/Footer.vue'
+import { ref } from 'vue'
+import OpenedHeaderMobile from './components/OpenedHeaderMobile.vue'
+
+const openMenu = ref(false)
+
+function useOpenMenu() {
+  return (openMenu.value = !openMenu.value)
+}
 // import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 
 // const mainRef = ref(null)
@@ -33,8 +41,9 @@ import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <Header ref="headerRef" />
-  <main ref="mainRef">
+  <Header ref="headerRef" :useOpenMenu="useOpenMenu" />
+  <OpenedHeaderMobile v-if="openMenu" />
+  <main ref="mainRef" v-else>
     <!-- <Header :mainRef="mainRef" /> -->
     <IntroductorySectionLayout />
     <DoubleFunctionalSystemLayout />
@@ -42,8 +51,8 @@ import Footer from './components/Footer.vue'
     <VideoSection />
     <AboutUsSection />
     <ContactsSection />
+    <Footer />
   </main>
-  <Footer />
 </template>
 
 <style scoped></style>

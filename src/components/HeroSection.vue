@@ -11,7 +11,7 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
     ref="mainRef"
   >
     <div class="gradient"></div>
-    <h1 class="heading">
+    <h1>
       Циклонные фильтры <br />
       Циклонные системы двойной фильтрации
     </h1>
@@ -67,11 +67,17 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
 }
 .clear-img {
   position: absolute;
-  bottom: 5rem;
-  right: 10rem;
+  display: inline-block;
+  bottom: 5.2%;
+  /* bottom: 5rem; */
+  right: 6%;
+  /* right: 10rem; */
   width: 45%;
+  /* width: 68rem; */
   z-index: 1;
-  height: 74vh;
+  height: auto;
+  padding-bottom: 35.5%;
+  /* height: 74vh; */
   background: var(--bg-clear-url);
   background-position: left 0 bottom -1rem;
   background-size: 86%;
@@ -102,5 +108,55 @@ const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
   border-radius: 2rem;
   border: none;
   padding: 2rem;
+}
+
+/* (1280px–1439px) */
+@media (max-width: 1439px) {
+}
+
+/* (1024px–1279px) */
+@media (max-width: 1279px) {
+  .text {
+    width: 100%;
+  }
+  .clear-img {
+    bottom: 4%;
+  }
+}
+
+/* (768px–1023px) */
+@media (max-width: 1023px) {
+  .texts {
+    width: 100%;
+    flex-direction: row;
+  }
+  .text {
+    width: 100%;
+  }
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .hero-section {
+    height: 103vh;
+  }
+  .clear-img {
+    bottom: 3%;
+    padding-bottom: 34.5%;
+  }
+  .texts,
+  .text {
+    width: 100%;
+  }
+  .text {
+    font-size: 2.3rem;
+  }
+}
+
+/* (до 479px) */
+@media (max-width: 638px) {
+  .hero-section {
+    height: 98vh;
+  }
 }
 </style>
