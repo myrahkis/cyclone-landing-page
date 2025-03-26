@@ -18,46 +18,48 @@ function closeModal() {
   <section class="contacts-section" id="contacts">
     <!-- <img src="/spanner-bottom-half.png" alt="" class="spanner" /> -->
     <h2>Контактная информация</h2>
-    <div class="container">
+    <div class="contacts-grid">
       <div class="contacts-info">
         <div>
-          <h3>+7 495 641-55-66</h3>
-          <p>info@ot24.pro</p>
+          <div>
+            <h3>+7 495 641-55-66</h3>
+            <p>info@ot24.pro</p>
+          </div>
+          <div>
+            <p>
+              Москва, <br />
+              ул. Воронцовские пруды, <br />
+              дом 3, подъезд 26
+            </p>
+            <p>(вход с ул. Академика Челомея)</p>
+          </div>
         </div>
-        <div>
-          <p>
-            Москва, <br />
-            ул. Воронцовские пруды, <br />
-            дом 3, подъезд 26
-          </p>
-          <p>(вход с ул. Академика Челомея)</p>
-        </div>
-        <div>
+        <div class="contacts-info-right">
           <p>
             Пн-Пт: 09:00 – 19:00, <br />
             Сб: 10:00 – 18:00, <br />
             Вс — выходной
           </p>
+          <SocialsIcons iconWidth="5rem" />
         </div>
-        <SocialsIcons iconWidth="5rem" />
       </div>
-      <div class="map-group">
-        <p>
-          Мы всегда готовы помочь вам определиться с необходимой комплектацией циклонного фильтра и
-          ответить на любые вопросы, касающиеся наших продуктов и услуг. Не стесняйтесь обращаться к
-          нам по любым вопросам — будь то консультация по выбору инструмента, детали заказа или
-          техническая поддержка.
-        </p>
-        <div class="map">
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A251189b0d152a15f05ac87119644b8e58fe04752b0c72ff8a62ee92c3c7d9ff6&amp;source=constructor"
-            width="100%"
-            height="100%"
-            frameborder="0"
-          ></iframe>
-        </div>
+      <p class="contacts-text">
+        Мы всегда готовы помочь вам определиться с необходимой комплектацией циклонного фильтра и
+        ответить на любые вопросы, касающиеся наших продуктов и услуг. Не стесняйтесь обращаться к
+        нам по любым вопросам — будь то консультация по выбору инструмента, детали заказа или
+        техническая поддержка.
+      </p>
+      <!-- <div class="map-group"> -->
+      <div class="map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A251189b0d152a15f05ac87119644b8e58fe04752b0c72ff8a62ee92c3c7d9ff6&amp;source=constructor"
+          width="100%"
+          height="100%"
+          frameborder="0"
+        ></iframe>
       </div>
     </div>
+    <!-- </div> -->
     <div class="btns-wrapper">
       <a
         class="white-border-btn"
@@ -76,37 +78,59 @@ function closeModal() {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   padding: 3.5rem;
   color: white;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 
-.container {
-  display: flex;
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr 1fr;
   gap: 2rem;
   flex-grow: 1;
 }
+/* .container {
+  display: flex;
+  gap: 2rem;
+  flex-grow: 1;
+} */
 .contacts-info {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  width: 30%;
+  width: 100%;
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
 }
-.map-group {
+.contacts-info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contacts-text {
+  grid-column: 2 / -1;
+  height: fit-content;
+  width: 100%;
+}
+/* .map-group {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 70%;
-}
+  width: 100%;
+} */
 .map {
   overflow: hidden;
   flex-grow: 1;
   border: 3px solid white;
   border-radius: 1.9rem;
+
+  grid-column: 2 / -1;
+  grid-row: 2 / 4;
 
   display: flex;
   justify-content: center;
@@ -123,6 +147,7 @@ function closeModal() {
 .btns-wrapper {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -155,6 +180,23 @@ function closeModal() {
       background-color: var(--brand-blue-color);
       color: black;
     }
+  }
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .contacts-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts-info {
+    flex-direction: row;
+    justify-content: space-between;
+    order: 1;
+  }
+  .map {
+    order: 3;
+    height: 50vh;
   }
 }
 </style>
