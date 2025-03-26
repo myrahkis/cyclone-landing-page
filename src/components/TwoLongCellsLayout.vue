@@ -78,11 +78,11 @@ const gridStyle = computed(() => ({
   padding: 2rem;
   min-height: 0;
 
-  &:last-child,
+  /* &:last-child,
   &:first-child {
     padding-bottom: 0;
     padding-top: 0;
-  }
+  } */
 }
 .text-cell-1 {
   grid-area: text-cell-1;
@@ -98,6 +98,8 @@ const gridStyle = computed(() => ({
 }
 .img {
   height: 100%;
+  max-width: 100%;
+  width: 70%;
   object-fit: contain;
 }
 .equipment {

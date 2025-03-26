@@ -20,7 +20,7 @@ const gradientStyle = computed(() => ({
         <p>{{ topText }}</p>
       </div>
       <div class="grid-cell second-cell">
-        <img src="/desc-img.png" alt="" class="img" />
+        <img src="/desc-filter-img.png" alt="" class="img" />
       </div>
       <div class="grid-cell">
         <img src="/full-height.png" alt="" class="img" />

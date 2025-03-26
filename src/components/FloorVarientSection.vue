@@ -27,15 +27,19 @@ const rowStyle = computed(() => ({
         </p>
         <p>{{ characteristic.header }}</p>
         <ul class="list">
-          <li v-for="charac in characteristic.charac" :key="charac">{{ charac }}</li>
+          <li v-for="charac in characteristic.charac" :key="charac">
+            <p>{{ charac }}</p>
+          </li>
         </ul>
         <p>{{ equipment.header }}</p>
         <ul class="list">
-          <li v-for="equip in equipment.equip" :key="equip">{{ equip }}</li>
+          <li v-for="equip in equipment.equip" :key="equip">
+            <p>{{ equip }}</p>
+          </li>
         </ul>
       </div>
       <div class="info-cell">
-        <img src="" alt="" />
+        <img src="/floor-var.png" alt="" class="img" />
       </div>
     </div>
   </section>
@@ -44,7 +48,7 @@ const rowStyle = computed(() => ({
 <style scoped>
 .floor-varient-section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   padding: 3.5rem;
 }
@@ -66,5 +70,21 @@ const rowStyle = computed(() => ({
 .list {
   font-size: 1.8rem;
   margin-left: 1.5rem;
+}
+.img {
+  height: 100%;
+  max-width: 100%;
+  width: 65%;
+  object-fit: contain;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .floor-varient-flex {
+    flex-direction: column !important;
+  }
+  .info-cell {
+    width: 100%;
+  }
 }
 </style>

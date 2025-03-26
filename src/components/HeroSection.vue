@@ -205,24 +205,24 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 /* (до 479px) */
 @media (max-width: 638px) {
   .hero-section {
-    height: 115vh;
+    height: 122vh;
   }
   .hero-section::before {
     background-size: 90%;
   }
   .clear-img-mobile {
-    bottom: 9%;
+    bottom: 3%;
     width: 90%;
-    padding-bottom: 42%;
+    padding-bottom: 58%;
   }
 }
 
 @media (min-width: 406px) and (max-width: 521px) {
   .hero-section {
-    height: 105vh;
+    height: 113vh;
   }
   .clear-img-mobile {
-    bottom: 8%;
+    bottom: 2.5%;
   }
 }
 @media (min-width: 320px) and (max-width: 406px) {
@@ -236,8 +236,8 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
     font-size: 2rem;
   }
   .clear-img-mobile {
-    bottom: 4%;
-    padding-bottom: 55%;
+    bottom: 1%;
+    padding-bottom: 63%;
   }
 }
 </style>

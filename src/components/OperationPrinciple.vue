@@ -68,6 +68,7 @@
   position: relative;
   height: auto;
   max-width: 100%;
+  width: 70%;
   object-fit: contain;
 }
 .cell-img {

@@ -24,7 +24,7 @@ const equipments = [
     </h2>
     <div class="fourth-grid">
       <div class="grid-cell img-cell">
-        <img src="" alt="" />
+        <img src="/one-side-img.png" alt="" class="img" />
       </div>
       <div class="grid-cell top-cell">
         <!-- <h3>Заголовок раздела</h3> -->
@@ -43,7 +43,9 @@ const equipments = [
       </div>
       <div class="grid-cell last-cell">
         <ul class="equipment">
-          <li v-for="item in equipments" :key="item">{{ item }}</li>
+          <li v-for="item in equipments" :key="item">
+            <p>{{ item }}</p>
+          </li>
         </ul>
       </div>
     </div>
@@ -90,5 +92,22 @@ const equipments = [
 .equipment {
   font-size: 2rem;
   margin-left: 1.8rem;
+}
+.img {
+  height: 100%;
+  max-width: 100%;
+  width: 85%;
+  object-fit: contain;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .fourth-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-cell {
+    order: 4;
+  }
 }
 </style>
