@@ -3,10 +3,10 @@
 <template>
   <section class="fifth-section">
     <div class="fifth-grid">
-      <div class="grid-cell horiz-cell"><img src="" alt="" /></div>
-      <div class="grid-cell vert-cell"><img src="" alt="" /></div>
-      <div class="grid-cell"><img src="" alt="" /></div>
-      <div class="grid-cell"><img src="" alt="" /></div>
+      <div class="grid-cell first-cell"><img src="" alt="" /></div>
+      <div class="grid-cell second-cell"><img src="" alt="" /></div>
+      <div class="grid-cell third-cell"><img src="" alt="" /></div>
+      <div class="grid-cell fourth-cell"><img src="" alt="" /></div>
     </div>
   </section>
 </template>
@@ -32,11 +32,34 @@
   padding: 2rem;
   min-height: 0;
 }
-.horiz-cell {
+.first-cell {
   grid-column: 1 / 3;
 }
-.vert-cell {
+.second-cell {
   grid-column: 3 / -1;
   grid-row: 1 / -1;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .fifth-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .first-cell {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+  }
+  .second-cell {
+    grid-column: 1 / 1;
+    grid-row: 2 / 4;
+  }
+  .third-cell {
+    grid-column: 2 / -1;
+    grid-row: 2 / 4;
+  }
+  .fourth-cell {
+    grid-column: 1 / -1;
+  }
 }
 </style>

@@ -37,13 +37,13 @@ const gradientStyle = computed(() => ({
   min-height: 100vh;
   color: white;
   padding: 3.5rem;
-  background: linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
+  /* background: linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4)); */
 }
 
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(4, 0.25fr);
-  grid-template-rows: repeat(2, 0.9fr);
+  grid-template-rows: repeat(2, auto);
   gap: 2rem;
   min-width: 100%;
   height: 100%;
@@ -56,11 +56,11 @@ const gradientStyle = computed(() => ({
   border-radius: 1.9rem;
   padding: 2rem;
   min-height: 0;
-  &:last-child,
+  /* &:last-child,
   &:first-child {
     padding-bottom: 0;
     padding-top: 0;
-  }
+  } */
 }
 
 .first-cell {
@@ -76,7 +76,16 @@ const gradientStyle = computed(() => ({
 }
 
 .img {
-  max-width: 55%;
+  max-width: 100%;
+  height: 100%;
   object-fit: contain;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .thrid-grid {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>
