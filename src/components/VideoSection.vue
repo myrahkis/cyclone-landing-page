@@ -44,7 +44,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   flex-direction: column;
   color: white;
   padding: 3.5rem;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 .video-cards {
@@ -62,5 +62,23 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   margin-bottom: 3rem;
 
   font-size: 2.5rem;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .video-cards {
+    flex-direction: column;
+  }
+  /* .video-elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 1.9rem;
+    height: 100%;
+    margin-bottom: 3rem;
+
+    font-size: 2.5rem;
+  } */
 }
 </style>

@@ -36,8 +36,10 @@
 <style scoped>
 .about-us-section {
   position: relative;
+  display: flex;
+  justify-content: space-between;
   padding: 3.5rem;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
@@ -68,9 +70,49 @@
   width: 20rem;
 }
 .spanner {
-  position: absolute;
-  bottom: 0;
-  right: 5rem;
-  width: 45rem;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* right: 5rem; */
+  max-width: 100%;
+  width: 35%;
+  max-height: 100%;
+}
+
+/* (1024px–1279px) */
+@media (max-width: 1279px) {
+  .spanner {
+    width: 45%;
+  }
+}
+
+/* (768px–1023px) */
+@media (max-width: 1023px) {
+  .about-us {
+    width: 50%;
+  }
+  .spanner {
+    width: 50%;
+  }
+}
+/* (480px–767px) */
+@media (max-width: 902px) {
+  .about-us-section {
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .about-us {
+    width: 100%;
+  }
+  .spanner {
+    align-self: center;
+  }
+  .skrew-big {
+    top: 0;
+    right: 0;
+  }
+  .skrew-sm {
+    top: 3rem;
+    right: 35rem;
+  }
 }
 </style>
