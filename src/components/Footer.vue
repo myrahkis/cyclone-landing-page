@@ -1,6 +1,7 @@
 <script setup>
-import BtnsLinksList from '@/ui/BtnsLinksList.vue';
+import BtnsLinksList from '@/ui/BtnsLinksList.vue'
 import SocialsIcons from './SocialsIcons.vue'
+import ToShopBtn from '@/ui/ToShopBtn.vue';
 
 function goUp() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -9,13 +10,13 @@ function goUp() {
 
 <template>
   <footer class="footer">
-    <img src="/footerIdk.png" alt="" class="bg-pic big-thing">
-    <img src="/15.png" alt="" class="bg-pic small-skrew">
-    <img src="/14.png" alt="" class="bg-pic mid-skrew">
-    <img src="/13.png" alt="" class="bg-pic big-skrew">
+    <img src="/footerIdk.png" alt="" class="bg-pic big-thing" />
+    <img src="/15.png" alt="" class="bg-pic small-skrew" />
+    <img src="/14.png" alt="" class="bg-pic mid-skrew" />
+    <img src="/13.png" alt="" class="bg-pic big-skrew" />
     <button class="up-btn" @click="goUp">Наверх</button>
     <div class="container">
-      <BtnsLinksList width="100%" fontSize="2rem" />
+      <!-- <BtnsLinksList width="100%" fontSize="2rem" /> -->
       <div class="lower-footer">
         <div class="info-block">
           <div class="idk">
@@ -32,11 +33,14 @@ function goUp() {
               +7 495 641-55-66 <br />
               info@ot24.pro
             </p>
+            <ToShopBtn />
             <SocialsIcons iconWidth="3.8rem" />
           </div>
         </div>
-        <div>
-          <p class="credits">© 2025 «ИнойИнструмент»</p>
+        <div class="credits">
+          <p>© 2025 «ИнойИнструмент»</p>
+          <p>Политика обработки персональных данных</p>
+          <p>Пользовательское соглашение</p>
         </div>
       </div>
     </div>
@@ -45,10 +49,11 @@ function goUp() {
 
 <style scoped>
 .footer {
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.7));
   padding: 3.5rem;
@@ -63,13 +68,15 @@ function goUp() {
   padding: 3.5rem;
   border: 3px solid white;
   border-radius: 1.9rem;
-  height: 48vh;
+  min-height: 48vh;
   width: 100%;
 }
 
 .lower-footer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   gap: 3.5rem;
 }
 
@@ -86,7 +93,7 @@ function goUp() {
   height: 11.5rem;
 }
 .data-text {
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   line-height: 3rem;
   color: var(--gray-color);
 }
@@ -101,6 +108,8 @@ function goUp() {
   color: var(--gray-color);
 }
 .credits {
+  display: flex;
+  gap: 1.5rem;
   font-size: 1.6rem;
   color: var(--gray-color);
 }
@@ -122,23 +131,60 @@ function goUp() {
   position: absolute;
 }
 .big-thing {
-  top: -17rem;
-  left: 5rem;
-  width: 43rem;
+  top: -20%;
+  left: 0;
+  width: 35vw; 
 }
 .small-skrew {
-  top: 6rem;
-  left: 54rem;
-  width: 20rem;
+  top: 3%;
+  left: 35%;
+  width: 15vw;
 }
 .mid-skrew {
-  top: 6rem;
-  left: 75rem;
-  width: 24rem;
+  top: 7%;
+  right: 30%;
+  width: 18vw;
 }
 .big-skrew {
-  top: -8rem;
-  right: 13rem;
-  width: 40rem;
+  top: -15%;
+  right: 0;
+  width: 35vw;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .idk {
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logo {
+    height: 7rem;
+  }
+  .big-thing {
+    top: -13%;
+    left: 0rem;
+    width: 20rem;
+  }
+  .small-skrew {
+    top: -6rem;
+    left: 23rem;
+    width: 15rem;
+  }
+  .mid-skrew {
+    top: 4%;
+    left: 48%;
+    width: 15rem;
+  }
+  .big-skrew {
+    top: -15rem;
+    right: -10rem;
+    width: 33rem;
+  }
 }
 </style>

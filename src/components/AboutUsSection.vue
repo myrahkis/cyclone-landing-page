@@ -54,9 +54,9 @@
   flex-direction: column;
   gap: 2.5rem;
 }
-.text {
+/* .text {
   font-size: 2.05rem;
-}
+} */
 .skrew-big {
   position: absolute;
   top: 0;
