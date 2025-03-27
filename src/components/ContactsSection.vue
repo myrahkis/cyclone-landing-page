@@ -22,7 +22,7 @@ function closeModal() {
       <div class="contacts-info">
         <div>
           <div>
-            <h3>+7 495 641-55-66</h3>
+            <p class="phone">+7 495 641-55-66</p>
             <p>info@ot24.pro</p>
           </div>
           <div>
@@ -101,7 +101,7 @@ function closeModal() {
   grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: clamp(1rem, 3vw, 4rem);
   width: 100%;
   border: 3px solid white;
   border-radius: 1.9rem;
@@ -116,6 +116,11 @@ function closeModal() {
   grid-column: 2 / -1;
   height: fit-content;
   width: 100%;
+}
+.phone {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 /* .map-group {
   display: flex;

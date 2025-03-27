@@ -49,6 +49,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   height: 130vh;
   padding: 3.5rem;
   padding-top: 15rem;
+  padding-bottom: 15rem;
   color: var(--white-color);
 }
 .hero-section::before {
@@ -136,9 +137,9 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 
 /* (768px–1023px) */
 @media (max-width: 1023px) {
-  .hero-section {
+  /* .hero-section {
     height: 155vh;
-  }
+  } */
   .clear-img {
     display: none;
   }
@@ -165,6 +166,11 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   }
   .text {
     width: 100%;
+  }
+}
+@media (min-width: 930px) and (max-width: 1023px) {
+  .hero-section {
+    height: 160vh;
   }
 }
 
@@ -227,7 +233,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 }
 @media (max-width: 406px) {
   .hero-section {
-    height: 110vh;
+    height: 105vh;
   }
   h1 {
     font-size: 2.9rem;
@@ -242,7 +248,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 }
 @media (max-width: 399px) {
   .hero-section {
-    height: 113vh;
+    height: 105vh;
   }
   h1 {
     font-size: 2.9rem;
@@ -255,9 +261,19 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
     padding-bottom: 63%;
   }
 }
+
+@media (min-width: 373px) and (max-width: 380px) {
+  .hero-section {
+    height: 115vh;
+  }
+  .clear-img-mobile {
+    bottom: 2.5%;
+  }
+}
+
 @media (max-width: 376px) {
   .hero-section {
-    height: 120vh;
+    height: 115vh;
   }
 }
 @media (max-width: 330px) {

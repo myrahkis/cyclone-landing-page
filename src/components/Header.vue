@@ -137,11 +137,11 @@ function toggleMenu() {
   transition: all 0.3s;
 
   &:hover {
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
   }
 }
 .menu-btn.open {
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 /* (1024px–1279px) */

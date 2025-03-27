@@ -190,4 +190,11 @@ const { iconWidth } = defineProps({
     }
   }
 }
+@media (max-width: 394px) {
+  .social {
+    svg {
+      width: 2.5rem !important;
+    }
+  }
+}
 </style>
