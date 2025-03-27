@@ -1,8 +1,11 @@
 <script setup>
+import { ref } from 'vue'
 import ToShopBtn from '@/ui/ToShopBtn.vue'
 import SocialsIcons from './SocialsIcons.vue'
 
 const { useOpenMenu } = defineProps({ useOpenMenu: { type: Function } })
+
+const headerRef = ref(null)
 
 function toggleMenu() {
   const menu = document.querySelector('.menu-btn')
@@ -15,13 +18,11 @@ function toggleMenu() {
 //   fontSize: { type: String, required: true },
 // })
 
-// import { onMounted, onUnmounted, ref } from 'vue'
 
-// const headerRef = ref(null)
 
-// defineExpose({
-//   offsetHeight: headerRef,
-// })
+defineExpose({
+  offsetHeight: headerRef,
+})
 </script>
 
 <template>
