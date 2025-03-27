@@ -17,7 +17,7 @@
   &:link,
   &:visited {
     text-decoration: none;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
     font-weight: 600;
     color: white;
     border: 2px solid white;
@@ -29,6 +29,15 @@
     border: 2px solid var(--brand-blue-color);
     background-color: var(--brand-blue-color);
     color: black;
+  }
+}
+
+@media (max-width: 480px) {
+  .to-shop-btn {
+    &:link,
+    &:visited {
+      padding: 1rem;
+    }
   }
 }
 </style>

@@ -225,9 +225,39 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
     bottom: 2.5%;
   }
 }
-@media (min-width: 320px) and (max-width: 406px) {
+@media (max-width: 406px) {
   .hero-section {
     height: 105vh;
+  }
+  h1 {
+    font-size: 2.9rem;
+  }
+  .text {
+    font-size: 2rem;
+  }
+  .clear-img-mobile {
+    bottom: 1%;
+    padding-bottom: 63%;
+  }
+}
+@media (max-width: 399px) {
+  .hero-section {
+    height: 113vh;
+  }
+  h1 {
+    font-size: 2.9rem;
+  }
+  .text {
+    font-size: 2rem;
+  }
+  .clear-img-mobile {
+    bottom: 1%;
+    padding-bottom: 63%;
+  }
+}
+@media (max-width: 346px) {
+  .hero-section {
+    height: 120vh;
   }
   h1 {
     font-size: 2.9rem;

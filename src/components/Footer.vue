@@ -1,7 +1,7 @@
 <script setup>
 import BtnsLinksList from '@/ui/BtnsLinksList.vue'
 import SocialsIcons from './SocialsIcons.vue'
-import ToShopBtn from '@/ui/ToShopBtn.vue';
+import ToShopBtn from '@/ui/ToShopBtn.vue'
 
 function goUp() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -76,7 +76,7 @@ function goUp() {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  flex-grow: 1;
   gap: 3.5rem;
 }
 
@@ -87,14 +87,14 @@ function goUp() {
 }
 .idk {
   display: flex;
-  gap: 8rem;
+  gap: clamp(2rem, 5vw, 8rem);
 }
 .logo {
   height: 11.5rem;
 }
 .data-text {
   /* font-size: 1.5rem; */
-  line-height: 3rem;
+  line-height: clamp(2rem, 3vw, 3rem);
   color: var(--gray-color);
 }
 .right-side {
@@ -109,8 +109,9 @@ function goUp() {
 }
 .credits {
   display: flex;
+  justify-content: space-between;
   gap: 1.5rem;
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
   color: var(--gray-color);
 }
 
@@ -133,7 +134,7 @@ function goUp() {
 .big-thing {
   top: -20%;
   left: 0;
-  width: 35vw; 
+  width: 35vw;
 }
 .small-skrew {
   top: 3%;
@@ -185,6 +186,14 @@ function goUp() {
     top: -15rem;
     right: -10rem;
     width: 33rem;
+  }
+}
+@media (max-width: 480px) {
+  .logo {
+    height: 6rem;
+  }
+  .credits {
+    flex-direction: column-reverse;
   }
 }
 </style>
