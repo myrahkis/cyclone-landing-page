@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="container" @click.stop>
+  <div class="modal-container" @click.stop>
     <h3 class="heading">Политика обработки персональных данных</h3>
     <p class="text">
       Настоящая Политика в отношении обработки и защиты персональных данных (далее – «Политика»)
@@ -207,7 +207,7 @@
 </template>
 
 <style scoped>
-.container {
+.modal-container {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -230,5 +230,19 @@
 }
 .text {
   font-size: 1.4rem;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .modal-container {
+    width: 38rem;
+  }
+}
+/* (480px–767px) */
+@media (max-width: 500px) {
+  .modal-container {
+    height: 80vh;
+    width: 33rem;
+  }
 }
 </style>

@@ -1,14 +1,36 @@
 <script setup>
-import BtnsLinksList from '@/ui/BtnsLinksList.vue'
 import SocialsIcons from './SocialsIcons.vue'
 import ToShopBtn from '@/ui/ToShopBtn.vue'
+import BgBlurModal from '@/ui/BgBlurModal.vue'
+import PublicOfferAgrModal from './PublicOfferAgrModal.vue'
+import { ref } from 'vue'
+import DataProcessingPolicyModal from './DataProcessingPolicyModal.vue'
+
+const isPublicOfferAgrModalOpen = ref(false)
+const isDataProcessingPolicyModalOpen = ref(false)
 
 function goUp() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
+
+function closePublicOfferAgrModal() {
+  return (isPublicOfferAgrModalOpen.value = false)
+}
+function closeDataProcessingPolicyModal() {
+  return (isDataProcessingPolicyModalOpen.value = false)
+}
 </script>
 
 <template>
+  <BgBlurModal :closeModal="closePublicOfferAgrModal" v-if="isPublicOfferAgrModalOpen">
+    <PublicOfferAgrModal />
+  </BgBlurModal>
+  <BgBlurModal
+    :closeModal="closeDataProcessingPolicyModal"
+    v-else-if="isDataProcessingPolicyModalOpen"
+  >
+    <DataProcessingPolicyModal />
+  </BgBlurModal>
   <footer class="footer">
     <img src="/footerIdk.png" alt="" class="bg-pic big-thing" />
     <img src="/15.png" alt="" class="bg-pic small-skrew" />
@@ -39,8 +61,20 @@ function goUp() {
         </div>
         <div class="credits">
           <p>© 2025 «ИнойИнструмент»</p>
-          <p>Политика обработки персональных данных</p>
-          <p>Пользовательское соглашение</p>
+          <p>
+            <a
+              class="credits-btn"
+              href=""
+              type="button"
+              @click.prevent="isDataProcessingPolicyModalOpen = true"
+              >Политика обработки персональных данных</a
+            >
+          </p>
+          <p>
+            <a class="credits-btn" href="" @click.prevent="isPublicOfferAgrModalOpen = true"
+              >Пользовательское соглашение</a
+            >
+          </p>
         </div>
       </div>
     </div>
@@ -150,6 +184,18 @@ function goUp() {
   top: -15%;
   right: 0;
   width: 35vw;
+}
+
+.credits-btn {
+  &:link,
+  &:visited {
+    color: var(--gray-color);
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* (480px–767px) */

@@ -14,7 +14,7 @@ function closeDataProcessingPolicyModal() {
   <BgBlurModal :closeModal="closeDataProcessingPolicyModal" v-if="isDataProcessingPolicyModalOpen">
     <DataProcessingPolicyModal />
   </BgBlurModal>
-  <div class="container" @click.stop>
+  <div class="modal-container" @click.stop>
     <h3 class="heading">Согласие на обработку персональных данных</h3>
     <p class="text">
       Я, Пользователь сайта (субъект персональных данных), оставляя заявку (информацию) на настоящем
@@ -70,26 +70,25 @@ function closeDataProcessingPolicyModal() {
 </template>
 
 <style scoped>
-.container {
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  width: 42rem;
-  height: 90vh;
-  gap: 1.5rem;
-  text-align: justify;
-  padding: 2rem;
-  border-radius: 2rem;
-
-  scrollbar-width: thin;
-}
-
 .heading {
   font-size: 2.4rem;
   margin-bottom: 0;
 }
 .text {
   font-size: 1.4rem;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .modal-container {
+    width: 38rem;
+  }
+}
+/* (480px–767px) */
+@media (max-width: 500px) {
+  .modal-container {
+    height: 80vh;
+    width: 33rem;
+  }
 }
 </style>
