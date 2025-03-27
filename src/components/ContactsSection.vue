@@ -198,5 +198,13 @@ function closeModal() {
     order: 3;
     height: 50vh;
   }
+  .white-border-btn {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .white-border-btn {
+    font-size: 1.5rem;
+  }
 }
 </style>

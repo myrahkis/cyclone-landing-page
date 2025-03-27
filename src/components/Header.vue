@@ -4,6 +4,12 @@ import SocialsIcons from './SocialsIcons.vue'
 
 const { useOpenMenu } = defineProps({ useOpenMenu: { type: Function } })
 
+function toggleMenu() {
+  const menu = document.querySelector('.menu-btn')
+  menu.classList.toggle('open')
+  useOpenMenu()
+}
+
 // const { width, fontSize } = defineProps({
 //   width: { type: String, required: true },
 //   fontSize: { type: String, required: true },
@@ -33,9 +39,11 @@ const { useOpenMenu } = defineProps({ useOpenMenu: { type: Function } })
       <!-- <BtnsLinksList width="60%" font-size="1.8rem" /> -->
       <div class="contacts-wrapper">
         <div class="contacts">
-          <p>+7 495 641-55-66</p>
-          <p>example@othertool.pro</p>
-          <p>Пн-Пт: 09:00 – 19:00, Сб: 10:00 – 18:00, Вс — выходной</p>
+          <div class="phone-email-wrapper">
+            <p class="phone">+7 495 641-55-66</p>
+            <p class="email">Info@othertool.ru</p>
+          </div>
+          <p class="working-hours">Пн-Пт: 09:00 – 19:00, Сб: 10:00 – 18:00, Вс — выходной</p>
         </div>
         <div class="btns-wrapper">
           <ToShopBtn />
@@ -53,7 +61,7 @@ const { useOpenMenu } = defineProps({ useOpenMenu: { type: Function } })
           </p>
         </div>
       </a>
-      <button class="menu-btn" @click="useOpenMenu">
+      <button class="menu-btn" @click="toggleMenu">
         <img src="/menu.png" alt="menu" />
       </button>
     </div>
@@ -90,10 +98,10 @@ const { useOpenMenu } = defineProps({ useOpenMenu: { type: Function } })
   gap: 1.2rem;
 }
 .logo {
-  width: 10.2rem;
+  width: clamp(8rem, 10vw, 15rem);
 }
 .logo-text {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
 }
 .logo-link {
   &:visited,
@@ -125,15 +133,64 @@ const { useOpenMenu } = defineProps({ useOpenMenu: { type: Function } })
   padding: 0 1.7rem;
   border: none;
   border-radius: 1.5rem;
+  transform: rotate(0deg);
   transition: all 0.3s;
 
   &:hover {
     transform: rotate(-90deg);
   }
 }
+.menu-btn.open {
+  transform: rotate(-90deg);
+}
 
-/* **Мобильные устройства (до 767px)** */
+/* (1024px–1279px) */
+@media (max-width: 1279px) {
+  .contacts-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btns-wrapper {
+    flex-direction: column-reverse;
+    align-items: end;
+    gap: 0.5rem;
+  }
+  .working-hours {
+    font-size: 1.4rem;
+  }
+  .phone-email-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .phone {
+    font-size: 2.3rem;
+  }
+  /* .email {
+    font-size: 1.8rem;
+  } */
+}
+
+/* (до 767px)  */
 @media (max-width: 767px) {
+  .header-desktop {
+    display: none;
+  }
+  .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
   .header-desktop {
     display: none;
   }

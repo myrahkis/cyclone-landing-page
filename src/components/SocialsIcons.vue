@@ -125,7 +125,7 @@ const { iconWidth } = defineProps({
 <style scoped>
 .socials {
   display: flex;
-  gap: 2rem;
+  gap: clamp(1rem, 2vw, 3rem);
 }
 .social {
   cursor: pointer;
@@ -159,6 +159,19 @@ const { iconWidth } = defineProps({
 .youtube {
   &:hover svg {
     color: #ff0000;
+  }
+}
+
+/* (1024px–1279px) */
+@media (max-width: 1279px) {
+  .socials {
+    display: flex;
+    gap: clamp(0.8rem, 2vw, 1.5rem);
+  }
+  .social {
+    svg {
+      width: 3.3rem !important;
+    }
   }
 }
 

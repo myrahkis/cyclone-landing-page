@@ -227,7 +227,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 }
 @media (max-width: 406px) {
   .hero-section {
-    height: 105vh;
+    height: 110vh;
   }
   h1 {
     font-size: 2.9rem;
@@ -255,19 +255,14 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
     padding-bottom: 63%;
   }
 }
-@media (max-width: 346px) {
+@media (max-width: 376px) {
   .hero-section {
     height: 120vh;
   }
-  h1 {
-    font-size: 2.9rem;
-  }
-  .text {
-    font-size: 2rem;
-  }
-  .clear-img-mobile {
-    bottom: 1%;
-    padding-bottom: 63%;
+}
+@media (max-width: 330px) {
+  .hero-section {
+    height: 128vh;
   }
 }
 </style>

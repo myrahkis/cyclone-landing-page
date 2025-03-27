@@ -233,6 +233,11 @@ function closeDataProcessingPolicyModal() {
     right: -10rem;
     width: 33rem;
   }
+
+  .up-btn {
+    font-size: 1.8rem;
+    padding: 1.5rem 4rem;
+  }
 }
 @media (max-width: 480px) {
   .logo {
