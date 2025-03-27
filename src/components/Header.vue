@@ -136,12 +136,12 @@ function toggleMenu() {
   transform: rotate(0deg);
   transition: all 0.3s;
 
-  &:hover {
-    transform: rotate(90deg);
-  }
+  /* &:hover {
+    transform: rotate(-90deg);
+  } */
 }
 .menu-btn.open {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 
 /* (1024px–1279px) */
@@ -176,6 +176,20 @@ function toggleMenu() {
   /* .email {
     font-size: 1.8rem;
   } */
+}
+
+@media (max-aspect-ratio: 9/16) {
+  .hero-section {
+    height: clamp(105vh, 120vh, 130vh);
+  }
+}
+
+@media (min-aspect-ratio: 9/16) and (max-aspect-ratio: 10/16) {
+  .hero-section {
+    height: clamp(110vh, 125vh, 135vh);
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
 }
 
 /* (до 767px)  */
