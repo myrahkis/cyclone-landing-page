@@ -121,8 +121,23 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   padding: 2rem;
 }
 
-/* (1280px–1439px) */
-@media (max-width: 1439px) {
+@media (min-width: 1600px) {
+  .hero-section {
+    height: 140vh;
+    padding-top: 20rem;
+  }
+}
+@media (min-width: 1800px) {
+  .hero-section {
+    height: 125vh;
+    padding-top: 20rem;
+  }
+}
+@media (min-width: 2200px) {
+  .hero-section {
+    height: 125vh;
+    padding-top: 25rem;
+  }
 }
 
 /* (1024px–1279px) */
