@@ -271,30 +271,32 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   }
 }
 
-
 @media (max-height: 1081px) and (max-width: 811px) {
   .hero-section {
     min-height: 90vh;
   }
 }
-@media (max-height: 927px) and (max-width: 429px) {
-  .hero-section {
-    min-height: 80vh;
+
+@supports not (-webkit-touch-callout: none) {
+  @media (max-height: 927px) and (max-width: 429px) {
+    .hero-section {
+      min-height: 80vh;
+    }
   }
-}
-@media (max-height: 813px) and (max-width: 376px) {
-  .hero-section {
-    min-height: 92vh;
+  @media (max-height: 813px) and (max-width: 376px) {
+    .hero-section {
+      min-height: 92vh;
+    }
   }
-}
-@media (max-height: 668px) and (max-width: 376px) {
-  .hero-section {
-    min-height: 112vh;
+  @media (max-height: 668px) and (max-width: 376px) {
+    .hero-section {
+      min-height: 112vh;
+    }
   }
-}
-@media (max-height: 761px) and (max-width: 360px) {
-  .hero-section {
-    min-height: 97vh;
+  @media (max-height: 761px) and (max-width: 360px) {
+    .hero-section {
+      min-height: 97vh;
+    }
   }
 }
 </style>
