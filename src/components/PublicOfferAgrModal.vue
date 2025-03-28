@@ -122,6 +122,20 @@
 </template>
 
 <style scoped>
+.modal-container {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 42rem;
+  height: 90vh;
+  gap: 1.3rem;
+  text-align: justify;
+  padding: 2rem;
+  border-radius: 2rem;
+
+  scrollbar-width: thin;
+}
 .heading {
   font-size: 2.4rem;
   margin-bottom: 0;
