@@ -20,23 +20,25 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
       Циклонные фильтры <br />
       Циклонные системы двойной фильтрации
     </h1>
-    <h3 class="text">
-      Чистота на всех уровнях — <br />
-      двойная защита для вашего оборудования!
-    </h3>
-    <div class="texts">
-      <p>
-        Циклонный фильтр может работать абсолютно с любым пылесосом - строительным, бытовым,
-        промышленным.
-      </p>
-      <p>
-        Кроме того... циклонный фильтр — может собирать в ёмкость влажные отходы или даже воду, но
-        пылесос в данном случае должен иметь функцию влажной уборки или иметь статус моющего.
-      </p>
+    <div class="hero-wrapper">
+      <div class="texts">
+        <h3 class="text">
+          Чистота на всех уровнях — <br />
+          двойная защита для вашего оборудования!
+        </h3>
+        <p>
+          Циклонный фильтр может работать абсолютно с любым пылесосом - строительным, бытовым,
+          промышленным.
+        </p>
+        <p>
+          Кроме того... циклонный фильтр — может собирать в ёмкость влажные отходы или даже воду, но
+          пылесос в данном случае должен иметь функцию влажной уборки или иметь статус моющего.
+        </p>
+      </div>
+      <div class="clear-img"></div>
+      <div class="clear-img-mobile"></div>
     </div>
     <!-- <button class="order-btn">Заказать</button> -->
-    <div class="clear-img"></div>
-    <div class="clear-img-mobile"></div>
   </section>
 </template>
 
@@ -59,7 +61,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   background: var(--bg-url);
   /* background-position: center; */
   background-position: center bottom 0;
-  background-size: 75%;
+  background-size: 70%;
   /* background-size: 80% 100%; */
   background-repeat: no-repeat;
   filter: blur(4px);
@@ -74,20 +76,16 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 }
 .clear-img {
   position: absolute;
-  /* display: inline-block; */
-  bottom: 5.2%;
-  /* bottom: 5rem; */
+  bottom: 0;
   right: 6%;
-  /* right: 10rem; */
   width: 45%;
-  /* width: 68rem; */
   z-index: 1;
   height: auto;
   padding-bottom: 35.5%;
   /* height: 74vh; */
   background: var(--bg-clear-url);
-  background-position: left 0 bottom -1rem;
-  background-size: 86%;
+  background-position: left 0 bottom 0;
+  background-size: 84%;
   background-repeat: no-repeat;
   border: 3px solid white;
   border-radius: 4.5rem;
@@ -96,7 +94,15 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   display: none;
   background: var(--bg-clear-mob-url);
 }
+.hero-wrapper {
+  position: relative;
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+  flex-grow: 1;
+}
 .texts {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,10 +110,11 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   margin-top: 2rem;
   font-size: 3.5rem;
   width: 40%;
+  height: fit-content;
 }
 .text {
   font-size: 3.5rem;
-  width: 45%;
+  /* width: 45%; */
 }
 .order-btn {
   margin-top: auto;
@@ -124,13 +131,11 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 @media (min-width: 1600px) {
   .hero-section {
     min-height: 110vh;
-    /* padding-top: 20rem; */
   }
 }
 @media (min-width: 1800px) {
   .hero-section {
     min-height: 115vh;
-    /* padding-top: 20rem; */
   }
 }
 @media (min-width: 2200px) {
@@ -149,19 +154,16 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 
 /* (1024px–1279px) */
 @media (max-width: 1279px) {
+  .clear-img {
+    background-size: 85%;
+  }
   .text {
     width: 100%;
-  }
-  .clear-img {
-    bottom: 4%;
   }
 }
 
 /* (768px–1023px) */
 @media (max-width: 1023px) {
-  .hero-section {
-    min-height: 140vh;
-  }
   .clear-img {
     display: none;
   }
@@ -169,12 +171,12 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
     position: absolute;
     display: block;
     left: 50%;
-    bottom: 8%;
-    width: 72%;
+    bottom: -1%;
+    width: 76.5%;
     transform: translate(-50%);
     z-index: 1;
     height: auto;
-    padding-bottom: 40%;
+    padding-bottom: 50%;
     background: var(--bg-clear-mob-url);
     background-position: center;
     background-size: 100%;
@@ -184,42 +186,25 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   }
   .texts {
     width: 100%;
-    /* flex-direction: row; */
+    margin-bottom: 55%;
   }
   .text {
     width: 100%;
-  }
-}
-@media (min-width: 930px) and (max-width: 1023px) {
-}
-
-@media (min-width: 858px) and (max-width: 930px) {
-  .clear-img-mobile {
-    bottom: 7.5%;
-  }
-}
-@media (min-width: 767px) and (max-width: 858px) {
-  .hero-section {
-    min-height: 130vh;
-  }
-  .clear-img-mobile {
-    bottom: 7%;
   }
 }
 
 /* (480px–767px) */
 @media (max-width: 767px) {
-  .hero-section {
-    min-height: 105vh;
-  }
-  .texts,
-  .text {
-    width: 100%;
+  .clear-img-mobile {
+    width: 78.5%;
   }
   .texts {
+    width: 100%;
+    margin-bottom: 55%;
     gap: 1rem;
   }
   .text {
+    width: 100%;
     font-size: 2.3rem;
   }
 }
@@ -232,71 +217,23 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
     background-size: 90%;
   }
   .clear-img-mobile {
-    bottom: 3%;
-    width: 90%;
-    padding-bottom: 58%;
+    background-size: 105%;
+    width: 100%;
+    padding-bottom: 65%;
+  }
+  .texts {
+    margin-bottom: 73%;
   }
 }
 
-@media (min-width: 406px) and (max-width: 510px) {
-  .hero-section {
-    min-height: 95vh;
+@media (max-width: 448px) {
+  .texts {
+    margin-bottom: 80%;
   }
   .clear-img-mobile {
-    bottom: 2.5%;
-  }
-}
-@media (max-width: 408px) {
-  .hero-section {
-    min-height: 90vh;
-  }
-  h1 {
-    font-size: 2.9rem;
-  }
-  .text {
-    font-size: 2rem;
-  }
-  .clear-img-mobile {
-    bottom: 1%;
-    padding-bottom: 63%;
-  }
-}
-
-@media (max-width: 399px) {
-  .hero-section {
-    min-height: 100vh;
-  }
-  .clear-img-mobile {
-    bottom: 2.5%;
-  }
-}
-
-@media (max-height: 1081px) and (max-width: 811px) {
-  .hero-section {
-    min-height: 90vh;
-  }
-}
-
-@supports not (-webkit-touch-callout: none) {
-  @media (max-height: 927px) and (max-width: 429px) {
-    .hero-section {
-      min-height: 80vh;
-    }
-  }
-  @media (max-height: 813px) and (max-width: 376px) {
-    .hero-section {
-      min-height: 92vh;
-    }
-  }
-  @media (max-height: 668px) and (max-width: 376px) {
-    .hero-section {
-      min-height: 112vh;
-    }
-  }
-  @media (max-height: 761px) and (max-width: 360px) {
-    .hero-section {
-      min-height: 97vh;
-    }
+    background-size: 104%;
+    width: 105%;
+    padding-bottom: 65%;
   }
 }
 </style>
