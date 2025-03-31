@@ -97,7 +97,6 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 .hero-wrapper {
   position: relative;
   display: flex;
-  /* justify-content: space-between; */
   width: 100%;
   flex-grow: 1;
 }
@@ -154,6 +153,9 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 
 /* (1024px–1279px) */
 @media (max-width: 1279px) {
+  .hero-section {
+    min-height: 100vh;
+  }
   .clear-img {
     background-size: 85%;
   }
@@ -234,6 +236,32 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
     background-size: 104%;
     width: 105%;
     padding-bottom: 65%;
+  }
+}
+
+@supports not (-webkit-touch-callout: none) {
+  @media (max-height: 927px) and (max-width: 429px) {
+    .hero-section {
+      min-height: 80vh;
+    }
+  }
+
+  @media (max-height: 813px) and (max-width: 376px) {
+    .hero-section {
+      min-height: 92vh;
+    }
+  }
+
+  @media (max-height: 668px) and (max-width: 376px) {
+    .hero-section {
+      min-height: 112vh;
+    }
+  }
+
+  @media (max-height: 761px) and (max-width: 360px) {
+    .hero-section {
+      min-height: 97vh;
+    }
   }
 }
 </style>
