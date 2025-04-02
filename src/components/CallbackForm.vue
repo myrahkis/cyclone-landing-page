@@ -1,35 +1,38 @@
 <script setup>
 import axios from 'axios'
-import { ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import PersonalDataProcessingModal from './PersonalDataProcessingModal.vue'
 import BgBlurModal from '@/ui/BgBlurModal.vue'
 import PublicOfferAgrModal from './PublicOfferAgrModal.vue'
+import IMask from 'imask'
 
 const { isModalOpen } = defineProps({ isModalOpen: { type: Function, required: true } })
 
 const validationError = ref('')
 const isPersDataModalOpen = ref(false)
 const isPublicOfferAgrModalOpen = ref(false)
+const formInputRef = ref(null)
+const maskInstance = ref(null)
 
 const formData = ref({
   name: '',
   telephone: '',
 })
 
-const validatePhone = () => {
-  if (!/^\d{10,15}$/.test(formData.value.telephone)) {
-    validationError.value = 'Введите корректный номер (10-15 цифр)'
-    return false
-  } else {
-    validationError.value = ''
-    return true
-  }
-}
+// const validatePhone = () => {
+//   if (!/^\d{10,15}$/.test(formData.value.telephone)) {
+//     validationError.value = 'Введите корректный номер (10-15 цифр)'
+//     return false
+//   } else {
+//     validationError.value = ''
+//     return true
+//   }
+// }
 
 async function submitHandle() {
-  if (!validatePhone()) return
-
+  // if (!validatePhone()) return
   try {
+    // console.log(formData)
     await axios.post('http://localhost:3000/send-mail', formData.value)
     alert('Сообщение отправлено!')
   } catch (error) {
@@ -43,6 +46,29 @@ function closePersDataModal() {
 function closePublicOfferAgrModal() {
   return (isPublicOfferAgrModalOpen.value = false)
 }
+
+const handlePhoneInput = (event) => {
+  formData.value.telephone = event.target.value.replace(/\D/g, '')
+}
+
+onMounted(() => {
+  if (formInputRef.value) {
+    maskInstance.value = IMask(formInputRef.value, {
+      mask: '+{7} (000) 000-00-00',
+      lazy: true,
+    })
+
+    maskInstance.value.on('accept', () => {
+      formData.value.telephone = maskInstance.value.value
+    })
+  }
+})
+onBeforeUnmount(() => {
+  if (maskInstance.value) {
+    maskInstance.value.destroy()
+    maskInstance.value = null
+  }
+})
 </script>
 
 <template>
@@ -64,11 +90,13 @@ function closePublicOfferAgrModal() {
       required
     />
     <input
-      v-model="formData.telephone"
+      @input="handlePhoneInput"
+      ref="formInputRef"
       class="input"
       type="tel"
       name="phone"
       placeholder="Номер телефона*"
+      maxlength="18"
       required
     />
     <p v-if="validationError" class="valid-error">{{ validationError }}</p>
