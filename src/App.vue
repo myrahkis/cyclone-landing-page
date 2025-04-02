@@ -38,9 +38,40 @@ onMounted(async () => {
 onUnmounted(() => {
   window.removeEventListener('resize', updatePadding)
 })
+
+function goUp() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+function handleScroll() {
+  const button = document.getElementById('goUpBtn')
+
+  if (window.scrollY > 1500) {
+    button.classList.add('show')
+  } else {
+    button.classList.remove('show')
+  }
+}
+
+window.addEventListener('scroll', handleScroll)
 </script>
 
 <template>
+  <button class="up-btn" id="goUpBtn" @click="goUp">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      width="3.5rem"
+      height="3.5rem"
+    >
+      <path
+        clip-rule="evenodd"
+        fill="white"
+        fill-rule="evenodd"
+        d="M 12 3 C 12.2652 3 12.5196 3.10536 12.7071 3.29289 L 19.7071 10.2929 C 20.0976 10.6834 20.0976 11.3166 19.7071 11.7071 C 19.3166 12.0976 18.6834 12.0976 18.2929 11.7071 L 13 6.41421 V 20 C 13 20.5523 12.5523 21 12 21 C 11.4477 21 11 20.5523 11 20 V 6.41421 L 5.70711 11.7071 C 5.31658 12.0976 4.68342 12.0976 4.29289 11.7071 C 3.90237 11.3166 3.90237 10.6834 4.29289 10.2929 L 11.2929 3.29289 C 11.4804 3.10536 11.7348 3 12 3 Z"
+      />
+    </svg>
+  </button>
   <Header ref="headerRef" :useOpenMenu="useOpenMenu" />
   <OpenedHeaderMobile v-if="openMenu" />
   <main ref="mainRef" v-else>
@@ -55,4 +86,26 @@ onUnmounted(() => {
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.up-btn {
+  /* display: none; */
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  z-index: 2;
+  font-size: 2.1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  color: white;
+  align-self: flex-end;
+  padding: 1.8rem 2.2rem;
+  border: 3px solid white;
+  border-radius: 1.9rem;
+
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.up-btn.show {
+  opacity: 1;
+}
+</style>

@@ -9,10 +9,6 @@ import DataProcessingPolicyModal from './DataProcessingPolicyModal.vue'
 const isPublicOfferAgrModalOpen = ref(false)
 const isDataProcessingPolicyModalOpen = ref(false)
 
-function goUp() {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
-
 function closePublicOfferAgrModal() {
   return (isPublicOfferAgrModalOpen.value = false)
 }
@@ -36,7 +32,6 @@ function closeDataProcessingPolicyModal() {
     <img src="/15.png" alt="" class="bg-pic small-skrew" />
     <img src="/14.png" alt="" class="bg-pic mid-skrew" />
     <img src="/13.png" alt="" class="bg-pic big-skrew" />
-    <button class="up-btn" @click="goUp">Наверх</button>
     <div class="container">
       <!-- <BtnsLinksList width="100%" fontSize="2rem" /> -->
       <div class="lower-footer">
@@ -52,8 +47,8 @@ function closeDataProcessingPolicyModal() {
           </div>
           <div class="right-side">
             <p class="contacts">
-              +7 495 641-55-66 <br />
-              info@ot24.pro
+              +7 495 641-55-67 <br />
+              info@othertool.ru
             </p>
             <ToShopBtn />
             <SocialsIcons iconWidth="3.8rem" />
@@ -147,19 +142,6 @@ function closeDataProcessingPolicyModal() {
   gap: 1.5rem;
   font-size: clamp(1.2rem, 1.5vw, 1.6rem);
   color: var(--gray-color);
-}
-
-.up-btn {
-  position: relative;
-  z-index: 2;
-  /* width: 10rem; */
-  font-size: 2.1rem;
-  background-color: transparent;
-  color: white;
-  align-self: flex-end;
-  padding: 2rem 6rem;
-  border: 3px solid white;
-  border-radius: 1.9rem;
 }
 
 .bg-pic {

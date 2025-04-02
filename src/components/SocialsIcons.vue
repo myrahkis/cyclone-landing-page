@@ -7,7 +7,7 @@ const { iconWidth } = defineProps({
 <template>
   <div class="socials">
     <a
-      href="https://wa.me/+74956415567?text=Здравствуйте! Хотел бы больше узнать о циклонных фильтрах Othertool OT-24!"
+      href="https://wa.me/+74956415567?text=Здравствуйте! Хотел бы больше узнать о циклонных фильтрах в магазине Иной Инструмент!"
       target="_blank"
     >
       <span class="social whatsup">

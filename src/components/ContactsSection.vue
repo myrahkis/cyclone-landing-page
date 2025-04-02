@@ -22,8 +22,8 @@ function closeModal() {
       <div class="contacts-info">
         <div>
           <div>
-            <p class="phone">+7 495 641-55-66</p>
-            <p>info@ot24.pro</p>
+            <p class="phone">+7 495 641-55-67</p>
+            <p>info@othertool.ru</p>
           </div>
           <div>
             <p>
@@ -49,7 +49,6 @@ function closeModal() {
         нам по любым вопросам — будь то консультация по выбору инструмента, детали заказа или
         техническая поддержка.
       </p>
-      <!-- <div class="map-group"> -->
       <div class="map">
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A251189b0d152a15f05ac87119644b8e58fe04752b0c72ff8a62ee92c3c7d9ff6&amp;source=constructor"
@@ -59,7 +58,6 @@ function closeModal() {
         ></iframe>
       </div>
     </div>
-    <!-- </div> -->
     <div class="btns-wrapper">
       <a
         class="white-border-btn"
@@ -91,11 +89,7 @@ function closeModal() {
   gap: 2rem;
   flex-grow: 1;
 }
-/* .container {
-  display: flex;
-  gap: 2rem;
-  flex-grow: 1;
-} */
+
 .contacts-info {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
@@ -122,12 +116,6 @@ function closeModal() {
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
-/* .map-group {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  width: 100%;
-} */
 .map {
   overflow: hidden;
   flex-grow: 1;

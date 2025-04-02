@@ -13,13 +13,6 @@ function toggleMenu() {
   useOpenMenu()
 }
 
-// const { width, fontSize } = defineProps({
-//   width: { type: String, required: true },
-//   fontSize: { type: String, required: true },
-// })
-
-
-
 defineExpose({
   offsetHeight: headerRef,
 })
@@ -41,8 +34,8 @@ defineExpose({
       <div class="contacts-wrapper">
         <div class="contacts">
           <div class="phone-email-wrapper">
-            <p class="phone">+7 495 641-55-66</p>
-            <p class="email">Info@othertool.ru</p>
+            <p class="phone">+7 495 641-55-67</p>
+            <p class="email"><a href="mailto:info@othertool.ru">info@othertool.ru</a></p>
           </div>
           <p class="working-hours">Пн-Пт: 09:00 – 19:00, Сб: 10:00 – 18:00, Вс — выходной</p>
         </div>
@@ -143,6 +136,15 @@ defineExpose({
 }
 .menu-btn.open {
   transform: rotate(-90deg);
+}
+.email {
+  a {
+    &:link,
+    &:visited {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 /* (1024px–1279px) */
