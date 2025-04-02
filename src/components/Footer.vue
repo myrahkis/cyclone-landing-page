@@ -32,7 +32,7 @@ function closeDataProcessingPolicyModal() {
     <img src="/15.png" alt="" class="bg-pic small-skrew" />
     <img src="/14.png" alt="" class="bg-pic mid-skrew" />
     <img src="/13.png" alt="" class="bg-pic big-skrew" />
-    <div class="container">
+    <div class="footer-container">
       <!-- <BtnsLinksList width="100%" fontSize="2rem" /> -->
       <div class="lower-footer">
         <div class="info-block">
@@ -89,7 +89,7 @@ function closeDataProcessingPolicyModal() {
   justify-content: end;
   gap: 2rem;
 }
-.container {
+.footer-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

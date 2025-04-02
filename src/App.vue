@@ -44,9 +44,21 @@ function goUp() {
 }
 function handleScroll() {
   const button = document.getElementById('goUpBtn')
+  const footer = document.querySelector('.footer-container')
+
+  const footerRect = footer.getBoundingClientRect()
+  const viewportHeight = window.innerHeight
+  // const buttonOffset = 20
 
   if (window.scrollY > 1500) {
     button.classList.add('show')
+
+    if (footerRect.top < viewportHeight) {
+      const overlap = viewportHeight - footerRect.top
+      button.style.transform = `translateY(-${overlap}px)`
+    } else {
+      button.style.transform = 'translateY(0)'
+    }
   } else {
     button.classList.remove('show')
   }
