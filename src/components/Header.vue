@@ -13,6 +13,10 @@ function toggleMenu() {
   useOpenMenu()
 }
 
+function goUp() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
 defineExpose({
   offsetHeight: headerRef,
 })
@@ -21,7 +25,7 @@ defineExpose({
 <template>
   <header class="header" ref="headerRef">
     <div class="header-desktop">
-      <a href="#home" class="logo-link">
+      <a href="#" class="logo-link" @click.prevent="goUp">
         <div class="logo-wrapper">
           <img src="/logo-color.png" alt="logo-color" class="logo" />
           <p class="logo-text">
