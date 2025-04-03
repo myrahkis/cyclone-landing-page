@@ -52,14 +52,16 @@ const rowStyle = computed(() => ({
 <style scoped>
 .floor-varient-section {
   position: relative;
-  height: 100vh;
+  display: flex;
+  min-height: 100vh;
   color: white;
   padding: 3.5rem;
 }
 .floor-varient-flex {
   display: flex;
   gap: 2rem;
-  height: 100%;
+  min-height: 100%;
+  flex-grow: 1;
 }
 .info-cell {
   display: flex;
@@ -67,7 +69,7 @@ const rowStyle = computed(() => ({
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-  height: 100%;
+  min-height: 100%;
   width: 50%;
   gap: 1.8rem;
 }
@@ -86,14 +88,13 @@ const rowStyle = computed(() => ({
 
 /* (480px–767px) */
 @media (max-width: 767px) {
-  .floor-varient-section {
-    height: auto;
-  }
   .floor-varient-flex {
     flex-direction: column !important;
+    flex-grow: 0;
   }
   .info-cell {
     width: 100%;
+    min-height: 0;
   }
 }
 </style>

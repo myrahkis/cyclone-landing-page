@@ -69,7 +69,7 @@ const gridStyle = computed(() => ({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr;
   gap: 2rem;
   width: 100%;
   height: 100%;
@@ -113,7 +113,7 @@ const gridStyle = computed(() => ({
   margin-left: 1rem;
 }
 
-@media (max-width: 1068px) {
+/* @media (max-width: 1068px) {
   .thrid-grid {
     grid-template-rows: 0.6fr 0.6fr;
   }
@@ -122,7 +122,7 @@ const gridStyle = computed(() => ({
   .thrid-grid {
     grid-template-rows: 0.7fr 0.7fr;
   }
-}
+} */
 
 /* (480px–767px) */
 @media (max-width: 767px) {

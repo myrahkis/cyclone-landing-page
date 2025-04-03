@@ -1,32 +1,33 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 
-const { pics } = defineProps({ pics: { type: Array, required: true } })
+const { pics } = defineProps({
+  pics: { type: Array, required: true, default: () => [] },
+})
 
-// const carouselRange = ref(null)
 const curIndex = ref(0)
+const direction = ref('slide-right')
 
 function nextSlide() {
+  direction.value = 'slide-left'
   curIndex.value = (curIndex.value + 1) % pics.length
 }
+
 function prevSlide() {
+  direction.value = 'slide-right'
   curIndex.value = (curIndex.value - 1 + pics.length) % pics.length
 }
-
-// onMounted(() => {
-//   carouselRange.value.style.setProperty('--slides', pics.length)
-// })
 </script>
 
 <template>
   <div class="carousel">
     <div class="carousel-container">
-      <div
-        class="carousel-range"
-        ref="carouselRange"
-        :style="{ transform: `translateX(-${curIndex * 100}%)` }"
-      >
-        <img v-for="pic in pics" :key="pic" :src="pic" :alt="pic" class="carousel-img" />
+      <div class="carousel-wrapper">
+        <transition :name="direction">
+          <div class="carousel-item" :key="curIndex">
+            <img :src="pics[curIndex]" alt="Фото карусели" class="carousel-image" />
+          </div>
+        </transition>
       </div>
     </div>
     <button class="carousel-btn prev" @click="prevSlide">❮</button>
@@ -37,30 +38,75 @@ function prevSlide() {
 <style scoped>
 .carousel {
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  overflow: hidden;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: relative;
   width: 100%;
   height: 100%;
 }
 
-.carousel-range {
-  display: flex;
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
+.carousel-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.carousel-img {
-  flex: 0 0 100%;
-  max-width: 100%;
-  max-height: 100%;
+.carousel-image {
+  height: 100%;
+  width: 100%;
   object-fit: contain;
   display: block;
 }
+
+/* движение влево */
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
+}
+
+.slide-left-enter-from {
+  transform: translate(150%, -50%);
+  opacity: 0;
+}
+.slide-left-leave-to {
+  transform: translate(-150%, -50%);
+  opacity: 0;
+}
+
+/* движение вправо */
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out;
+}
+
+.slide-right-enter-from {
+  transform: translate(-150%, -50%);
+  opacity: 0;
+}
+.slide-right-leave-to {
+  transform: translate(150%, -50%);
+  opacity: 0;
+}
+
 .carousel-btn {
   position: absolute;
   padding: 1.5rem 2rem;
@@ -71,26 +117,45 @@ function prevSlide() {
   backdrop-filter: blur(3px);
   border: none;
   border-radius: 2rem;
-  transform: translateY(0);
+  cursor: pointer;
   transition: all 0.2s;
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    transform: translateY(-3px);
-  }
-  &:active {
-    box-shadow: 0 0.15rem 0.3rem black;
-    transform: translateY(-1px);
-  }
 }
+
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.carousel-btn:active {
+  box-shadow: 0 0.15rem 0.3rem black;
+  transform: translateY(-1px);
+}
+
 .prev {
   top: 50%;
   left: 1rem;
   z-index: 2;
 }
+
 .next {
   top: 50%;
   right: 1rem;
   z-index: 2;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  .carousel-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>
