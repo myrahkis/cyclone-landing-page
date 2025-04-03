@@ -1,14 +1,17 @@
 <script setup>
 import { computed } from 'vue'
+import PhotoCarousel from './PhotoCarousel.vue'
 
-const { gradientDirection, equipments1, equipments2, text1, text2, layoutVariant } = defineProps({
-  gradientDirection: { type: String, required: true },
-  equipments1: { type: Object, default: () => ({}) },
-  equipments2: { type: Object, default: () => ({}) },
-  text1: { type: String },
-  text2: { type: String },
-  layoutVariant: { type: String, required: true },
-})
+const { pics, gradientDirection, equipments1, equipments2, text1, text2, layoutVariant } =
+  defineProps({
+    pics: { type: Array },
+    gradientDirection: { type: String, required: true },
+    equipments1: { type: Object, default: () => ({}) },
+    equipments2: { type: Object, default: () => ({}) },
+    text1: { type: String },
+    text2: { type: String },
+    layoutVariant: { type: String, required: true },
+  })
 
 const gradientStyle = computed(() => ({
   background: `linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4))`,
@@ -38,7 +41,8 @@ const gridStyle = computed(() => ({
         <img src="/desc-filter-img.png" alt="" class="img" />
       </div>
       <div class="grid-cell img-cell-2" :style="{ gridColumn: photoPos2 }">
-        <img src="/full-height.png" alt="" class="img" />
+        <PhotoCarousel :pics="pics" />
+        <!-- <img src="/full-height.png" alt="" class="img" /> -->
       </div>
       <div class="grid-cell text-cell-2">
         <h3 v-if="equipments1.header">
@@ -65,18 +69,18 @@ const gridStyle = computed(() => ({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: 0.5fr 0.5fr;
   gap: 2rem;
-  min-width: 100%;
+  width: 100%;
   height: 100%;
 }
 .grid-cell {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-  min-height: 0;
+  /* min-height: 0; */
 
   /* &:last-child,
   &:first-child {
@@ -107,6 +111,17 @@ const gridStyle = computed(() => ({
   flex-direction: column;
   font-size: 1.5rem;
   margin-left: 1rem;
+}
+
+@media (max-width: 1068px) {
+  .thrid-grid {
+    grid-template-rows: 0.6fr 0.6fr;
+  }
+}
+@media (max-width: 946px) {
+  .thrid-grid {
+    grid-template-rows: 0.7fr 0.7fr;
+  }
 }
 
 /* (480px–767px) */

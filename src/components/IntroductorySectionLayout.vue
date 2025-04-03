@@ -1,8 +1,9 @@
 <script setup>
-import DescriptionSection from './DescriptionSection.vue'
+import HowFilterWorksSection from './HowFilterWorksSection.vue'
 import HeroSection from './HeroSection.vue'
 import OperationPrinciple from './OperationPrinciple.vue'
 import TwoLongCellsLayout from './TwoLongCellsLayout.vue'
+import TwoColumnsLayout from './TwoColumnsLayout.vue'
 
 const equipments1 = {
   header: 'Циклонный фильтр с двойной фильтрацией',
@@ -28,13 +29,49 @@ const equipments2 = {
     'Крепёжный болт, гайка, шайба - 4шт',
   ],
 }
+
+const filterTexts = [
+  'Циклонный фильтр с двухступенчатой системой фильтрации очищает проходимый через него воздух до 99%. Крупная и средняя фракция отсеивается через фильтр SN50N3, а мелкодисперционная пыль оседает в колбе второй ступени фильтрации.',
+  'Данная система способна скидывать в ёмкость даже самую мелкодисперсионную пыль - мука, пыль после зашкуривания шпаклёвки или дерева и т.п. А то, небольшое количество мелкодисперсионной пыли, которое при работе обычного циклона, попадало в пылесос, в данной системе попадает в колбу второй ступени фильтрации.',
+]
+
+const howFilterWorksTexts = [
+  'Циклонный фильтр для пылесоса SN50ТЗ с одной ступенью очистки экономит ваши деньги, не позволяя попадать крупным и средним частицам фракции попадать в пылесос. Загрязненныйпоток сначала вместе с воздухом попадает в систему, а позже при помощи центробежной силы отделяет загрязненный поток от воздуха. Благодаря вращению различные крупные частицы (пыль, песок, стружка и т.д.) не попадают в ваше устройство, а скапливается в специальные сосуд, например, в металлическую бочку.',
+]
+
+const cyclone_SN50T3F_slides = [
+  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-1.png`,
+  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-2.png`,
+  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-3.png`,
+  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-4.png`,
+]
+
+const nozzleSlides = [
+  `${import.meta.env.BASE_URL}/Nozzle/nozzle1.png`,
+  `${import.meta.env.BASE_URL}/Nozzle/nozzle2.png`,
+]
 </script>
 
 <template>
   <HeroSection :mainRef="mainRef" />
-  <DescriptionSection />
-  <OperationPrinciple />
+  <HowFilterWorksSection
+    :showHeader="true"
+    heading="Циклонный фильтр для пылесоса SN50T3"
+    topText="Циклонный фильтр для пылесоса SN50T3 позволяет отделять влажные и сухие частицы пыли до
+          97%, что снижает загрязнение фильтра и мешка пылесоса, тем самым продлевая их срок службы.
+          При этом фильтр пылесоса практически не забивается."
+    :bottomText="howFilterWorksTexts"
+  />
+  <TwoColumnsLayout
+    heading="Циклонный фильтр с двойной фильтрацией"
+    gradientDirection="to bottom"
+    rowDirection="row"
+    :texts="filterTexts"
+    :pics="cyclone_SN50T3F_slides"
+  />
+  <!-- <OperationPrinciple /> -->
   <TwoLongCellsLayout
+    :pics="nozzleSlides"
     gradientDirection="to top"
     :equipments1="equipments1"
     :equipments2="equipments2"
