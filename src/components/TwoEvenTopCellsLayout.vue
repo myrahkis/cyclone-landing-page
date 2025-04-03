@@ -1,11 +1,16 @@
 <script setup>
 import { computed } from 'vue'
+import PhotoCarousel from './PhotoCarousel.vue'
 
-const { gradientDirection, topText, bottomText } = defineProps({
-  gradientDirection: { type: String, requied: true },
-  topText: { type: String, required: true },
-  bottomText: { type: String, requied: true },
-})
+const { metalBarrelsPics, plasticBarrelPics, gradientDirection, topText, bottomText } = defineProps(
+  {
+    metalBarrelsPics: Array,
+    plasticBarrelPics: Array,
+    gradientDirection: { type: String, requied: true },
+    topText: { type: String, required: true },
+    bottomText: { type: String, requied: true },
+  },
+)
 
 const gradientStyle = computed(() => ({
   background: `linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4))`,
@@ -20,10 +25,12 @@ const gradientStyle = computed(() => ({
         <p>{{ topText }}</p>
       </div>
       <div class="grid-cell second-cell">
-        <img src="/desc-filter-img.png" alt="" class="img" />
+        <PhotoCarousel :pics="metalBarrelsPics" />
+        <!-- <img src="/desc-filter-img.png" alt="" class="img" /> -->
       </div>
-      <div class="grid-cell">
-        <img src="/full-height.png" alt="" class="img" />
+      <div class="grid-cell third-cell">
+        <PhotoCarousel :pics="plasticBarrelPics" />
+        <!-- <img src="/full-height.png" alt="" class="img" /> -->
       </div>
       <div class="grid-cell last-cell">
         <p>{{ bottomText }}</p>
@@ -34,6 +41,8 @@ const gradientStyle = computed(() => ({
 
 <style scoped>
 .third-section {
+  /* display: flex;
+  flex-direction: column; */
   min-height: 100vh;
   color: white;
   padding: 3.5rem;
@@ -43,19 +52,20 @@ const gradientStyle = computed(() => ({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(4, 0.25fr);
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: 2fr 1fr;
   gap: 2rem;
-  min-width: 100%;
+  /* min-width: 100%; */
   height: 100%;
+  /* flex-grow: 1; */
 }
 
 .grid-cell {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-  min-height: 0;
+  /* min-height: 100%; */
   /* &:last-child,
   &:first-child {
     padding-bottom: 0;
@@ -67,9 +77,12 @@ const gradientStyle = computed(() => ({
   grid-column: 1 / 3;
 }
 .second-cell {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   grid-column: 3 / -1;
+}
+.third-cell {
+  grid-column: 1 / 2;
 }
 .last-cell {
   grid-column: 2 / -1;

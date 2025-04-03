@@ -69,7 +69,7 @@ function prevSlide() {
 .carousel-image {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -118,28 +118,29 @@ function prevSlide() {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  transform: translate(-1%, -50%);
   transition: all 0.2s;
 }
 
 .carousel-btn:hover {
   background-color: rgba(0, 0, 0, 0.4);
-  transform: translateY(-3px);
+  transform: translate(-1%, -50%) translateY(-3px);
 }
 
 .carousel-btn:active {
   box-shadow: 0 0.15rem 0.3rem black;
-  transform: translateY(-1px);
+  transform: translate(-1%, -50%) translateY(-1px);
 }
 
 .prev {
   top: 50%;
-  left: 1rem;
+  left: 1%;
   z-index: 2;
 }
 
 .next {
   top: 50%;
-  right: 1rem;
+  right: 1%;
   z-index: 2;
 }
 

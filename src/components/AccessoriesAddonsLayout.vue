@@ -2,10 +2,27 @@
 import TwoEvenTopCellsLayout from './TwoEvenTopCellsLayout.vue'
 import FourPicsLayout from './FourPicsLayout.vue'
 import TwoLongCellsLayout from './TwoLongCellsLayout.vue'
+
+const metalBarrelSlides = [
+  `${import.meta.env.BASE_URL}/Barrels/metalBarrel1.png`,
+  `${import.meta.env.BASE_URL}/Barrels/metalBarrel2.png`,
+  `${import.meta.env.BASE_URL}/Barrels/metalBarrel3.png`,
+]
+const plasticBarrelSlides = [
+  `${import.meta.env.BASE_URL}/Barrels/plasticBarrel1.png`,
+  `${import.meta.env.BASE_URL}/Barrels/plasticBarrel2.png`,
+  `${import.meta.env.BASE_URL}/Barrels/plasticBarrel3.png`,
+]
+const hosesSlides = [
+  `${import.meta.env.BASE_URL}/Hoses/hose1.png`,
+  `${import.meta.env.BASE_URL}/Hoses/hose2.png`,
+]
 </script>
 
 <template>
   <TwoEvenTopCellsLayout
+    :metalBarrelsPics="metalBarrelSlides"
+    :plasticBarrelPics="plasticBarrelSlides"
     gradientDirection="to top"
     topText="Металлическая (железная) бочка с крышкой — 
 это идеальная ёмкость для работы в связке 
@@ -19,6 +36,7 @@ import TwoLongCellsLayout from './TwoLongCellsLayout.vue'
 что усложняет возможность использования циклона «из коробки», либо устанавливать на крышке ёмкости обратный клапан, что так же требует дополнительных как финансовых так и трудозатрат."
   />
   <TwoLongCellsLayout
+    :pics="hosesSlides"
     gradientDirection="to bottom"
     text1="Шланг ПВХ Армированный 50мм (армирующая спираль выполнена 
 из более плотного ПВХ). Внутренний диаметр 50мм, наружный диаметр 56мм. Жёсткий, тяжёлый, прочный. 
