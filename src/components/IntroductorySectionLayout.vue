@@ -1,8 +1,6 @@
 <script setup>
 import HowFilterWorksSection from './HowFilterWorksSection.vue'
 import HeroSection from './HeroSection.vue'
-import OperationPrinciple from './OperationPrinciple.vue'
-import TwoLongCellsLayout from './TwoLongCellsLayout.vue'
 import TwoColumnsLayout from './TwoColumnsLayout.vue'
 import TwoLongCellsWOnePhoto from './TwoLongCellsWOnePhoto.vue'
 
@@ -72,15 +70,7 @@ const nozzleSlides = [
     :texts="filterTexts"
     :pics="cyclone_SN50T3F_slides"
   />
-  <!-- <OperationPrinciple /> -->
   <TwoLongCellsWOnePhoto :nozzleSlides="nozzleSlides" :equipments1="equipments1" :equipments2="equipments2" />
-  <!-- <TwoLongCellsLayout
-    :nozzleSlides="nozzleSlides"
-    gradientDirection="to top"
-    :equipments1="equipments1"
-    :equipments2="equipments2"
-    layoutVariant="default"
-  /> -->
 </template>
 
 <style scoped></style>

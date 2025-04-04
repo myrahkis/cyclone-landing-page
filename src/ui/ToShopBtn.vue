@@ -25,7 +25,7 @@
     padding: 1rem 2rem;
   }
 
-  &:hover {
+  &:hover, &:active {
     border: 2px solid var(--brand-blue-color);
     background-color: var(--brand-blue-color);
     color: black;

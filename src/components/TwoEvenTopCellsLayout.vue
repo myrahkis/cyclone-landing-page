@@ -41,49 +41,33 @@ const gradientStyle = computed(() => ({
 
 <style scoped>
 .accessory-section {
-  /* display: flex;
-  flex-direction: column; */
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   /* min-height: 100vh; */
   color: white;
   padding: 3.5rem;
-  /* background: linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4)); */
 }
 
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(4, 0.25fr);
-  /* grid-template-rows: 2fr 2fr; */
   grid-template-rows: minmax(450px, 1fr) 1fr;
   gap: 2rem;
-  /* min-width: 100%; */
   height: 100%;
-  /* border: 2px solid red; */
   flex-grow: 1;
 }
 
 .grid-cell {
   display: flex;
-  /* justify-content: center; */
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-  /* min-height: 100%; */
-  /* &:last-child,
-  &:first-child {
-    padding-bottom: 0;
-    padding-top: 0;
-  } */
 }
 
 .first-cell {
   grid-column: 1 / 3;
 }
 .second-cell {
-  /* display: flex;
-  justify-content: center; */
   grid-column: 3 / -1;
 }
 .third-cell {
@@ -104,6 +88,10 @@ const gradientStyle = computed(() => ({
   .thrid-grid {
     display: flex;
     flex-direction: column;
+  }
+
+  .third-cell {
+    order: 4;
   }
 }
 </style>

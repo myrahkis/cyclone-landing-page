@@ -53,44 +53,31 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
   gap: 2rem;
   width: 100%;
   height: 100%;
-  /* grid-template-areas: text-cell-1 img-cell-1 img-cell-1 img-cell-2 img-cell-2 text-cell-2; */
 }
 .grid-cell {
   display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
+  flex-direction: column;
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-  /* min-height: 0; */
-
-  /* &:last-child,
-  &:first-child {
-    padding-bottom: 0;
-    padding-top: 0;
-  } */
 }
 .text-cell-1 {
   grid-column: 1 / 2;
-  /* grid-area: text-cell-1; */
 }
 .img-cell-1 {
   grid-column: 2 / -1;
-  /* grid-area: img-cell-1; */
 }
 .img-cell-2 {
   grid-column: 1 / 3;
   grid-row: 2;
-  /* grid-area: img-cell-2; */
 }
 .text-cell-2 {
   grid-column: 3 / -1;
   grid-template-rows: 2;
-  /* grid-area: text-cell-2; */
 }
 .img {
   align-self: center;
-  max-width: 60%;
+  max-width: 50%;
   height: 100%;
   object-fit: contain;
 }
@@ -110,19 +97,7 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
   .thrid-grid {
     grid-template-rows: auto minmax(42rem, auto);
   }
-} 
-
-/* (1024px–1279px) */
-/* @media (max-width: 1279px) {
-  .thrid-grid {
-    grid-template-rows: 0.6fr 0.6fr;
-  }
 }
-@media (max-width: 1129px) {
-  .thrid-grid {
-    grid-template-rows: 0.7fr 0.7fr;
-  }
-} */
 
 /* (480px–767px) */
 @media (max-width: 767px) {
@@ -132,6 +107,12 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
   }
   .img-cell-2 {
     order: 4;
+  }
+}
+/* (до 479px) */
+@media (max-width: 479px) {
+  .img {
+    max-width: 100%;
   }
 }
 </style>

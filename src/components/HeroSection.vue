@@ -107,7 +107,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   margin-bottom: 15%;
 }
 .text {
-  font-size: 3.5rem;
+  /* font-size: 3.5rem; */
   /* width: 45%; */
 }
 .order-btn {

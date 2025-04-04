@@ -23,7 +23,7 @@ function closeModal() {
         <div>
           <div>
             <p class="phone">+7 495 641-55-67</p>
-            <p>info@othertool.ru</p>
+            <p class="email">info@othertool.ru</p>
           </div>
           <div>
             <p>
@@ -112,8 +112,11 @@ function closeModal() {
   width: 100%;
 }
 .phone {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 4vw, 3rem);
   font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.email {
   margin-bottom: 1.5rem;
 }
 .map {
@@ -161,14 +164,19 @@ function closeModal() {
   transition: all 0.3s;
 
   &:first-child {
-    &:hover {
+    font-size: 2rem;
+    &:hover,
+    &:active,
+    &:focus {
       border: 3px solid var(--brand-yellow-color);
       background-color: var(--brand-yellow-color);
       color: black;
     }
   }
   &:last-child {
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       border: 3px solid var(--brand-blue-color);
       background-color: var(--brand-blue-color);
       color: black;
@@ -197,7 +205,11 @@ function closeModal() {
 }
 @media (max-width: 480px) {
   .white-border-btn {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+
+    &:first-child {
+      font-size: 1.7rem;
+    }
   }
 }
 </style>

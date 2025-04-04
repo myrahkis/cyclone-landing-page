@@ -146,12 +146,29 @@ function prevSlide() {
   z-index: 2;
 }
 
+/* (1024px–1279px) */
+@media (max-width: 1032px) {
+  .carousel-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .carousel-item {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel-image {
+    width: 145%;
+  }
+}
+
 /* (480px–767px) */
 @media (max-width: 767px) {
   .carousel-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%;
+    padding-top: 63%;
   }
   .carousel-wrapper {
     position: absolute;
@@ -159,6 +176,43 @@ function prevSlide() {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+  .carousel-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel-image {
+    width: 100%;
+  }
+}
+/* (до 479px) */
+@media (max-width: 479px) {
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    padding-top: 110%;
+  }
+  .carousel-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-item {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    transform: translate(-45%, -45%);
+  }
+  .carousel-image {
+    width: 140%;
+  }
+  .carousel-btn {
+    padding: 1rem 1.5rem;
+    border-radius: 1.5rem;
   }
 }
 </style>

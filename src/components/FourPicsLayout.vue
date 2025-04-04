@@ -9,7 +9,8 @@
       </div>
       <div class="grid-cell second-cell">
         <h3>Напольное исполнение</h3>
-        <img src="/floor-var.png" alt="" class="img" /></div>
+        <img src="/floor-var.png" alt="" class="img" />
+      </div>
       <div class="grid-cell third-cell"><img src="/wallVarient2.png" alt="" class="img" /></div>
       <div class="grid-cell fourth-cell"><img src="/wallVarient3.png" alt="" class="img" /></div>
       <div class="grid-cell fifth-cell"><img src="/floorVar2.png" alt="" class="img" /></div>
@@ -34,11 +35,10 @@
 .grid-cell {
   position: relative;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   border: 3px solid white;
   color: white;
   border-radius: 1.9rem;
-  /* padding: 2rem; */
   padding: 0;
   min-height: 0;
 }
@@ -59,7 +59,6 @@
     top: 0.5rem;
     left: 1rem;
   }
-  /* grid-row: 1 / -1; */
 }
 .third-cell,
 .fourth-cell,
@@ -77,23 +76,29 @@
 /* (480px–767px) */
 @media (max-width: 767px) {
   .fifth-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
-  .first-cell {
-    grid-column: 1 / -1;
-    grid-row: 1 / 1;
-  }
-  .second-cell {
-    grid-column: 1 / 1;
-    grid-row: 2 / 4;
+    grid-template-rows: minmax(300px, 0.25fr) 0.5fr 0.5fr;
   }
   .third-cell {
-    grid-column: 2 / -1;
-    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+    grid-row: 2;
   }
   .fourth-cell {
-    grid-column: 1 / -1;
+    grid-column: 1 / 3;
+    grid-row: 3;
   }
+  .fifth-cell {
+    grid-column: 3 / -1;
+    grid-row: 2;
+  }
+  .sixth-cell {
+    grid-column: 3 / -1;
+    grid-row: 3;
+  }
+}
+/* (до 479px) */
+@media (max-width: 479px) {
+  /* .fifth-section {
+    height: 90vh;
+  }  */
 }
 </style>

@@ -103,7 +103,7 @@ window.addEventListener('scroll', handleScroll)
   position: fixed;
   bottom: 5%;
   right: 3%;
-  z-index: 2;
+  z-index: 10;
   font-size: 2.1rem;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(3px);
@@ -118,5 +118,15 @@ window.addEventListener('scroll', handleScroll)
 }
 .up-btn.show {
   opacity: 1;
+}
+
+/* (480px–767px) */
+@media (max-width: 767px) {
+  .up-btn {
+    bottom: 3%;
+    right: 8%;
+    font-size: 1.8rem;
+    padding: 1.3rem 1.6rem;
+  }
 }
 </style>

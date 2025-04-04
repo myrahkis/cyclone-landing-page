@@ -47,7 +47,7 @@ h3 {
 }
 
 p {
-  font-size: clamp(1.2rem, 2vw, 1.9rem);
+  font-size: clamp(1.5rem, 2vw, 1.9rem);
   font-weight: 400;
   width: fit-content;
 }
@@ -84,7 +84,7 @@ button:disabled {
   h1 {
     font-size: clamp(4rem, 6vw, 8rem);
     line-height: clamp(4.5rem, 7vw, 9rem);
-    margin-bottom: clamp(4rem, 7vw, 9rem); 
+    margin-bottom: clamp(4rem, 7vw, 9rem);
   }
 
   h2 {
@@ -130,6 +130,24 @@ button:disabled {
 /* (1024px–1279px) */
 @media (max-width: 1279px) {
   h1 {
+    font-size: clamp(2.5rem, 4.2vw, 5.5rem);
+    line-height: clamp(3rem, 6vw, 6.5rem);
+    font-weight: 700;
+    margin-bottom: clamp(2.5rem, 6vw, 6rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 4vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: clamp(1.8rem, 4.5vw, 5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    font-weight: 700;
+    margin-bottom: clamp(0.8rem, 1.5vw, 1.8rem);
+  }
+  h1 {
     margin-bottom: 3rem;
   }
 }
@@ -163,4 +181,23 @@ button:disabled {
 
 /* (до 479px) */
 @media (max-width: 479px) {
+  h1 {
+    font-size: clamp(2.9rem, 5vw, 8rem);
+    line-height: clamp(3.5rem, 7vw, 10rem);
+    margin-bottom: clamp(3rem, 7vw, 10rem);
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 4.5vw, 7rem);
+    margin-bottom: clamp(2.5rem, 5.5vw, 7.5rem);
+  }
+
+  h3 {
+    font-size: clamp(2rem, 3.5vw, 5rem);
+    margin-bottom: clamp(1.8rem, 2.5vw, 4rem);
+  }
+
+  /* p {
+    font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+  } */
 }

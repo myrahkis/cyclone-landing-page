@@ -38,14 +38,6 @@ const howFilterWorksTexts = [
 <template>
   <OneSideImgTwoRowsLayout />
   <FourPicsLayout />
-  <!-- <TwoColumnsLayout
-    heading="Напольное исполнение"
-    gradientDirection="to top"
-    rowDirection="row"
-    :texts="floorVarientTexts"
-    :characteristic="characteristic"
-    :equipment="equipment"
-  /> -->
   <HowFilterWorksSection
     :showHeader="false"
     gradientDirection="to bottom"
@@ -55,12 +47,6 @@ const howFilterWorksTexts = [
 дополнительные фильтры задерживают остаточные загрязнения."
     :bottomText="howFilterWorksTexts"
   />
-  <!-- <TwoColumnsLayout
-    heading="Напольное исполнение"
-    gradientDirection="to bottom"
-    rowDirection="row-reverse"
-    :texts="floorVarientTexts"
-  /> -->
 </template>
 
 <style scoped></style>

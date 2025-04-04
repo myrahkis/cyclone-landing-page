@@ -29,7 +29,7 @@ const gradientStyle = computed(() => ({
           {{ topText }}
         </p>
       </div>
-      <div class="grid-cell">
+      <div class="grid-cell text-cell">
         <p v-for="text in bottomText" :key="text">
           {{ text }}
         </p>
@@ -51,16 +51,15 @@ const gradientStyle = computed(() => ({
 }
 .desc-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
   gap: 2rem;
-  min-width: 100%;
-  height: 100%;
+  /* min-width: 100%; */
+  /* height: 100%; */
 }
 .grid-cell {
-  position: relative;
+  /* position: relative; */
   display: flex;
-  min-height: 100%;
   gap: 1rem;
   flex-direction: column;
   border: 3px solid white;
@@ -74,19 +73,26 @@ const gradientStyle = computed(() => ({
 .cell-wide {
   grid-column: 1 / -1;
 }
-.des-img {
-  position: relative;
-  max-width: 100%;
-  height: 100%;
-  object-fit: contain;
-  /* margin-bottom: -13rem; */
-}
 .cell-img {
-  /* width: 70%; */
+  grid-column: 3 / -1;
+  grid-row: 2;
+  /* width: 100%; */
   /* display: flex; */
   /* max-width: 100%; */
   /* height: 100%; */
   /* overflow: hidden; */
+}
+.how-works-img {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 70%;
+  height: 100%;
+  object-fit: contain;
+  /* margin-bottom: -13rem; */
+}
+.text-cell {
+  grid-column: 1 / 3;
+  grid-row: 2;
 }
 /* .cell-img::before {
   content: '';
@@ -106,6 +112,12 @@ const gradientStyle = computed(() => ({
   .desc-grid {
     display: flex;
     flex-direction: column;
+  }
+}
+/* (до 479px) */
+@media (max-width: 479px) {
+  .how-works-img {
+    width: 100%;
   }
 }
 </style>

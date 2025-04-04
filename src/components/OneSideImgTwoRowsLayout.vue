@@ -19,7 +19,7 @@ const equipments = [
   <section class="fourth-section">
     <SkrewImg />
     <h2>
-      Двухфункциональная система <br />
+      Двухфункциональная система <br class="br-mobile" />
       двойной фильтрации
     </h2>
     <div class="fourth-grid">
@@ -104,12 +104,20 @@ const equipments = [
 
 /* (480px–767px) */
 @media (max-width: 767px) {
+  .br-mobile {
+    display: none;
+  }
   .fourth-grid {
     display: flex;
     flex-direction: column;
   }
   .img-cell {
     order: 4;
+  }
+  .img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
   }
 }
 </style>

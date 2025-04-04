@@ -1,7 +1,7 @@
 <script setup>
 import PhotoCarousel from './PhotoCarousel.vue'
 
-const { cartSlides, equipments1, equipments2 } = defineProps({
+const { cartSlides } = defineProps({
   cartSlides: { type: Array },
   equipments1: { type: Object, default: () => ({}) },
   equipments2: { type: Object, default: () => ({}) },
@@ -12,7 +12,6 @@ const { cartSlides, equipments1, equipments2 } = defineProps({
   <section :style="gradientStyle" class="third-section">
     <div class="thrid-grid" :style="gridStyle">
       <div class="grid-cell img-cell-1">
-        <!-- <PhotoCarousel :pics="whiteHosesPhotos" /> -->
         <PhotoCarousel :pics="cartSlides" />
       </div>
       <div class="grid-cell text-cell-1">
@@ -34,7 +33,6 @@ const { cartSlides, equipments1, equipments2 } = defineProps({
       </div>
       <div class="grid-cell img-cell-2">
         <img src="/adapter.png" alt="" class="img" />
-        <!-- <img src="/full-height.png" alt="" class="img" /> -->
       </div>
       <div class="grid-cell text-cell-2">
         <p>
@@ -63,43 +61,31 @@ const { cartSlides, equipments1, equipments2 } = defineProps({
   gap: 2rem;
   width: 100%;
   height: 100%;
-  /* grid-template-areas: text-cell-1 img-cell-1 img-cell-1 img-cell-2 img-cell-2 text-cell-2; */
 }
 .grid-cell {
   display: flex;
-  /* justify-content: center; */
+  flex-direction: column;
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-  /* min-height: 0; */
-
-  /* &:last-child,
-  &:first-child {
-    padding-bottom: 0;
-    padding-top: 0;
-  } */
 }
 .text-cell-1 {
   grid-column: 4 / -1;
-  /* grid-area: text-cell-1; */
 }
 .img-cell-1 {
   grid-column: 1 / 4;
-  /* grid-area: img-cell-1; */
 }
 .img-cell-2 {
   display: flex;
   grid-column: 3 / -1;
   grid-row: 2;
-  /* grid-area: img-cell-2; */
 }
 .text-cell-2 {
   grid-column: 1 / 3;
   grid-template-rows: 2;
-  /* grid-area: text-cell-2; */
 }
 .img {
-    align-self: center;
+  align-self: center;
   height: 100%;
   max-width: 100%;
   width: 40%;
@@ -127,10 +113,26 @@ const { cartSlides, equipments1, equipments2 } = defineProps({
 @media (max-width: 767px) {
   .thrid-grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
-  .img-cell-2 {
-    order: 4;
+  /* .img-cell-1 {
+    order: 2;
+  } */
+  .text-cell-1 {
+    order: 1;
+  }
+  .img-cell-1 {
+    order: 1;
+  }
+  /* .img {
+    width: 70%;
+  } */
+}
+
+/* (до 479px) */
+@media (max-width: 479px) {
+  .img {
+    width: 70%;
   }
 }
 </style>

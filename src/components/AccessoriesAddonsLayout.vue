@@ -1,6 +1,5 @@
 <script setup>
 import TwoEvenTopCellsLayout from './TwoEvenTopCellsLayout.vue'
-import FourPicsLayout from './FourPicsLayout.vue'
 import TwoLongCellsLayout from './TwoLongCellsLayout.vue'
 import TwoLongCellsWOnePhotoRev from './TwoLongCellsWOnePhotoRev.vue'
 
@@ -62,14 +61,6 @@ const cartSlides = [
 образом можно соединить несколько 1,5 метровых отрезков для получения необходимой вам длинны."
     layoutVariant="default"
   />
-  <!-- <TwoLongCellsLayout
-    :pics1="cartSlides"
-    gradientDirection="to top"
-    text1="Доп блок Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed 
-leo ut rutrum."
-    text2="Доп блок Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo."
-    layoutVariant="reverse"
-  /> -->
   <TwoLongCellsWOnePhotoRev :cartSlides="cartSlides"  />
 </template>
 

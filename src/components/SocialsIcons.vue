@@ -137,27 +137,32 @@ const { iconWidth } = defineProps({
     height: fit-content;
   }
 
-  &:hover svg path[fill='#0e0f10'] {
+  &:hover svg path[fill='#0e0f10'],
+  &:active svg path[fill='#0e0f10'] {
     fill: white;
   }
 }
 .whatsup {
-  &:hover svg {
+  &:hover svg,
+  &:active svg {
     color: #25d366;
   }
 }
 .vk {
-  &:hover svg {
+  &:hover svg,
+  &:active svg {
     color: #0077ff;
   }
 }
 .tg {
-  &:hover svg {
+  &:hover svg,
+  &:active svg {
     color: #24a1de;
   }
 }
 .youtube {
-  &:hover svg {
+  &:hover svg,
+  &:active svg {
     color: #ff0000;
   }
 }

@@ -24,7 +24,8 @@ import SkrewImg from '@/ui/SkrewImg.vue'
         <div class="video-elem">
           <img src="/floorVar2.png" alt="" class="img" /><img
             src="/youtubePlaceholder.png"
-            alt="" class="yt-placeholder"
+            alt=""
+            class="yt-placeholder"
           />
         </div>
         <h3>Заголовок раздела</h3>
@@ -37,7 +38,8 @@ import SkrewImg from '@/ui/SkrewImg.vue'
         <div class="video-elem">
           <img src="/wallVarient3.png" alt="" class="img" /><img
             src="/youtubePlaceholder.png"
-            alt="" class="yt-placeholder"
+            alt=""
+            class="yt-placeholder"
           />
         </div>
         <h3>Заголовок раздела</h3>
@@ -96,16 +98,17 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   .video-cards {
     flex-direction: column;
   }
-  /* .video-elem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid white;
-    border-radius: 1.9rem;
-    height: 100%;
-    margin-bottom: 3rem;
-
-    font-size: 2.5rem;
-  } */
+  .img {
+    max-width: 40%;
+  }
+  .yt-placeholder {
+    width: 11%;
+  }
+}
+/* (до 479px) */
+@media (max-width: 479px) {
+  .img {
+    max-width: 60%;
+  }
 }
 </style>

@@ -222,13 +222,50 @@ function closeDataProcessingPolicyModal() {
     right: -10rem;
     width: 33rem;
   }
-
-  .up-btn {
-    font-size: 1.8rem;
-    padding: 1.5rem 4rem;
+}
+@media (max-width: 665px) {
+  .small-skrew {
+    left: 20rem;
+  }
+}
+@media (max-width: 565px) {
+  .big-thing {
+    width: 18rem;
+  }
+  .small-skrew {
+    left: 17rem;
+    width: 13rem;
+  }
+  .mid-skrew {
+    left: 48%;
+    width: 13rem;
+  }
+  .big-skrew {
+    width: 30rem;
   }
 }
 @media (max-width: 480px) {
+  .footer-container {
+    padding: 2rem;
+  }
+  .big-thing {
+    top: -10%;
+    width: 16rem;
+  }
+  .small-skrew {
+    top: -2.5rem;
+    left: 14rem;
+    width: 10rem;
+  }
+  .mid-skrew {
+    top: 6%;
+    left: 45%;
+    width: 11rem;
+  }
+  .big-skrew {
+    width: 28rem;
+    right: -8rem;
+  }
   .logo {
     height: 6rem;
   }
