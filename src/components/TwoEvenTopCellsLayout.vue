@@ -6,9 +6,9 @@ const { metalBarrelsPics, plasticBarrelPics, gradientDirection, topText, bottomT
   {
     metalBarrelsPics: Array,
     plasticBarrelPics: Array,
-    gradientDirection: { type: String, requied: true },
+    gradientDirection: { type: String, required: true },
     topText: { type: String, required: true },
-    bottomText: { type: String, requied: true },
+    bottomText: { type: String, required: true },
   },
 )
 
@@ -18,7 +18,7 @@ const gradientStyle = computed(() => ({
 </script>
 
 <template>
-  <section :style="gradientStyle" class="third-section" id="accessory">
+  <section :style="gradientStyle" class="accessory-section" id="accessory">
     <h2>Аксессуары и дополнительное оборудование</h2>
     <div class="thrid-grid">
       <div class="grid-cell first-cell">
@@ -40,9 +40,12 @@ const gradientStyle = computed(() => ({
 </template>
 
 <style scoped>
-.third-section {
+.accessory-section {
   /* display: flex;
   flex-direction: column; */
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   color: white;
   padding: 3.5rem;
@@ -52,11 +55,13 @@ const gradientStyle = computed(() => ({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(4, 0.25fr);
-  grid-template-rows: 2fr 1fr;
+  /* grid-template-rows: 2fr 2fr; */
+  grid-template-rows: minmax(450px, 1fr) 1fr;
   gap: 2rem;
   /* min-width: 100%; */
   height: 100%;
-  /* flex-grow: 1; */
+  /* border: 2px solid red; */
+  flex-grow: 1;
 }
 
 .grid-cell {
@@ -82,10 +87,10 @@ const gradientStyle = computed(() => ({
   grid-column: 3 / -1;
 }
 .third-cell {
-  grid-column: 1 / 2;
+  grid-column: 1 / 3;
 }
 .last-cell {
-  grid-column: 2 / -1;
+  grid-column: 3 / -1;
 }
 
 .img {

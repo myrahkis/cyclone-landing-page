@@ -1,17 +1,23 @@
 <script setup>
 import SkrewImg from '@/ui/SkrewImg.vue'
+import { computed } from 'vue'
 // import PhotoCarousel from './PhotoCarousel.vue'
 
-const { showHeader, heading, topText, bottomText } = defineProps({
+const { showHeader, gradientDirection, heading, topText, bottomText } = defineProps({
   showHeader: Boolean,
+  gradientDirection: { type: String, required: true },
   heading: String,
   topText: String,
   bottomText: Array,
 })
+
+const gradientStyle = computed(() => ({
+  background: `linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4))`,
+}))
 </script>
 
 <template>
-  <section class="description-section">
+  <section class="description-section" :style="gradientStyle">
     <!-- <SkrewImg /> -->
     <h2 v-if="showHeader">
       Циклонный фильтр для пылесоса SN50T3/ <br />Циклонный фильтр с двойной фильтрацией
@@ -82,7 +88,7 @@ const { showHeader, heading, topText, bottomText } = defineProps({
   /* height: 100%; */
   /* overflow: hidden; */
 }
-.cell-img::before {
+/* .cell-img::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -93,7 +99,7 @@ const { showHeader, heading, topText, bottomText } = defineProps({
     #8f8f8f 20%,
     transparent 80%
   );
-}
+} */
 
 /* (480px–767px) */
 @media (max-width: 767px) {

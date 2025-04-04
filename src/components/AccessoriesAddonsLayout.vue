@@ -2,6 +2,7 @@
 import TwoEvenTopCellsLayout from './TwoEvenTopCellsLayout.vue'
 import FourPicsLayout from './FourPicsLayout.vue'
 import TwoLongCellsLayout from './TwoLongCellsLayout.vue'
+import TwoLongCellsWOnePhotoRev from './TwoLongCellsWOnePhotoRev.vue'
 
 const metalBarrelSlides = [
   `${import.meta.env.BASE_URL}/Barrels/metalBarrel1.png`,
@@ -13,9 +14,20 @@ const plasticBarrelSlides = [
   `${import.meta.env.BASE_URL}/Barrels/plasticBarrel2.png`,
   `${import.meta.env.BASE_URL}/Barrels/plasticBarrel3.png`,
 ]
-const hosesSlides = [
-  `${import.meta.env.BASE_URL}/Hoses/hose1.png`,
-  `${import.meta.env.BASE_URL}/Hoses/hose2.png`,
+const blackHosesSlides = [
+  `${import.meta.env.BASE_URL}/Hoses/blackHose1.png`,
+  `${import.meta.env.BASE_URL}/Hoses/blackHose2.png`,
+  `${import.meta.env.BASE_URL}/Hoses/blackHose3.png`,
+]
+const whiteHosesSlides = [
+  `${import.meta.env.BASE_URL}/Hoses/whiteHose1.png`,
+  `${import.meta.env.BASE_URL}/Hoses/whiteHose2.png`,
+  `${import.meta.env.BASE_URL}/Hoses/whiteHose3.png`,
+]
+const cartSlides = [
+  `${import.meta.env.BASE_URL}/Carts/cart1.png`,
+  `${import.meta.env.BASE_URL}/Carts/cart2.png`,
+  `${import.meta.env.BASE_URL}/Carts/cart3.png`,
 ]
 </script>
 
@@ -36,7 +48,8 @@ const hosesSlides = [
 что усложняет возможность использования циклона «из коробки», либо устанавливать на крышке ёмкости обратный клапан, что так же требует дополнительных как финансовых так и трудозатрат."
   />
   <TwoLongCellsLayout
-    :pics="hosesSlides"
+    :pics2="blackHosesSlides"
+    :pics1="whiteHosesSlides"
     gradientDirection="to bottom"
     text1="Шланг ПВХ Армированный 50мм (армирующая спираль выполнена 
 из более плотного ПВХ). Внутренний диаметр 50мм, наружный диаметр 56мм. Жёсткий, тяжёлый, прочный. 
@@ -49,14 +62,15 @@ const hosesSlides = [
 образом можно соединить несколько 1,5 метровых отрезков для получения необходимой вам длинны."
     layoutVariant="default"
   />
-  <TwoLongCellsLayout
+  <!-- <TwoLongCellsLayout
+    :pics1="cartSlides"
     gradientDirection="to top"
     text1="Доп блок Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed 
 leo ut rutrum."
     text2="Доп блок Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius tortor a tincidunt convallis. Fusce consectetur sed leo ut rutrum. Sed ornare, nisl vitae fringilla tristique, nisi ante iaculis nisl, et tincidunt odio leo in leo."
     layoutVariant="reverse"
-  />
-  <FourPicsLayout />
+  /> -->
+  <TwoLongCellsWOnePhotoRev :cartSlides="cartSlides"  />
 </template>
 
 <style scoped></style>

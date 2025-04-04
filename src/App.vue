@@ -91,7 +91,7 @@ window.addEventListener('scroll', handleScroll)
     <IntroductorySectionLayout />
     <DoubleFunctionalSystemLayout />
     <AccessoriesAddonsLayout />
-    <VideoSection />
+    <!-- <VideoSection /> -->
     <AboutUsSection />
     <ContactsSection />
     <Footer />

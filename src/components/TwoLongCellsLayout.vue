@@ -2,9 +2,11 @@
 import { computed } from 'vue'
 import PhotoCarousel from './PhotoCarousel.vue'
 
-const { pics, gradientDirection, equipments1, equipments2, text1, text2, layoutVariant } =
+const { pics1, pics2, gradientDirection, equipments1, equipments2, text1, text2, layoutVariant } =
   defineProps({
-    pics: { type: Array },
+    pics1: { type: Array },
+    pics2: {type: Array},
+    nozzleSlides: {type: Array},
     gradientDirection: { type: String, required: true },
     equipments1: { type: Object, default: () => ({}) },
     equipments2: { type: Object, default: () => ({}) },
@@ -38,10 +40,11 @@ const gridStyle = computed(() => ({
         </ul>
       </div>
       <div class="grid-cell img-cell-1" :style="{ gridColumn: photoPos1 }">
-        <img src="/desc-filter-img.png" alt="" class="img" />
+        <PhotoCarousel :pics="pics1" />
+        <!-- <img src="/desc-filter-img.png" alt="" class="img" /> -->
       </div>
       <div class="grid-cell img-cell-2" :style="{ gridColumn: photoPos2 }">
-        <PhotoCarousel :pics="pics" />
+        <PhotoCarousel :pics="pics2" />
         <!-- <img src="/full-height.png" alt="" class="img" /> -->
       </div>
       <div class="grid-cell text-cell-2">
@@ -69,7 +72,7 @@ const gridStyle = computed(() => ({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: minmax(200px, 1fr) minmax(400px, 1fr);
   gap: 2rem;
   width: 100%;
   height: 100%;

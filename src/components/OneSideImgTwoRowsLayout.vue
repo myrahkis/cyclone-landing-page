@@ -80,6 +80,8 @@ const equipments = [
 .img-cell {
   grid-row: 1 / -1;
   grid-column: 1 / 2;
+  padding-left: 0;
+  padding-right: 0;
 }
 .top-cell {
   grid-column: 2 / -1;
@@ -96,7 +98,7 @@ const equipments = [
 .img {
   height: 100%;
   max-width: 100%;
-  width: 85%;
+  /* width: 85%; */
   object-fit: contain;
 }
 

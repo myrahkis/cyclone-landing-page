@@ -4,6 +4,7 @@ import HeroSection from './HeroSection.vue'
 import OperationPrinciple from './OperationPrinciple.vue'
 import TwoLongCellsLayout from './TwoLongCellsLayout.vue'
 import TwoColumnsLayout from './TwoColumnsLayout.vue'
+import TwoLongCellsWOnePhoto from './TwoLongCellsWOnePhoto.vue'
 
 const equipments1 = {
   header: 'Циклонный фильтр с двойной фильтрацией',
@@ -44,11 +45,13 @@ const cyclone_SN50T3F_slides = [
   `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-2.png`,
   `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-3.png`,
   `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-4.png`,
+  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-5.png`,
 ]
 
 const nozzleSlides = [
   `${import.meta.env.BASE_URL}/Nozzle/nozzle1.png`,
   `${import.meta.env.BASE_URL}/Nozzle/nozzle2.png`,
+  `${import.meta.env.BASE_URL}/Nozzle/nozzle3.png`,
 ]
 </script>
 
@@ -70,13 +73,14 @@ const nozzleSlides = [
     :pics="cyclone_SN50T3F_slides"
   />
   <!-- <OperationPrinciple /> -->
-  <TwoLongCellsLayout
-    :pics="nozzleSlides"
+  <TwoLongCellsWOnePhoto :nozzleSlides="nozzleSlides" :equipments1="equipments1" :equipments2="equipments2" />
+  <!-- <TwoLongCellsLayout
+    :nozzleSlides="nozzleSlides"
     gradientDirection="to top"
     :equipments1="equipments1"
     :equipments2="equipments2"
     layoutVariant="default"
-  />
+  /> -->
 </template>
 
 <style scoped></style>
