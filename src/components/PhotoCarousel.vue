@@ -51,6 +51,8 @@ function prevSlide() {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .carousel-wrapper {

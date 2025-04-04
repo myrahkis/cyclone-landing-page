@@ -15,7 +15,9 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
         <h3>{{ equipments1.header }}</h3>
         <p>{{ equipments1.subheader }}:</p>
         <ul class="equipment" v-if="equipments1.equip">
-          <li v-for="item in equipments1.equip" :key="item">{{ item }}</li>
+          <li v-for="item in equipments1.equip" :key="item">
+            <p>{{ item }}</p>
+          </li>
         </ul>
       </div>
       <div class="grid-cell img-cell-1">
@@ -28,7 +30,9 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
         <h3>Насадка на циклонный фильтр SN50T3 — вторая ступень фильтрации</h3>
         <p>Комплектация:</p>
         <ul class="equipment" v-if="equipments2.equip">
-          <li v-for="item in equipments2.equip" :key="item">{{ item }}</li>
+          <li v-for="item in equipments2.equip" :key="item">
+            <p>{{ item }}</p>
+          </li>
         </ul>
       </div>
     </div>
@@ -37,7 +41,7 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
 
 <style scoped>
 .third-section {
-  min-height: 100vh;
+  /*  -height: 100vh; */
   color: white;
   padding: 3.5rem;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
@@ -45,7 +49,7 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-rows: auto minmax(52rem, auto);
   gap: 2rem;
   width: 100%;
   height: 100%;
@@ -53,6 +57,7 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
 }
 .grid-cell {
   display: flex;
+  /* align-items: center; */
   /* justify-content: center; */
   border: 3px solid white;
   border-radius: 1.9rem;
@@ -84,7 +89,8 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
   /* grid-area: text-cell-2; */
 }
 .img {
-  max-width: 100%;
+  align-self: center;
+  max-width: 60%;
   height: 100%;
   object-fit: contain;
 }
@@ -99,8 +105,20 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
   .thrid-grid {
     grid-template-rows: 0.6fr 0.6fr;
   }
-}
+} */
 @media (max-width: 946px) {
+  .thrid-grid {
+    grid-template-rows: auto minmax(42rem, auto);
+  }
+} 
+
+/* (1024px–1279px) */
+/* @media (max-width: 1279px) {
+  .thrid-grid {
+    grid-template-rows: 0.6fr 0.6fr;
+  }
+}
+@media (max-width: 1129px) {
   .thrid-grid {
     grid-template-rows: 0.7fr 0.7fr;
   }

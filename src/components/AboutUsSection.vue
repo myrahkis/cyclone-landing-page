@@ -39,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   padding: 3.5rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: white;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }

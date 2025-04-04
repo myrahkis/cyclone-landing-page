@@ -82,7 +82,7 @@ function closeDataProcessingPolicyModal() {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: white;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.7));
   padding: 3.5rem;
@@ -97,8 +97,10 @@ function closeDataProcessingPolicyModal() {
   padding: 3.5rem;
   border: 3px solid white;
   border-radius: 1.9rem;
-  min-height: 48vh;
+  /* min-height: 48vh; */
   width: 100%;
+  margin-top: 35%;
+
 }
 
 .lower-footer {

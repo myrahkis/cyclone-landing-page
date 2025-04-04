@@ -56,7 +56,7 @@ const nozzleSlides = [
 </script>
 
 <template>
-  <HeroSection :mainRef="mainRef" />
+  <HeroSection />
   <HowFilterWorksSection
     :showHeader="true"
     heading="Циклонный фильтр для пылесоса SN50T3"

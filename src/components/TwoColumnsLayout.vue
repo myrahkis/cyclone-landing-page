@@ -53,7 +53,7 @@ const rowStyle = computed(() => ({
 .floor-varient-section {
   position: relative;
   display: flex;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: white;
   padding: 3.5rem;
 }

@@ -76,7 +76,7 @@ function closeModal() {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 3.5rem;
   color: white;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));

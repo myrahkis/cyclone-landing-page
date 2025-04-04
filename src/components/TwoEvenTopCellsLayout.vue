@@ -46,7 +46,7 @@ const gradientStyle = computed(() => ({
   /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: white;
   padding: 3.5rem;
   /* background: linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4)); */

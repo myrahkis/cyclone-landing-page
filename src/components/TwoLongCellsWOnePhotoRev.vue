@@ -51,7 +51,7 @@ const { cartSlides, equipments1, equipments2 } = defineProps({
 
 <style scoped>
 .third-section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: white;
   padding: 3.5rem;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));

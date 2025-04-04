@@ -87,7 +87,6 @@ window.addEventListener('scroll', handleScroll)
   <Header ref="headerRef" :useOpenMenu="useOpenMenu" />
   <OpenedHeaderMobile v-if="openMenu" />
   <main ref="mainRef" v-else>
-    <!-- <Header :mainRef="mainRef" /> -->
     <IntroductorySectionLayout />
     <DoubleFunctionalSystemLayout />
     <AccessoriesAddonsLayout />

@@ -65,7 +65,7 @@ const gridStyle = computed(() => ({
 
 <style scoped>
 .third-section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: white;
   padding: 3.5rem;
 }

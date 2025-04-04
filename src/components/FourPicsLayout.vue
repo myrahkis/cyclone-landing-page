@@ -20,14 +20,14 @@
 
 <style scoped>
 .fifth-section {
-  height: 110vh;
+  /* height: 110vh; */
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   padding: 3.5rem;
 }
 .fifth-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: minmax(300px, 1fr) 1fr 1fr;
+  grid-template-rows: minmax(300px, 0.25fr) 0.5fr 0.5fr;
   gap: 2rem;
   height: 100%;
 }
