@@ -84,7 +84,13 @@ function closeDataProcessingPolicyModal() {
   flex-direction: column;
   /* min-height: 100vh; */
   color: white;
-  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.6) 70%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
   padding: 3.5rem;
   justify-content: end;
   gap: 2rem;
@@ -99,8 +105,7 @@ function closeDataProcessingPolicyModal() {
   border-radius: 1.9rem;
   /* min-height: 48vh; */
   width: 100%;
-  margin-top: 35%;
-
+  margin-top: 30%;
 }
 
 .lower-footer {
