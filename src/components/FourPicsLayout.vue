@@ -141,7 +141,7 @@
   .first-cell {
     order: 1;
   }
-  .second-cell {
+  .fourth-cell {
     order: 2;
   }
   .third-cell {
