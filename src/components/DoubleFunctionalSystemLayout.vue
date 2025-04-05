@@ -39,4 +39,15 @@ const howFilterWorksTexts = [
   width: 50%;
   object-fit: contain;
 }
+
+/* (768px–1023px) */
+@media (max-width: 1023px) {
+  .double-filter {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 100%;
+    width: 75%;
+    object-fit: contain;
+  }
+}
 </style>
