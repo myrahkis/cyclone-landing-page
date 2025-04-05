@@ -32,7 +32,7 @@ const { cartSlides } = defineProps({
         </p>
       </div>
       <div class="grid-cell img-cell-2">
-        <img src="/adapter.png" alt="" class="img" />
+        <img src="/adapter.png" alt="Переходник-адаптер" class="img" />
       </div>
       <div class="grid-cell text-cell-2">
         <p>

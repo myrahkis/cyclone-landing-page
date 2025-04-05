@@ -43,7 +43,6 @@ const rowStyle = computed(() => ({
       </div>
       <div class="info-cell">
         <PhotoCarousel :pics="pics" />
-        <!-- <img src="/floor-var.png" alt="" class="img" /> -->
       </div>
     </div>
   </section>

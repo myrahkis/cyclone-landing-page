@@ -21,7 +21,7 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
         </ul>
       </div>
       <div class="grid-cell img-cell-1">
-        <img src="/bundling.png" alt="" class="img" />
+        <img src="/bundling.png" alt="Комплектация фильтра" class="img" />
       </div>
       <div class="grid-cell img-cell-2">
         <PhotoCarousel :pics="nozzleSlides" />

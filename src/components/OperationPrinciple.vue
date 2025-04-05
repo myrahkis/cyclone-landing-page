@@ -13,7 +13,7 @@
         </p>
       </div>
       <div class="grid-cell cell-img">
-        <img src="/how-filter-works.png" alt="" class="how-works-img" />
+        <img src="/how-filter-works.png" alt="Схема работы фильтра" class="how-works-img" />
       </div>
       <div class="grid-cell info-cell">
         <p>

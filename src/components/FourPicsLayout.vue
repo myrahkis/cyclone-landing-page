@@ -5,16 +5,24 @@
     <div class="fifth-grid">
       <h2 class="heading-cell-1">Настенное исполнение</h2>
       <div class="grid-cell first-cell">
-        <img src="/wallVarient3.png" alt="" class="img" />
+        <img src="/wallVarient3.png" alt="Настенный вариант фильтра" class="img" />
       </div>
       <h2 class="heading-cell-2">Напольное исполнение</h2>
       <div class="grid-cell second-cell">
-        <img src="/floor-var.png" alt="" class="img" />
+        <img src="/floor-var.png" alt="Напольный вариант фильтра" class="img" />
       </div>
-      <div class="grid-cell third-cell"><img src="/wallVarient2.png" alt="" class="img" /></div>
-      <div class="grid-cell fourth-cell"><img src="/wallVarient.png" alt="" class="img" /></div>
-      <div class="grid-cell fifth-cell"><img src="/floorVar2.png" alt="" class="img" /></div>
-      <div class="grid-cell sixth-cell"><img src="/floorVar3.png" alt="" class="img" /></div>
+      <div class="grid-cell third-cell">
+        <img src="/wallVarient2.png" alt="Настенный вариант фильтра" class="img" />
+      </div>
+      <div class="grid-cell fourth-cell">
+        <img src="/wallVarient.png" alt="Настенный вариант фильтра" class="img" />
+      </div>
+      <div class="grid-cell fifth-cell">
+        <img src="/floorVar2.png" alt="Напольный вариант фильтра" class="img" />
+      </div>
+      <div class="grid-cell sixth-cell">
+        <img src="/floorVar3.png" alt="Напольный вариант фильтра" class="img" />
+      </div>
     </div>
   </section>
 </template>

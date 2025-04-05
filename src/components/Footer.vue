@@ -37,7 +37,7 @@ function closeDataProcessingPolicyModal() {
       <div class="lower-footer">
         <div class="info-block">
           <div class="idk">
-            <img src="/logo-gray.png" alt="logo" class="logo" />
+            <img src="/logo-gray.png" alt="лого" class="logo" />
             <p class="data-text">
               ИП Колосова Юлия Романовна <br />
               ИНН: 771508405997 <br />

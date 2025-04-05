@@ -26,11 +26,9 @@ const gradientStyle = computed(() => ({
       </div>
       <div class="grid-cell second-cell">
         <PhotoCarousel :pics="metalBarrelsPics" />
-        <!-- <img src="/desc-filter-img.png" alt="" class="img" /> -->
       </div>
       <div class="grid-cell third-cell">
         <PhotoCarousel :pics="plasticBarrelPics" />
-        <!-- <img src="/full-height.png" alt="" class="img" /> -->
       </div>
       <div class="grid-cell last-cell">
         <p>{{ bottomText }}</p>

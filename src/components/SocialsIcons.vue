@@ -33,7 +33,6 @@ const { iconWidth } = defineProps({
           />
         </svg>
       </span>
-      <!-- <img src="/whatsup.png" alt="whatsup" class="social" /> -->
     </a>
     <a href="https://vk.com/othertool" target="_blank">
       <span class="social vk">
@@ -68,7 +67,6 @@ const { iconWidth } = defineProps({
           </g>
         </svg>
       </span>
-      <!-- <img src="/vk.png" alt="vk" class="social" /> -->
     </a>
     <a href="https://t.me/other_tool" target="_blank">
       <span class="social tg">
@@ -92,7 +90,6 @@ const { iconWidth } = defineProps({
           />
         </svg>
       </span>
-      <!-- <img src="/telegram.png" alt="telegram" class="social" /> -->
     </a>
     <a href="https://www.youtube.com/@othertool" target="_blank">
       <span class="social youtube">

@@ -24,7 +24,11 @@ const equipments = [
     </h2>
     <div class="fourth-grid">
       <div class="grid-cell img-cell">
-        <img src="/one-side-img.png" alt="" class="img" />
+        <img
+          src="/one-side-img.png"
+          alt="Двухфункциональная система двойной фильтрации"
+          class="img"
+        />
       </div>
       <div class="grid-cell top-cell">
         <!-- <h3>Заголовок раздела</h3> -->
