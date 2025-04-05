@@ -3,16 +3,16 @@
 <template>
   <section class="fifth-section">
     <div class="fifth-grid">
+      <h2 class="heading-cell-1">Настенное исполнение</h2>
       <div class="grid-cell first-cell">
-        <h3>Настенное исполнение</h3>
-        <img src="/wallVarient.png" alt="" class="img" />
+        <img src="/wallVarient3.png" alt="" class="img" />
       </div>
+      <h2 class="heading-cell-2">Напольное исполнение</h2>
       <div class="grid-cell second-cell">
-        <h3>Напольное исполнение</h3>
         <img src="/floor-var.png" alt="" class="img" />
       </div>
       <div class="grid-cell third-cell"><img src="/wallVarient2.png" alt="" class="img" /></div>
-      <div class="grid-cell fourth-cell"><img src="/wallVarient3.png" alt="" class="img" /></div>
+      <div class="grid-cell fourth-cell"><img src="/wallVarient.png" alt="" class="img" /></div>
       <div class="grid-cell fifth-cell"><img src="/floorVar2.png" alt="" class="img" /></div>
       <div class="grid-cell sixth-cell"><img src="/floorVar3.png" alt="" class="img" /></div>
     </div>
@@ -28,22 +28,36 @@
 .fifth-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: minmax(300px, 0.25fr) 0.5fr 0.5fr;
+  grid-template-rows: auto minmax(300px, 0.6fr) 0.3fr 0.3fr;
   gap: 2rem;
   height: 100%;
+  color: white;
 }
 .grid-cell {
   position: relative;
   display: flex;
   justify-content: center;
   border: 3px solid white;
-  color: white;
   border-radius: 1.9rem;
   padding: 0;
   min-height: 0;
 }
+
+.heading-cell-1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  margin-bottom: 0;
+  font-size: clamp(1.2rem, 3.5vw, 3.5rem);
+}
+.heading-cell-2 {
+  grid-column: 3 / -1;
+  grid-row: 1;
+  margin-bottom: 0;
+  font-size: clamp(1.2rem, 3.5vw, 3.5rem);
+}
 .first-cell {
   grid-column: 1 / 3;
+  grid-row: 2;
 
   h3 {
     position: absolute;
@@ -53,6 +67,7 @@
 }
 .second-cell {
   grid-column: 3 / -1;
+  grid-row: 2;
 
   h3 {
     position: absolute;
@@ -65,6 +80,7 @@
 .fifth-cell,
 .sixth-cell {
   grid-row: 2 / -1;
+  grid-row: 3 / -1;
 }
 
 .img {
@@ -76,23 +92,65 @@
 /* (480px–767px) */
 @media (max-width: 767px) {
   .fifth-grid {
-    grid-template-rows: minmax(300px, 0.25fr) 0.5fr 0.5fr;
+    grid-template-rows: auto minmax(300px, 0.25fr) 0.5fr 0.5fr;
+  }
+  .heading-cell-1 {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  .heading-cell-2 {
+    grid-column: 3 / -1;
+    grid-row: 1;
   }
   .third-cell {
     grid-column: 1 / 3;
-    grid-row: 2;
+    grid-row: 3;
   }
   .fourth-cell {
     grid-column: 1 / 3;
-    grid-row: 3;
+    grid-row: 4;
   }
   .fifth-cell {
     grid-column: 3 / -1;
-    grid-row: 2;
+    grid-row: 3;
   }
   .sixth-cell {
     grid-column: 3 / -1;
-    grid-row: 3;
+    grid-row: 4;
+  }
+}
+
+/* (480px–767px) */
+@media (max-width: 661px) {
+  .fifth-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .heading-cell-1 {
+    font-size: clamp(1.4rem, 6vw, 4.8rem);
+    order: 0;
+  }
+  .first-cell {
+    order: 1;
+  }
+  .second-cell {
+    order: 2;
+  }
+  .third-cell {
+    order: 3;
+  }
+  .heading-cell-2 {
+    font-size: clamp(1.4rem, 6vw, 4.8rem);
+    order: 4;
+  }
+  .second-cell {
+    order: 5;
+  }
+  .fifth-cell {
+    order: 6;
+  }
+  .sixth-cell {
+    order: 7;
   }
 }
 /* (до 479px) */
