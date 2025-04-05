@@ -39,13 +39,11 @@ const gridStyle = computed(() => ({
           <li v-for="item in equipments1.equip" :key="item">{{ item }}</li>
         </ul>
       </div>
-      <div class="grid-cell img-cell-1" :style="{ gridColumn: photoPos1 }">
+      <div class="grid-cell img-cell-1">
         <PhotoCarousel :pics="pics1" />
-        <!-- <img src="/desc-filter-img.png" alt="" class="img" /> -->
       </div>
-      <div class="grid-cell img-cell-2" :style="{ gridColumn: photoPos2 }">
+      <div class="grid-cell img-cell-2">
         <PhotoCarousel :pics="pics2" />
-        <!-- <img src="/full-height.png" alt="" class="img" /> -->
       </div>
       <div class="grid-cell text-cell-2">
         <h3 v-if="equipments1.header">
@@ -79,17 +77,9 @@ const gridStyle = computed(() => ({
 }
 .grid-cell {
   display: flex;
-  /* justify-content: center; */
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-  /* min-height: 0; */
-
-  /* &:last-child,
-  &:first-child {
-    padding-bottom: 0;
-    padding-top: 0;
-  } */
 }
 .text-cell-1 {
   grid-area: text-cell-1;
@@ -115,17 +105,6 @@ const gridStyle = computed(() => ({
   font-size: 1.5rem;
   margin-left: 1rem;
 }
-
-/* @media (max-width: 1068px) {
-  .thrid-grid {
-    grid-template-rows: 0.6fr 0.6fr;
-  }
-}
-@media (max-width: 946px) {
-  .thrid-grid {
-    grid-template-rows: 0.7fr 0.7fr;
-  }
-} */
 
 /* (480px–767px) */
 @media (max-width: 767px) {

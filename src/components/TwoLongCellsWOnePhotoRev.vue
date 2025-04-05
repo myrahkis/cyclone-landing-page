@@ -9,8 +9,8 @@ const { cartSlides } = defineProps({
 </script>
 
 <template>
-  <section :style="gradientStyle" class="third-section">
-    <div class="thrid-grid" :style="gridStyle">
+  <section class="third-section">
+    <div class="thrid-grid">
       <div class="grid-cell img-cell-1">
         <PhotoCarousel :pics="cartSlides" />
       </div>

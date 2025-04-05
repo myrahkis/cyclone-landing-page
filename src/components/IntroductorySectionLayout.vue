@@ -57,6 +57,7 @@ const nozzleSlides = [
   <HeroSection />
   <HowFilterWorksSection
     :showHeader="true"
+    gradientDirection="to top"
     heading="Циклонный фильтр для пылесоса SN50T3"
     topText="Циклонный фильтр для пылесоса SN50T3 позволяет отделять влажные и сухие частицы пыли до
           97%, что снижает загрязнение фильтра и мешка пылесоса, тем самым продлевая их срок службы.

@@ -9,8 +9,8 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
 </script>
 
 <template>
-  <section :style="gradientStyle" class="third-section">
-    <div class="thrid-grid" :style="gridStyle">
+  <section class="third-section">
+    <div class="thrid-grid">
       <div class="grid-cell text-cell-1">
         <h3>{{ equipments1.header }}</h3>
         <p>{{ equipments1.subheader }}:</p>
