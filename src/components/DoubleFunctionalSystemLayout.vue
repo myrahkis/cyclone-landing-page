@@ -20,7 +20,11 @@ const howFilterWorksTexts = [
 с помощью двухступенчатой системы фильтрации. Сначала грязь удаляется за счет центробежной силы, а затем 
 дополнительные фильтры задерживают остаточные загрязнения."
     :bottomText="howFilterWorksTexts"
-  />
+  >
+    <template #photo-place>
+      <img src="" alt="Схема работы циклонного фильтра с двойной фильтрацией" />
+    </template>
+  </HowFilterWorksSection>
 </template>
 
 <style scoped></style>

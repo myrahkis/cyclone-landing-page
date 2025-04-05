@@ -3,6 +3,7 @@ import HowFilterWorksSection from './HowFilterWorksSection.vue'
 import HeroSection from './HeroSection.vue'
 import TwoColumnsLayout from './TwoColumnsLayout.vue'
 import TwoLongCellsWOnePhoto from './TwoLongCellsWOnePhoto.vue'
+import PhotoCarousel from './PhotoCarousel.vue'
 
 const equipments1 = {
   header: 'Циклонный фильтр с двойной фильтрацией',
@@ -39,17 +40,18 @@ const howFilterWorksTexts = [
 ]
 
 const cyclone_SN50T3F_slides = [
-  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-1.png`,
-  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-2.png`,
-  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-3.png`,
-  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-4.png`,
-  `${import.meta.env.BASE_URL}/CycloneSN50T3F/CycloneSN50T3F-5.png`,
+  `${import.meta.env.BASE_URL}CycloneSN50T3F/how-filter-works1.png`,
+  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-1.png`,
+  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-2.png`,
+  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-3.png`,
+  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-4.png`,
+  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-5.png`,
 ]
 
 const nozzleSlides = [
-  `${import.meta.env.BASE_URL}/Nozzle/nozzle1.png`,
-  `${import.meta.env.BASE_URL}/Nozzle/nozzle2.png`,
-  `${import.meta.env.BASE_URL}/Nozzle/nozzle3.png`,
+  `${import.meta.env.BASE_URL}Nozzle/nozzle1.png`,
+  `${import.meta.env.BASE_URL}Nozzle/nozzle2.png`,
+  `${import.meta.env.BASE_URL}Nozzle/nozzle3.png`,
 ]
 </script>
 
@@ -63,15 +65,23 @@ const nozzleSlides = [
           97%, что снижает загрязнение фильтра и мешка пылесоса, тем самым продлевая их срок службы.
           При этом фильтр пылесоса практически не забивается."
     :bottomText="howFilterWorksTexts"
-  />
+  >
+    <template #photo-place>
+      <PhotoCarousel :pics="cyclone_SN50T3F_slides" />
+    </template>
+  </HowFilterWorksSection>
   <TwoColumnsLayout
     heading="Циклонный фильтр с двойной фильтрацией"
     gradientDirection="to bottom"
     rowDirection="row"
     :texts="filterTexts"
-    :pics="cyclone_SN50T3F_slides"
+    :pics="[]"
   />
-  <TwoLongCellsWOnePhoto :nozzleSlides="nozzleSlides" :equipments1="equipments1" :equipments2="equipments2" />
+  <TwoLongCellsWOnePhoto
+    :nozzleSlides="nozzleSlides"
+    :equipments1="equipments1"
+    :equipments2="equipments2"
+  />
 </template>
 
 <style scoped></style>

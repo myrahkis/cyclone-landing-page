@@ -1,7 +1,6 @@
 <script setup>
 import SkrewImg from '@/ui/SkrewImg.vue'
 import { computed } from 'vue'
-// import PhotoCarousel from './PhotoCarousel.vue'
 
 const { showHeader, gradientDirection, heading, topText, bottomText } = defineProps({
   showHeader: Boolean,
@@ -35,7 +34,7 @@ const gradientStyle = computed(() => ({
         </p>
       </div>
       <div class="grid-cell cell-img">
-        <img src="/how-filter-works.png" alt="" class="how-works-img" />
+        <slot name="photo-place" />
       </div>
     </div>
   </section>
@@ -45,30 +44,22 @@ const gradientStyle = computed(() => ({
 .description-section {
   position: relative;
   /* min-height: 100vh;  */
-  /* background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4)); */
   color: white;
   padding: 3.5rem;
 }
 .desc-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: auto minmax(400px, 1fr);
   gap: 2rem;
-  /* min-width: 100%; */
-  /* height: 100%; */
 }
 .grid-cell {
-  /* position: relative; */
   display: flex;
   gap: 1rem;
   flex-direction: column;
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-
-  /* &:last-child {
-    padding: 0;
-  } */
 }
 .cell-wide {
   grid-column: 1 / -1;
@@ -76,11 +67,6 @@ const gradientStyle = computed(() => ({
 .cell-img {
   grid-column: 3 / -1;
   grid-row: 2;
-  /* width: 100%; */
-  /* display: flex; */
-  /* max-width: 100%; */
-  /* height: 100%; */
-  /* overflow: hidden; */
 }
 .how-works-img {
   margin: 0 auto;
@@ -88,7 +74,6 @@ const gradientStyle = computed(() => ({
   width: 70%;
   height: 100%;
   object-fit: contain;
-  /* margin-bottom: -13rem; */
 }
 .text-cell {
   grid-column: 1 / 3;
