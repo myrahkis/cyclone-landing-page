@@ -52,8 +52,8 @@ const rowStyle = computed(() => ({
 .floor-varient-section {
   position: relative;
   display: flex;
-  /* min-height: 100vh; */
   color: white;
+  /* min-height: 80vh; */
   padding: 3.5rem;
 }
 .floor-varient-flex {
@@ -68,7 +68,6 @@ const rowStyle = computed(() => ({
   border: 3px solid white;
   border-radius: 1.9rem;
   padding: 2rem;
-  min-height: 100%;
   width: 50%;
   gap: 1.8rem;
 }

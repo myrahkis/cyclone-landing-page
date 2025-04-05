@@ -22,9 +22,21 @@ const howFilterWorksTexts = [
     :bottomText="howFilterWorksTexts"
   >
     <template #photo-place>
-      <img src="" alt="Схема работы циклонного фильтра с двойной фильтрацией" />
+      <img
+        src="/how-double-filter-works.png"
+        alt="Схема работы циклонного фильтра с двойной фильтрацией"
+        class="double-filter"
+      />
     </template>
   </HowFilterWorksSection>
 </template>
 
-<style scoped></style>
+<style scoped>
+.double-filter {
+  margin: 0 auto;
+  height: 100%;
+  max-width: 100%;
+  width: 50%;
+  object-fit: contain;
+}
+</style>

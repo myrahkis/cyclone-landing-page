@@ -40,7 +40,7 @@ const howFilterWorksTexts = [
 ]
 
 const cyclone_SN50T3F_slides = [
-  `${import.meta.env.BASE_URL}CycloneSN50T3F/how-filter-works1.png`,
+  `${import.meta.env.BASE_URL}CycloneSN50T3F/how-filter-works.png`,
   `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-1.png`,
   `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-2.png`,
   `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-3.png`,
@@ -52,6 +52,11 @@ const nozzleSlides = [
   `${import.meta.env.BASE_URL}Nozzle/nozzle1.png`,
   `${import.meta.env.BASE_URL}Nozzle/nozzle2.png`,
   `${import.meta.env.BASE_URL}Nozzle/nozzle3.png`,
+]
+
+const doubleCycloneSlides = [
+  `${import.meta.env.BASE_URL}DoubleCyclone/doubleCyclone1.png`,
+  `${import.meta.env.BASE_URL}DoubleCyclone/doubleCyclone2.png`,
 ]
 </script>
 
@@ -75,7 +80,7 @@ const nozzleSlides = [
     gradientDirection="to bottom"
     rowDirection="row"
     :texts="filterTexts"
-    :pics="[]"
+    :pics="doubleCycloneSlides"
   />
   <TwoLongCellsWOnePhoto
     :nozzleSlides="nozzleSlides"
