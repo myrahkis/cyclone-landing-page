@@ -5,8 +5,8 @@ import PhotoCarousel from './PhotoCarousel.vue'
 const { pics1, pics2, gradientDirection, equipments1, equipments2, text1, text2, layoutVariant } =
   defineProps({
     pics1: { type: Array },
-    pics2: {type: Array},
-    nozzleSlides: {type: Array},
+    pics2: { type: Array },
+    nozzleSlides: { type: Array },
     gradientDirection: { type: String, required: true },
     equipments1: { type: Object, default: () => ({}) },
     equipments2: { type: Object, default: () => ({}) },
@@ -40,10 +40,20 @@ const gridStyle = computed(() => ({
         </ul>
       </div>
       <div class="grid-cell img-cell-1">
-        <PhotoCarousel :pics="pics1" />
+        <PhotoCarousel
+          :pics="pics1"
+          link="https://othertool.ru/shlang-pvx-poleuretan-armirovannyj-50mm?search=шланг"
+          side-pos="left"
+          margin-rem="0.5rem"
+        />
       </div>
       <div class="grid-cell img-cell-2">
-        <PhotoCarousel :pics="pics2" />
+        <PhotoCarousel
+          :pics="pics2"
+          link="https://othertool.ru/shlang-pvx-s-fitingami-50mm?search=шланг"
+          side-pos="right"
+          margin-rem="0.5rem"
+        />
       </div>
       <div class="grid-cell text-cell-2">
         <h3 v-if="equipments1.header">

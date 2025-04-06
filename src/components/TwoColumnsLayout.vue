@@ -42,7 +42,12 @@ const rowStyle = computed(() => ({
         </ul>
       </div>
       <div class="info-cell">
-        <PhotoCarousel :pics="pics" />
+        <PhotoCarousel
+          :pics="pics"
+          link="https://othertool.ru/tsiklonnyj-filtr-s-dvojnoj-filtratsiej?search=циклон"
+          side-pos="left"
+          margin-rem="0.5rem"
+        />
       </div>
     </div>
   </section>

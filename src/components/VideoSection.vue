@@ -9,7 +9,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
     <div class="video-cards">
       <div class="video-card">
         <div class="video-elem">
-          <img src="/floor-var.png" alt="" class="img" />
+          <img src="/FloorVarient/floorVar1.png" alt="" class="img" />
           <img src="/youtubePlaceholder.png" alt="" class="yt-placeholder" />
         </div>
         <div>
@@ -22,7 +22,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
       </div>
       <div class="video-card">
         <div class="video-elem">
-          <img src="/floorVar2.png" alt="" class="img" /><img
+          <img src="/FloorVarient/floorVar2.png" alt="" class="img" /><img
             src="/youtubePlaceholder.png"
             alt=""
             class="yt-placeholder"
@@ -36,7 +36,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
       </div>
       <div class="video-card">
         <div class="video-elem">
-          <img src="/wallVarient3.png" alt="" class="img" /><img
+          <img src="/WallVarient/wallVar3.png" alt="" class="img" /><img
             src="/youtubePlaceholder.png"
             alt=""
             class="yt-placeholder"

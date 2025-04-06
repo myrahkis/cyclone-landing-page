@@ -72,7 +72,12 @@ const doubleCycloneSlides = [
     :bottomText="howFilterWorksTexts"
   >
     <template #photo-place>
-      <PhotoCarousel :pics="cyclone_SN50T3F_slides" />
+      <PhotoCarousel
+        :pics="cyclone_SN50T3F_slides"
+        link="https://othertool.ru/tsiklon-dlja-pylesosa-sn50t3-poslednego-pokolenija?search=циклон"
+        side-pos="left"
+        marginRem="0.5rem"
+      />
     </template>
   </HowFilterWorksSection>
   <TwoColumnsLayout

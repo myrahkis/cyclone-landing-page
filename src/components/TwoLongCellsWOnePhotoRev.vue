@@ -1,4 +1,5 @@
 <script setup>
+import BuyBtn from '@/ui/BuyBtn.vue'
 import PhotoCarousel from './PhotoCarousel.vue'
 
 const { cartSlides } = defineProps({
@@ -12,7 +13,12 @@ const { cartSlides } = defineProps({
   <section class="third-section">
     <div class="thrid-grid">
       <div class="grid-cell img-cell-1">
-        <PhotoCarousel :pics="cartSlides" />
+        <PhotoCarousel
+          :pics="cartSlides"
+          link="https://othertool.ru/teleghka_stroitelnaya?search=циклон"
+          side-pos="right"
+          margin-rem="0.5rem"
+        />
       </div>
       <div class="grid-cell text-cell-1">
         <h3>Строительная тележка 800*400*18мм</h3>
@@ -33,6 +39,11 @@ const { cartSlides } = defineProps({
       </div>
       <div class="grid-cell img-cell-2">
         <img src="/adapter.png" alt="Переходник-адаптер" class="img" />
+        <BuyBtn
+          link="https://othertool.ru/home_master/tsiklonnye-filtry-dlja-pylesosa/universalnyj-perexodnik-adapter-dlja-pylesosa"
+          side-pos="left"
+          margin-rem="2rem"
+        />
       </div>
       <div class="grid-cell text-cell-2">
         <p>
@@ -76,6 +87,7 @@ const { cartSlides } = defineProps({
   grid-column: 1 / 4;
 }
 .img-cell-2 {
+  position: relative;
   display: flex;
   grid-column: 3 / -1;
   grid-row: 2;

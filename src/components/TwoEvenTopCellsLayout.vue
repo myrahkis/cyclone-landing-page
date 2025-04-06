@@ -25,10 +25,20 @@ const gradientStyle = computed(() => ({
         <p>{{ topText }}</p>
       </div>
       <div class="grid-cell second-cell">
-        <PhotoCarousel :pics="metalBarrelsPics" />
+        <PhotoCarousel
+          :pics="metalBarrelsPics"
+          link="https://othertool.ru/metall-bochka?search=бочка"
+          side-pos="left"
+          margin-rem="0.5rem"
+        />
       </div>
       <div class="grid-cell third-cell">
-        <PhotoCarousel :pics="plasticBarrelPics" />
+        <PhotoCarousel
+          :pics="plasticBarrelPics"
+          link="https://othertool.ru/novye-plastikovye-bochki?search=бочка"
+          side-pos="right"
+          margin-rem="0.5rem"
+        />
       </div>
       <div class="grid-cell last-cell">
         <p>{{ bottomText }}</p>
@@ -49,7 +59,7 @@ const gradientStyle = computed(() => ({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(4, 0.25fr);
-  grid-template-rows: minmax(450px, 1fr) 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 2rem;
   height: 100%;
   flex-grow: 1;

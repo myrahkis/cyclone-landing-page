@@ -1,4 +1,5 @@
 <script setup>
+import BuyBtn from '@/ui/BuyBtn.vue'
 import SkrewImg from '@/ui/SkrewImg.vue'
 
 const equipments = [
@@ -28,6 +29,11 @@ const equipments = [
           src="/one-side-img.png"
           alt="Двухфункциональная система двойной фильтрации"
           class="img"
+        />
+        <BuyBtn
+          link="https://othertool.ru/dvuxfunktsionalnaja-tsiklonnaja-sistema-dvojno-filtratsii?search=циклон"
+          side-pos="right"
+          marginRem="2rem"
         />
       </div>
       <div class="grid-cell top-cell">
@@ -82,6 +88,7 @@ const equipments = [
   min-height: 0;
 }
 .img-cell {
+  position: relative;
   grid-row: 1 / -1;
   grid-column: 1 / 2;
   padding-left: 0;

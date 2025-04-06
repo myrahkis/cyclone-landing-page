@@ -24,7 +24,12 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
         <img src="/bundling.png" alt="Комплектация фильтра" class="img" />
       </div>
       <div class="grid-cell img-cell-2">
-        <PhotoCarousel :pics="nozzleSlides" />
+        <PhotoCarousel
+          :pics="nozzleSlides"
+          link="https://othertool.ru/dvojnoj-filtratsiej?search=циклон"
+          side-pos="right"
+          margin-rem="0.5rem"
+        />
       </div>
       <div class="grid-cell text-cell-2">
         <h3>Насадка на циклонный фильтр SN50T3 — вторая ступень фильтрации</h3>

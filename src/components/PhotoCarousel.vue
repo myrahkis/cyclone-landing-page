@@ -1,8 +1,12 @@
 <script setup>
+import BuyBtn from '@/ui/BuyBtn.vue'
 import { ref } from 'vue'
 
-const { pics } = defineProps({
+const { pics, link, sidePos, marginRem } = defineProps({
   pics: { type: Array, required: true, default: () => [] },
+  link: String,
+  sidePos: String,
+  marginRem: String,
 })
 
 const curIndex = ref(0)
@@ -32,18 +36,19 @@ function prevSlide() {
     </div>
     <button class="carousel-btn prev" @click="prevSlide">❮</button>
     <button class="carousel-btn next" @click="nextSlide">❯</button>
+    <BuyBtn :link="link" :sidePos="sidePos" :margin-rem="marginRem" />
   </div>
 </template>
 
 <style scoped>
 .carousel {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .carousel-container {
