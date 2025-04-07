@@ -1,9 +1,9 @@
 <script setup>
-import BuyBtn from '@/ui/BuyBtn.vue'
 import PhotoCarousel from './PhotoCarousel.vue'
 
 const { cartSlides } = defineProps({
   cartSlides: { type: Array },
+  adapterSlides: { type: Array },
   equipments1: { type: Object, default: () => ({}) },
   equipments2: { type: Object, default: () => ({}) },
 })
@@ -38,11 +38,11 @@ const { cartSlides } = defineProps({
         </p>
       </div>
       <div class="grid-cell img-cell-2">
-        <img src="/adapter.png" alt="Переходник-адаптер" class="img" />
-        <BuyBtn
-          link="https://othertool.ru/home_master/tsiklonnye-filtry-dlja-pylesosa/universalnyj-perexodnik-adapter-dlja-pylesosa"
+        <PhotoCarousel
+          :pics="adapterSlides"
           side-pos="left"
-          margin-rem="2rem"
+          margin-rem="0.5rem"
+          link="https://othertool.ru/home_master/tsiklonnye-filtry-dlja-pylesosa/universalnyj-perexodnik-adapter-dlja-pylesosa"
         />
       </div>
       <div class="grid-cell text-cell-2">
@@ -68,7 +68,7 @@ const { cartSlides } = defineProps({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(6, 0.25fr);
-  grid-template-rows: auto;
+  grid-template-rows: auto minmax(450px, 1fr);
   gap: 2rem;
   width: 100%;
   height: 100%;

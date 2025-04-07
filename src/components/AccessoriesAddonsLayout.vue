@@ -28,6 +28,10 @@ const cartSlides = [
   `${import.meta.env.BASE_URL}Carts/cart2.png`,
   `${import.meta.env.BASE_URL}Carts/cart3.png`,
 ]
+const adapterSlides = [
+  `${import.meta.env.BASE_URL}Adapter/adapter1.png`,
+  `${import.meta.env.BASE_URL}Adapter/adapter2.png`,
+]
 </script>
 
 <template>
@@ -61,7 +65,7 @@ const cartSlides = [
 образом можно соединить несколько 1,5 метровых отрезков для получения необходимой вам длинны."
     layoutVariant="default"
   />
-  <TwoLongCellsWOnePhotoRev :cartSlides="cartSlides"  />
+  <TwoLongCellsWOnePhotoRev :cartSlides="cartSlides" :adapterSlides="adapterSlides" />
 </template>
 
 <style scoped></style>

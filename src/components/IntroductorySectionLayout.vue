@@ -43,7 +43,6 @@ const cyclone_SN50T3F_slides = [
   `${import.meta.env.BASE_URL}CycloneSN50T3F/how-filter-works.png`,
   `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-1.png`,
   `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-2.png`,
-  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-3.png`,
   `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-4.png`,
   `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-5.png`,
 ]

@@ -160,11 +160,11 @@ function prevSlide() {
   .carousel-item {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 43%;
     transform: translate(-50%, -50%);
   }
   .carousel-image {
-    width: 145%;
+    width: 125%;
   }
 }
 

@@ -1,7 +1,7 @@
 <script setup>
-const fullImgPath1 = `${import.meta.env.BASE_URL}2025-02-13-bg.png`
-const fullImgPath2 = `${import.meta.env.BASE_URL}2025-02-13.png`
-const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
+const fullImgPath1 = `${import.meta.env.BASE_URL}hero-bg.png`
+const fullImgPath2 = `${import.meta.env.BASE_URL}hero-clear.png`
+const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.png`
 </script>
 
 <template>
@@ -71,15 +71,15 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 }
 .clear-img {
   position: absolute;
-  bottom: 0;
-  right: 6%;
+  bottom: 1%;
+  right: 5.5%;
   width: 45%;
   z-index: 1;
   height: auto;
   padding-bottom: 35.5%;
   background: var(--bg-clear-url);
   background-position: left 0 bottom 0;
-  background-size: 84%;
+  background-size: 83%;
   background-repeat: no-repeat;
   border: 3px solid white;
   border-radius: 4.5rem;
@@ -152,7 +152,8 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
     /* min-height: 100vh; */
   }
   .clear-img {
-    background-size: 85%;
+    background-size: 84%;
+    bottom: -0.5%;
   }
   .text {
     width: 100%;
@@ -197,6 +198,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
 @media (max-width: 767px) {
   .clear-img-mobile {
     width: 78.5%;
+    bottom: -2.5%;
   }
   .texts {
     width: 100%;
@@ -219,6 +221,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   .clear-img-mobile {
     background-size: 105%;
     width: 100%;
+    bottom: -1%;
     padding-bottom: 65%;
   }
   .texts {
@@ -233,6 +236,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}clear-mobile.png`
   .clear-img-mobile {
     background-size: 104%;
     width: 105%;
+    bottom: -2%;
     padding-bottom: 65%;
   }
 }
