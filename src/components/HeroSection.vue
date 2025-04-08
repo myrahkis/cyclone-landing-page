@@ -1,7 +1,7 @@
 <script setup>
 const fullImgPath1 = `${import.meta.env.BASE_URL}hero-bg.webp`
 const fullImgPath2 = `${import.meta.env.BASE_URL}hero-clear.webp`
-const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.png`
+const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
 </script>
 
 <template>
