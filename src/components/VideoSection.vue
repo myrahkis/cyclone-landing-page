@@ -34,7 +34,7 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   align-items: center;
   border: 3px solid white;
   border-radius: 1.9rem;
-  padding-bottom: 56.25%;
+  padding-bottom: 46.25%;
   height: 0;
   width: 100%;
   margin-bottom: 3rem;
