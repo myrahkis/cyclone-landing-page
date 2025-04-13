@@ -28,10 +28,10 @@ function closeDataProcessingPolicyModal() {
     <DataProcessingPolicyModal />
   </BgBlurModal>
   <footer class="footer">
-    <img src="/footerIdk.png" alt="" class="bg-pic big-thing" />
+    <!-- <img src="/footerIdk.png" alt="" class="bg-pic big-thing" />
     <img src="/15.png" alt="" class="bg-pic small-skrew" />
     <img src="/14.png" alt="" class="bg-pic mid-skrew" />
-    <img src="/13.png" alt="" class="bg-pic big-skrew" />
+    <img src="/13.png" alt="" class="bg-pic big-skrew" /> -->
     <div class="footer-container">
       <!-- <BtnsLinksList width="100%" fontSize="2rem" /> -->
       <div class="lower-footer">
@@ -55,7 +55,7 @@ function closeDataProcessingPolicyModal() {
           </div>
         </div>
         <div class="credits">
-          <p>© 2025 «ИнойИнструмент»</p>
+          <p class="credits-text">© 2025 «ИнойИнструмент»</p>
           <p>
             <a
               class="credits-btn"
@@ -64,6 +64,9 @@ function closeDataProcessingPolicyModal() {
               @click.prevent="isDataProcessingPolicyModalOpen = true"
               >Политика обработки персональных данных</a
             >
+          </p>
+          <p>
+            <a class="credits-btn" href="card_of_all_banks.pdf" download>Карточка компании</a>
           </p>
           <p>
             <a class="credits-btn" href="" @click.prevent="isPublicOfferAgrModalOpen = true"
@@ -105,7 +108,7 @@ function closeDataProcessingPolicyModal() {
   border-radius: 1.9rem;
   /* min-height: 48vh; */
   width: 100%;
-  margin-top: 30%;
+  /* margin-top: 30%; */
 }
 
 .lower-footer {
@@ -139,7 +142,7 @@ function closeDataProcessingPolicyModal() {
   gap: 3rem;
 }
 .contacts {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 2.5  vw, 2rem);
   line-height: 2.5rem;
   color: var(--gray-color);
 }
@@ -147,11 +150,13 @@ function closeDataProcessingPolicyModal() {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
-  font-size: clamp(1.2rem, 1.5vw, 1.6rem);
   color: var(--gray-color);
 }
+.credits-text {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
 
-.bg-pic {
+/* .bg-pic {
   position: absolute;
 }
 .big-thing {
@@ -173,9 +178,11 @@ function closeDataProcessingPolicyModal() {
   top: -15%;
   right: 0;
   width: 35vw;
-}
+} */
 
 .credits-btn {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+
   &:link,
   &:visited {
     color: var(--gray-color);

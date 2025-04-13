@@ -9,7 +9,7 @@
       </div>
       <h2 class="heading-cell-2">Напольное исполнение</h2>
       <div class="grid-cell second-cell">
-        <img src="/FloorVarient/floorVar2.png" alt="Напольный вариант фильтра" class="img" />
+        <img src="/FloorVarient/floorVar3.png" alt="Напольный вариант фильтра" class="img" />
       </div>
       <div class="grid-cell third-cell">
         <img src="/WallVarient/wallVar2.png" alt="Настенный вариант фильтра" class="img" />
@@ -21,7 +21,7 @@
         <img src="/FloorVarient/floorVar1.png" alt="Напольный вариант фильтра" class="img" />
       </div>
       <div class="grid-cell sixth-cell">
-        <img src="/FloorVarient/floorVar3.png" alt="Напольный вариант фильтра" class="img" />
+        <img src="/FloorVarient/floorVar2.png" alt="Напольный вариант фильтра" class="img" />
       </div>
     </div>
   </section>

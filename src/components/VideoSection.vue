@@ -6,39 +6,40 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   <section class="video-section" id="overviews">
     <div class="video-elem">
       <iframe
+        class="video-frame"
         src="https://www.youtube.com/embed/ClvIqt0Vq5Y"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
         frameborder="0"
         allowfullscreen
-      >
-      </iframe>
+      ></iframe>
     </div>
   </section>
 </template>
 
 <style scoped>
 .video-section {
-  position: relative;
+  padding: 3.5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   display: flex;
   flex-direction: column;
-  color: white;
-  padding: 3.5rem;
-  /* height: 85rem; */
-  background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
-}
-.video-elem {
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  color: white;
+}
+
+/* Контейнер */
+.video-elem {
+  width: 100%;
+  max-width: 100rem;
+  margin-bottom: 3rem;
   border: 3px solid white;
   border-radius: 1.9rem;
-  padding-bottom: 46.25%;
-  height: 0;
-  width: 100%;
-  margin-bottom: 3rem;
+  overflow: hidden;
+}
 
-  font-size: 2.5rem;
+/* Сам iframe */
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
 }
 </style>

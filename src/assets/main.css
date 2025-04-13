@@ -51,6 +51,7 @@ p {
   font-size: clamp(1.5rem, 2vw, 1.9rem);
   font-weight: 400;
   width: fit-content;
+  text-align: justify;
 }
 
 button {

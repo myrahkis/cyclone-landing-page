@@ -68,7 +68,7 @@ const { cartSlides } = defineProps({
 .thrid-grid {
   display: grid;
   grid-template-columns: repeat(6, 0.25fr);
-  grid-template-rows: auto minmax(450px, 1fr);
+  grid-template-rows: 0.8fr minmax(450px, 1fr);
   gap: 2rem;
   width: 100%;
   height: 100%;

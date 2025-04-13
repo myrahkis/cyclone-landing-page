@@ -115,6 +115,7 @@ function closeModal() {
   font-size: clamp(1.6rem, 4vw, 3rem);
   font-weight: 600;
   margin-bottom: 1.5rem;
+  text-align: start;
 }
 .email {
   margin-bottom: 1.5rem;
@@ -181,6 +182,12 @@ function closeModal() {
       background-color: var(--brand-blue-color);
       color: black;
     }
+  }
+}
+
+@media (max-width: 975px) {
+  .phone {
+    font-size: clamp(1.6rem, 2.5vw, 2.8rem);
   }
 }
 

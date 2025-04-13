@@ -27,9 +27,9 @@
         </p>
       </div>
     </div>
+    <img src="/brand-character.png" alt="" class="brand-character" />
     <img src="/11.png" alt="" class="skrew-big" />
     <img src="/12.png" alt="" class="skrew-sm" />
-    <img src="/brand-character.png" alt="" class="spanner" />
   </section>
 </template>
 
@@ -39,7 +39,7 @@
   display: flex;
   justify-content: space-between;
   padding: 3.5rem;
-  /* min-height: 100vh; */
+  height: min-content;
   color: white;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
@@ -69,18 +69,16 @@
   right: 48rem;
   width: 20rem;
 }
-.spanner {
-  /* position: absolute; */
-  /* bottom: 0; */
-  /* right: 5rem; */
+.brand-character {
   max-width: 100%;
-  width: 35%;
+  width: 30%;
   max-height: 100%;
+  align-self: end;
 }
 
 /* (1024px–1279px) */
 @media (max-width: 1279px) {
-  .spanner {
+  .brand-character {
     width: 45%;
   }
 }
@@ -90,7 +88,7 @@
   .about-us {
     width: 50%;
   }
-  .spanner {
+  .brand-character {
     width: 50%;
   }
 }
@@ -103,7 +101,7 @@
   .about-us {
     width: 100%;
   }
-  .spanner {
+  .brand-character {
     align-self: center;
   }
   .skrew-big {

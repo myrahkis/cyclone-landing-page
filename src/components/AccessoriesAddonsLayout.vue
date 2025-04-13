@@ -27,6 +27,7 @@ const cartSlides = [
   `${import.meta.env.BASE_URL}Carts/cart1.png`,
   `${import.meta.env.BASE_URL}Carts/cart2.png`,
   `${import.meta.env.BASE_URL}Carts/cart3.png`,
+  `${import.meta.env.BASE_URL}Carts/cart4.png`,
 ]
 const adapterSlides = [
   `${import.meta.env.BASE_URL}Adapter/adapter1.png`,

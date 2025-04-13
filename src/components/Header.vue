@@ -34,7 +34,6 @@ defineExpose({
           </p>
         </div>
       </a>
-      <!-- <BtnsLinksList width="60%" font-size="1.8rem" /> -->
       <div class="contacts-wrapper">
         <div class="contacts">
           <div class="phone-email-wrapper">
@@ -141,7 +140,12 @@ defineExpose({
 .menu-btn.open {
   transform: rotate(-90deg);
 }
+.working-hours {
+  font-size: clamp(1rem, 2vw, 1.6rem);
+}
 .email {
+  font-size: clamp(1.8rem, 2vw, 2.1rem);
+
   a {
     &:link,
     &:visited {
@@ -149,6 +153,9 @@ defineExpose({
       text-decoration: none;
     }
   }
+}
+.phone {
+  font-size: clamp(1.8rem, 2vw, 2.1rem);
 }
 
 /* (1024px–1279px) */
@@ -169,33 +176,26 @@ defineExpose({
     align-items: end;
     gap: 0.5rem;
   }
-  .working-hours {
-    font-size: 1.4rem;
-  }
   .phone-email-wrapper {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
   .phone {
-    font-size: 2.3rem;
+    /* font-size: 2.5rem; */
   }
-  /* .email {
-    font-size: 1.8rem;
-  } */
-}
-
-@media (max-aspect-ratio: 9/16) {
-  .hero-section {
-    height: clamp(105vh, 120vh, 130vh);
+  .email {
+    /* font-size: 1.8rem; */
   }
 }
 
-@media (min-aspect-ratio: 9/16) and (max-aspect-ratio: 10/16) {
-  .hero-section {
-    height: clamp(110vh, 125vh, 135vh);
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+@media (max-width: 1024px) {
+  .working-hours {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+  }
+  .email,
+  .phone {
+    font-size: clamp(1.8rem, 2vw, 1.8rem);
   }
 }
 

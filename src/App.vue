@@ -44,11 +44,10 @@ function goUp() {
 }
 function handleScroll() {
   const button = document.getElementById('goUpBtn')
-  const footer = document.querySelector('.footer-container')
+  const footer = document.querySelector('.contacts-text')
 
   const footerRect = footer.getBoundingClientRect()
   const viewportHeight = window.innerHeight
-  // const buttonOffset = 20
 
   if (window.scrollY > 1500) {
     button.classList.add('show')
