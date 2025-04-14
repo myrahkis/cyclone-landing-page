@@ -7,7 +7,7 @@ import CallbackForm from './CallbackForm.vue'
 const isModalOpen = ref(false)
 
 function closeModal() {
-  return (isModalOpen.value = false)
+  isModalOpen.value = false
 }
 </script>
 

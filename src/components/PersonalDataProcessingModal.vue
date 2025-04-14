@@ -6,7 +6,7 @@ import DataProcessingPolicyModal from './DataProcessingPolicyModal.vue'
 const isDataProcessingPolicyModalOpen = ref(false)
 
 function closeDataProcessingPolicyModal() {
-  return (isDataProcessingPolicyModalOpen.value = false)
+  isDataProcessingPolicyModalOpen.value = false
 }
 </script>
 

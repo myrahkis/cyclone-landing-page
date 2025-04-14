@@ -13,7 +13,7 @@ import OpenedHeaderMobile from './components/OpenedHeaderMobile.vue'
 const openMenu = ref(false)
 
 function useOpenMenu() {
-  return (openMenu.value = !openMenu.value)
+  openMenu.value = !openMenu.value
 }
 
 const mainRef = ref(null)

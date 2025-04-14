@@ -19,20 +19,8 @@ const formData = ref({
   telephone: '',
 })
 
-// const validatePhone = () => {
-//   if (!/^\d{10,15}$/.test(formData.value.telephone)) {
-//     validationError.value = 'Введите корректный номер (10-15 цифр)'
-//     return false
-//   } else {
-//     validationError.value = ''
-//     return true
-//   }
-// }
-
 async function submitHandle() {
-  // if (!validatePhone()) return
   try {
-    // console.log(formData)
     await axios.post('http://localhost:3000/send-mail', formData.value)
     alert('Сообщение отправлено!')
   } catch (error) {
@@ -41,10 +29,10 @@ async function submitHandle() {
 }
 
 function closePersDataModal() {
-  return (isPersDataModalOpen.value = false)
+  isPersDataModalOpen.value = false
 }
 function closePublicOfferAgrModal() {
-  return (isPublicOfferAgrModalOpen.value = false)
+  isPublicOfferAgrModalOpen.value = false
 }
 
 const handlePhoneInput = (event) => {

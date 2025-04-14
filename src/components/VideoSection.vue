@@ -1,11 +1,24 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+const showVideo = ref(false)
+</script>
 
 <template>
   <section class="video-section" id="overviews">
     <div class="video-elem">
+      <img
+        v-if="!showVideo"
+        @click="showVideo = true"
+        class="video-preview"
+        src="/youtube-preview.webp"
+        alt="Превью ютуб видео"
+      />
       <iframe
+        v-else
         class="video-frame"
         src="https://www.youtube.com/embed/ClvIqt0Vq5Y"
+        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
         frameborder="0"
         allowfullscreen
       ></iframe>
@@ -31,7 +44,12 @@
   border-radius: 1.9rem;
   overflow: hidden;
 }
-
+.video-preview {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .video-frame {
   width: 100%;
   aspect-ratio: 16 / 9;

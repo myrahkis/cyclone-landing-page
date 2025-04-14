@@ -10,10 +10,10 @@ const isPublicOfferAgrModalOpen = ref(false)
 const isDataProcessingPolicyModalOpen = ref(false)
 
 function closePublicOfferAgrModal() {
-  return (isPublicOfferAgrModalOpen.value = false)
+  isPublicOfferAgrModalOpen.value = false
 }
 function closeDataProcessingPolicyModal() {
-  return (isDataProcessingPolicyModalOpen.value = false)
+  isDataProcessingPolicyModalOpen.value = false
 }
 </script>
 

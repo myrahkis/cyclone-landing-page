@@ -1,7 +1,7 @@
 <script setup>
 import OneSideImgTwoRowsLayout from './OneSideImgTwoRowsLayout.vue'
 import HowFilterWorksSection from './HowFilterWorksSection.vue'
-import FourPicsLayout from './FourPicsLayout.vue'
+import SixPicsLayout from './SixPicsLayout.vue'
 
 const howFilterWorksTexts = [
   'Циклонный этап: На первом этапе загрязненный поток (воздух или жидкость) поступает в корпус системы, где он под воздействием центробежных сил начинает вращаться. Это вращение заставляет более крупные частицы оседать на стенках фильтра и скапливаться в специальном отсеке для сбора загрязнений. Этот процесс эффективно удаляет более тяжелые и крупные частицы, такие как пыль, песок и металлические частички.',
@@ -11,7 +11,7 @@ const howFilterWorksTexts = [
 
 <template>
   <OneSideImgTwoRowsLayout />
-  <FourPicsLayout />
+  <SixPicsLayout />
   <HowFilterWorksSection
     :showHeader="false"
     gradientDirection="to bottom"

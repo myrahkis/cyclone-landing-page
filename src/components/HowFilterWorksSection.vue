@@ -1,5 +1,4 @@
 <script setup>
-import SkrewImg from '@/ui/SkrewImg.vue'
 import { computed } from 'vue'
 
 const { showHeader, gradientDirection, heading, topText, bottomText } = defineProps({
