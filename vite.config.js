@@ -4,9 +4,13 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), ...(import.meta.env.MODE === 'development' ? [vueDevTools()] : [])],
+  plugins: [vue(), ...(import.meta.env.VITE_APP_MODE === 'development' ? [vueDevTools()] : [])],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
