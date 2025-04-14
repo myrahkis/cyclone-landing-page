@@ -55,6 +55,7 @@ function closeModal() {
           width="100%"
           height="100%"
           frameborder="0"
+          tabindex="-1"
         ></iframe>
       </div>
     </div>

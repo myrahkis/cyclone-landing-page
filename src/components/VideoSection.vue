@@ -7,20 +7,17 @@ const showVideo = ref(false)
 <template>
   <section class="video-section" id="overviews">
     <div class="video-elem">
-      <img
-        v-if="!showVideo"
-        @click="showVideo = true"
-        class="video-preview"
-        src="/youtube-preview.webp"
-        alt="Превью ютуб видео"
-      />
+      <div class="preview-wrapper" v-if="!showVideo" @click.prevent.stop="showVideo = true">
+        <img class="video-preview" src="/youtube-preview.webp" alt="Превью ютуб видео" />
+      </div>
       <iframe
         v-else
         class="video-frame"
-        src="https://www.youtube.com/embed/ClvIqt0Vq5Y"
-        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+        :src="'https://www.youtube.com/embed/ClvIqt0Vq5Y?autoplay=1&rel=0'"
+        allow="accelerometer; encrypted-media; autoplay; gyroscope; picture-in-picture"
         frameborder="0"
         allowfullscreen
+        tabindex="-1"
       ></iframe>
     </div>
   </section>
@@ -37,6 +34,7 @@ const showVideo = ref(false)
 }
 
 .video-elem {
+  position: relative;
   width: 100%;
   max-width: 100rem;
   margin-bottom: 3rem;
@@ -44,11 +42,20 @@ const showVideo = ref(false)
   border-radius: 1.9rem;
   overflow: hidden;
 }
-.video-preview {
+.preview-wrapper {
   cursor: pointer;
+}
+.video-preview {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7rem;
 }
 .video-frame {
   width: 100%;
