@@ -4,8 +4,8 @@ import PhotoCarousel from './PhotoCarousel.vue'
 
 const { metalBarrelsPics, plasticBarrelPics, gradientDirection, topText, bottomText } = defineProps(
   {
-    metalBarrelsPics: Array,
-    plasticBarrelPics: Array,
+    metalBarrelsPics: { type: Array, required: true },
+    plasticBarrelPics: { type: Array, required: true },
     gradientDirection: { type: String, required: true },
     topText: { type: String, required: true },
     bottomText: { type: String, required: true },

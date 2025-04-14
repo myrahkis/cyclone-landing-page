@@ -54,7 +54,7 @@ function closeModal() {
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A251189b0d152a15f05ac87119644b8e58fe04752b0c72ff8a62ee92c3c7d9ff6&amp;source=constructor"
           width="100%"
           height="100%"
-          frameborder="0"
+          style="border: 0"
           tabindex="-1"
         ></iframe>
       </div>

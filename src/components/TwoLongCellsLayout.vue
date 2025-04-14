@@ -2,18 +2,12 @@
 import { computed } from 'vue'
 import PhotoCarousel from './PhotoCarousel.vue'
 
-const { pics1, pics2, gradientDirection, equipments1, equipments2, text1, text2, layoutVariant } =
-  defineProps({
-    pics1: { type: Array },
-    pics2: { type: Array },
-    nozzleSlides: { type: Array },
-    gradientDirection: { type: String, required: true },
-    equipments1: { type: Object, default: () => ({}) },
-    equipments2: { type: Object, default: () => ({}) },
-    text1: { type: String },
-    text2: { type: String },
-    layoutVariant: { type: String, required: true },
-  })
+const { pics1, pics2, gradientDirection, layoutVariant } = defineProps({
+  pics1: { type: Array },
+  pics2: { type: Array },
+  gradientDirection: { type: String, required: true },
+  layoutVariant: { type: String, required: true },
+})
 
 const gradientStyle = computed(() => ({
   background: `linear-gradient(${gradientDirection}, rgba(0, 0, 0), rgba(0, 0, 0, 0.4))`,
@@ -30,14 +24,7 @@ const gridStyle = computed(() => ({
   <section :style="gradientStyle" class="third-section">
     <div class="thrid-grid" :style="gridStyle">
       <div class="grid-cell text-cell-1">
-        <h3 v-if="equipments1.header">{{ equipments1.header }}</h3>
-        <p v-if="equipments1.subheader">{{ equipments1.subheader }}:</p>
-        <p v-else>
-          {{ text1 }}
-        </p>
-        <ul class="equipment" v-if="equipments1.equip">
-          <li v-for="item in equipments1.equip" :key="item">{{ item }}</li>
-        </ul>
+        <slot name="text-cell-1" />
       </div>
       <div class="grid-cell img-cell-1">
         <PhotoCarousel
@@ -56,16 +43,7 @@ const gridStyle = computed(() => ({
         />
       </div>
       <div class="grid-cell text-cell-2">
-        <h3 v-if="equipments1.header">
-          Насадка на циклонный фильтр SN50T3 — вторая ступень фильтрации
-        </h3>
-        <p v-if="equipments1.subheader">Комплектация:</p>
-        <p v-if="text2">
-          {{ text2 }}
-        </p>
-        <ul class="equipment" v-if="equipments2.equip">
-          <li v-for="item in equipments2.equip" :key="item">{{ item }}</li>
-        </ul>
+        <slot name="text-cell-2" />
       </div>
     </div>
   </section>

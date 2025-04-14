@@ -180,11 +180,16 @@ defineExpose({
 }
 
 @media (max-width: 1024px) {
+  .logo-text {
+    font-size: clamp(1rem, 3.5vw, 1.6rem);
+    text-align: start;
+  }
   .working-hours {
     font-size: clamp(1rem, 2vw, 1.3rem);
   }
   .email,
   .phone {
+    text-align: start;
     font-size: clamp(1.8rem, 2vw, 1.8rem);
   }
 }

@@ -2,11 +2,11 @@
 import { computed } from 'vue'
 
 const { showHeader, gradientDirection, heading, topText, bottomText } = defineProps({
-  showHeader: Boolean,
+  showHeader: {type: Boolean, default: false},
   gradientDirection: { type: String, required: true },
-  heading: String,
-  topText: String,
-  bottomText: Array,
+  heading: { type: String, required: true },
+  topText: { type: String, required: true },
+  bottomText: { type: Array, required: true },
 })
 
 const gradientStyle = computed(() => ({

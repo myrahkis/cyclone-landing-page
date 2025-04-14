@@ -2,9 +2,9 @@
 import PhotoCarousel from './PhotoCarousel.vue'
 
 const { nozzleSlides, equipments1, equipments2 } = defineProps({
-  nozzleSlides: { type: Array },
-  equipments1: { type: Object, default: () => ({}) },
-  equipments2: { type: Object, default: () => ({}) },
+  nozzleSlides: { type: Array, required: true },
+  equipments1: { type: Object, required: true },
+  equipments2: { type: Object, required: true },
 })
 </script>
 

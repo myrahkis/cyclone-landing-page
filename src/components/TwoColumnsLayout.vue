@@ -2,14 +2,12 @@
 import { computed } from 'vue'
 import PhotoCarousel from './PhotoCarousel.vue'
 
-const { heading, gradientDirection, rowDirection, texts, characteristic, pics } = defineProps({
+const { heading, gradientDirection, rowDirection, texts, pics } = defineProps({
   heading: { type: String, required: true },
   gradientDirection: { type: String, required: true },
-  rowDirection: { type: String, required: true },
+  rowDirection: { type: String, default: 'row' },
   texts: { type: Array, required: true },
-  characteristic: { type: Object, required: false, default: () => ({}) },
-  equipment: { type: Object, required: false, default: () => ({}) },
-  pics: { type: Array },
+  pics: { type: Array, required: true },
 })
 
 const gradientStyle = computed(() => ({
@@ -28,18 +26,6 @@ const rowStyle = computed(() => ({
         <p v-for="text in texts" :key="text">
           {{ text }}
         </p>
-        <p>{{ characteristic.header }}</p>
-        <ul class="list">
-          <li v-for="charac in characteristic.charac" :key="charac">
-            <p>{{ charac }}</p>
-          </li>
-        </ul>
-        <p>{{ equipment.header }}</p>
-        <ul class="list">
-          <li v-for="equip in equipment.equip" :key="equip">
-            <p>{{ equip }}</p>
-          </li>
-        </ul>
       </div>
       <div class="info-cell">
         <PhotoCarousel

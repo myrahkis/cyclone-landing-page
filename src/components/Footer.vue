@@ -1,9 +1,9 @@
 <script setup>
+import { ref } from 'vue'
 import SocialsIcons from './SocialsIcons.vue'
 import ToShopBtn from '@/ui/ToShopBtn.vue'
 import BgBlurModal from '@/ui/BgBlurModal.vue'
 import PublicOfferAgrModal from './PublicOfferAgrModal.vue'
-import { ref } from 'vue'
 import DataProcessingPolicyModal from './DataProcessingPolicyModal.vue'
 
 const isPublicOfferAgrModalOpen = ref(false)
@@ -84,8 +84,8 @@ function closeDataProcessingPolicyModal() {
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 0.8) 50%,
-    rgba(0, 0, 0, 0.6) 70%,
+    rgba(0, 0, 0, 0.8) 65%,
+    rgba(0, 0, 0, 0.6) 85%,
     rgba(0, 0, 0, 0.4) 100%
   );
   padding: 3.5rem;

@@ -21,7 +21,7 @@ const formData = ref({
 
 async function submitHandle() {
   try {
-    await axios.post('http://localhost:3000/send-mail', formData.value)
+    await axios.post('https://SITE_NAME/send-email.php', formData.value)
     alert('Сообщение отправлено!')
   } catch (error) {
     alert('Ошибка при отправке.')
