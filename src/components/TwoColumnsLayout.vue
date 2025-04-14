@@ -58,7 +58,6 @@ const rowStyle = computed(() => ({
   position: relative;
   display: flex;
   color: white;
-  /* min-height: 80vh; */
   padding: 3.5rem;
 }
 .floor-varient-flex {
@@ -83,10 +82,6 @@ const rowStyle = computed(() => ({
 .img {
   display: flex;
   align-items: center;
-  /* height: 100%;
-  max-width: 100%;
-  width: 65%;
-  object-fit: contain; */
 }
 
 /* (480px–767px) */

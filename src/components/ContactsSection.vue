@@ -16,7 +16,6 @@ function closeModal() {
     <CallbackForm :isModalOpen="closeModal" />
   </BgBlurModal>
   <section class="contacts-section" id="contacts">
-    <!-- <img src="/spanner-bottom-half.png" alt="" class="spanner" /> -->
     <h2>Контактная информация</h2>
     <div class="contacts-grid">
       <div class="contacts-info">
@@ -26,12 +25,13 @@ function closeModal() {
             <p class="email">info@othertool.ru</p>
           </div>
           <div>
-            <p>
+            <p class="address">
               Москва, <br />
               ул. Воронцовские пруды, <br />
               дом 3, подъезд 26
+              <br />
+              (вход с ул. Академика Челомея)
             </p>
-            <p>(вход с ул. Академика Челомея)</p>
           </div>
         </div>
         <div class="contacts-info-right">
@@ -76,7 +76,6 @@ function closeModal() {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
   padding: 3.5rem;
   color: white;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
@@ -110,6 +109,9 @@ function closeModal() {
   grid-column: 2 / -1;
   height: fit-content;
   width: 100%;
+}
+.address {
+  text-align: start;
 }
 .phone {
   font-size: clamp(1.6rem, 4vw, 3rem);

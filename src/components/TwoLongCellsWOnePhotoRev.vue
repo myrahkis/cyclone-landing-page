@@ -1,11 +1,9 @@
 <script setup>
 import PhotoCarousel from './PhotoCarousel.vue'
 
-const { cartSlides } = defineProps({
+const { cartSlides, adapterSlides } = defineProps({
   cartSlides: { type: Array },
   adapterSlides: { type: Array },
-  equipments1: { type: Object, default: () => ({}) },
-  equipments2: { type: Object, default: () => ({}) },
 })
 </script>
 
@@ -21,10 +19,9 @@ const { cartSlides } = defineProps({
         />
       </div>
       <div class="grid-cell text-cell-1">
-        <!-- <p>Строительная тележка 800*400*18мм</p> -->
         <p>
-          Строительная тележка 800*400*18мм, предназначена для перевозки различных грузов по строительной
-          площадке.
+          Строительная тележка 800*400*18мм, предназначена для перевозки различных грузов по
+          строительной площадке.
         </p>
         <p>
           Данная тележка была разработана для совместной работы пылесоса и ёмкости с установленным
@@ -60,7 +57,6 @@ const { cartSlides } = defineProps({
 
 <style scoped>
 .third-section {
-  /* min-height: 100vh; */
   color: white;
   padding: 3.5rem;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
@@ -110,35 +106,18 @@ const { cartSlides } = defineProps({
   margin-left: 1rem;
 }
 
-/* @media (max-width: 1068px) {
-  .thrid-grid {
-    grid-template-rows: 0.6fr 0.6fr;
-  }
-}
-@media (max-width: 946px) {
-  .thrid-grid {
-    grid-template-rows: 0.7fr 0.7fr;
-  }
-} */
-
 /* (480px–767px) */
 @media (max-width: 767px) {
   .thrid-grid {
     display: flex;
     flex-direction: column-reverse;
   }
-  /* .img-cell-1 {
-    order: 2;
-  } */
   .text-cell-1 {
     order: 1;
   }
   .img-cell-1 {
     order: 1;
   }
-  /* .img {
-    width: 70%;
-  } */
 }
 
 /* (до 479px) */

@@ -75,8 +75,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* overflow: hidden; */
 }
 
 @media (max-width: 767px) {

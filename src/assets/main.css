@@ -154,26 +154,6 @@ button:disabled {
   }
 }
 
-/* (768px–1023px) */
-@media (max-width: 1023px) {
-  /* h1 {
-    font-size: 4.3rem;
-    line-height: 6.5rem;
-    margin-bottom: 6rem;
-  }
-  h2 {
-    font-size: 4rem;
-    margin-bottom: 5.5rem;
-  }
-  h3 {
-    font-size: 2.6rem;
-    margin-bottom: 0;
-  }
-  p {
-    font-size: 1.7rem;
-  } */
-}
-
 /* (480px–767px) */
 @media (max-width: 767px) {
   h1 {
@@ -198,8 +178,4 @@ button:disabled {
     font-size: clamp(2rem, 3.5vw, 5rem);
     margin-bottom: clamp(1.8rem, 2.5vw, 4rem);
   }
-
-  /* p {
-    font-size: clamp(1.6rem, 2.5vw, 2.5rem);
-  } */
 }

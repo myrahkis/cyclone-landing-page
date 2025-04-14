@@ -10,16 +10,10 @@ import SocialsIcons from './SocialsIcons.vue'
         class="to-shop-btn"
         >В магазин</a
       >
-    <!-- <div class="contacts-wrapper"> -->
-    <!-- <div class="contacts"> -->
     <p class="text">+7 495 641-55-66</p>
     <p class="text">example@othertool.pro</p>
     <p class="text">Пн-Пт: 09:00 – 19:00, Сб: 10:00 – 18:00, Вс — выходной</p>
-    <!-- </div> -->
-    <!-- <div class="btns-wrapper"> -->
     <SocialsIcons iconWidth="3.8rem" />
-    <!-- </div> -->
-    <!-- </div> -->
   </div>
 </template>
 

@@ -1,6 +1,4 @@
-<script setup>
-import SkrewImg from '@/ui/SkrewImg.vue'
-</script>
+<script setup></script>
 
 <template>
   <section class="video-section" id="overviews">
@@ -25,7 +23,6 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   color: white;
 }
 
-/* Контейнер */
 .video-elem {
   width: 100%;
   max-width: 100rem;
@@ -35,7 +32,6 @@ import SkrewImg from '@/ui/SkrewImg.vue'
   overflow: hidden;
 }
 
-/* Сам iframe */
 .video-frame {
   width: 100%;
   aspect-ratio: 16 / 9;

@@ -51,7 +51,6 @@ const gradientStyle = computed(() => ({
 .accessory-section {
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
   color: white;
   padding: 3.5rem;
 }

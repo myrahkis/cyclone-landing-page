@@ -132,10 +132,6 @@ defineExpose({
   border-radius: 1.5rem;
   transform: rotate(0deg);
   transition: all 0.3s;
-
-  /* &:hover {
-    transform: rotate(-90deg);
-  } */
 }
 .menu-btn.open {
   transform: rotate(-90deg);
@@ -180,12 +176,6 @@ defineExpose({
     display: flex;
     align-items: center;
     gap: 1rem;
-  }
-  .phone {
-    /* font-size: 2.5rem; */
-  }
-  .email {
-    /* font-size: 1.8rem; */
   }
 }
 

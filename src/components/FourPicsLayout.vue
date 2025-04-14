@@ -29,7 +29,6 @@
 
 <style scoped>
 .fifth-section {
-  /* height: 110vh; */
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   padding: 3.5rem;
 }
@@ -160,11 +159,5 @@
   .sixth-cell {
     order: 7;
   }
-}
-/* (до 479px) */
-@media (max-width: 479px) {
-  /* .fifth-section {
-    height: 90vh;
-  }  */
 }
 </style>

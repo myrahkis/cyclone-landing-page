@@ -46,7 +46,6 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
 
 <style scoped>
 .third-section {
-  /*  -height: 100vh; */
   color: white;
   padding: 3.5rem;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
@@ -93,11 +92,6 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
   margin-left: 1rem;
 }
 
-/* @media (max-width: 1068px) {
-  .thrid-grid {
-    grid-template-rows: 0.6fr 0.6fr;
-  }
-} */
 @media (max-width: 946px) {
   .thrid-grid {
     grid-template-rows: auto minmax(42rem, auto);

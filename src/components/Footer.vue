@@ -28,12 +28,7 @@ function closeDataProcessingPolicyModal() {
     <DataProcessingPolicyModal />
   </BgBlurModal>
   <footer class="footer">
-    <!-- <img src="/footerIdk.png" alt="" class="bg-pic big-thing" />
-    <img src="/15.png" alt="" class="bg-pic small-skrew" />
-    <img src="/14.png" alt="" class="bg-pic mid-skrew" />
-    <img src="/13.png" alt="" class="bg-pic big-skrew" /> -->
     <div class="footer-container">
-      <!-- <BtnsLinksList width="100%" fontSize="2rem" /> -->
       <div class="lower-footer">
         <div class="info-block">
           <div class="idk">
@@ -85,7 +80,6 @@ function closeDataProcessingPolicyModal() {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
   color: white;
   background: linear-gradient(
     to top,
@@ -106,9 +100,7 @@ function closeDataProcessingPolicyModal() {
   padding: 3.5rem;
   border: 3px solid white;
   border-radius: 1.9rem;
-  /* min-height: 48vh; */
   width: 100%;
-  /* margin-top: 30%; */
 }
 
 .lower-footer {
@@ -132,7 +124,7 @@ function closeDataProcessingPolicyModal() {
   height: 11.5rem;
 }
 .data-text {
-  /* font-size: 1.5rem; */
+  text-align: start;
   line-height: clamp(2rem, 3vw, 3rem);
   color: var(--gray-color);
 }
@@ -142,7 +134,7 @@ function closeDataProcessingPolicyModal() {
   gap: 3rem;
 }
 .contacts {
-  font-size: clamp(1.2rem, 2.5  vw, 2rem);
+  font-size: clamp(1.2rem, 2.5 vw, 2rem);
   line-height: 2.5rem;
   color: var(--gray-color);
 }
@@ -155,30 +147,6 @@ function closeDataProcessingPolicyModal() {
 .credits-text {
   font-size: clamp(1.1rem, 2vw, 1.4rem);
 }
-
-/* .bg-pic {
-  position: absolute;
-}
-.big-thing {
-  top: -20%;
-  left: 0;
-  width: 35vw;
-}
-.small-skrew {
-  top: 3%;
-  left: 35%;
-  width: 15vw;
-}
-.mid-skrew {
-  top: 7%;
-  right: 30%;
-  width: 18vw;
-}
-.big-skrew {
-  top: -15%;
-  right: 0;
-  width: 35vw;
-} */
 
 .credits-btn {
   font-size: clamp(1.1rem, 2vw, 1.4rem);
@@ -209,69 +177,10 @@ function closeDataProcessingPolicyModal() {
   .logo {
     height: 7rem;
   }
-  .big-thing {
-    top: -13%;
-    left: 0rem;
-    width: 20rem;
-  }
-  .small-skrew {
-    top: -6rem;
-    left: 23rem;
-    width: 15rem;
-  }
-  .mid-skrew {
-    top: 4%;
-    left: 48%;
-    width: 15rem;
-  }
-  .big-skrew {
-    top: -15rem;
-    right: -10rem;
-    width: 33rem;
-  }
-}
-@media (max-width: 665px) {
-  .small-skrew {
-    left: 20rem;
-  }
-}
-@media (max-width: 565px) {
-  .big-thing {
-    width: 18rem;
-  }
-  .small-skrew {
-    left: 17rem;
-    width: 13rem;
-  }
-  .mid-skrew {
-    left: 48%;
-    width: 13rem;
-  }
-  .big-skrew {
-    width: 30rem;
-  }
 }
 @media (max-width: 480px) {
   .footer-container {
     padding: 2rem;
-  }
-  .big-thing {
-    top: -10%;
-    width: 16rem;
-  }
-  .small-skrew {
-    top: -2.5rem;
-    left: 14rem;
-    width: 10rem;
-  }
-  .mid-skrew {
-    top: 6%;
-    left: 45%;
-    width: 11rem;
-  }
-  .big-skrew {
-    width: 28rem;
-    right: -8rem;
   }
   .logo {
     height: 6rem;

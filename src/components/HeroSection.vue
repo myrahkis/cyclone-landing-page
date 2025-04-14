@@ -47,7 +47,6 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* min-height: 100vh; */
   padding: 3.5rem;
   color: var(--white-color);
 }
@@ -106,10 +105,6 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
   height: fit-content;
   margin-bottom: 15%;
 }
-.text {
-  /* font-size: 3.5rem; */
-  /* width: 45%; */
-}
 .order-btn {
   margin-top: auto;
   width: 30rem;
@@ -132,25 +127,9 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
     min-height: 115vh;
   }
 }
-@media (min-width: 2200px) {
-  /* .hero-section {
-  height: 12vh;
-  padding-top: 25rem;
-  } */
-}
-
-/* (1279px – 1550px) */
-@media (max-width: 1550px) {
-  .hero-section {
-    /* min-height: 110vh; */
-  }
-}
 
 /* (1024px–1279px) */
 @media (max-width: 1279px) {
-  .hero-section {
-    /* min-height: 100vh; */
-  }
   .clear-img {
     background-size: 84%;
     bottom: -0.5%;
@@ -212,9 +191,6 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
 }
 
 @media (max-width: 638px) {
-  .hero-section {
-    /* min-height: 100vh; */
-  }
   .hero-section::before {
     background-size: 90%;
   }
@@ -238,32 +214,6 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
     width: 105%;
     bottom: -2%;
     padding-bottom: 65%;
-  }
-}
-
-@supports not (-webkit-touch-callout: none) {
-  @media (max-height: 927px) and (max-width: 429px) {
-    .hero-section {
-      /* min-height: 80vh; */
-    }
-  }
-
-  @media (max-height: 813px) and (max-width: 376px) {
-    .hero-section {
-      /* min-height: 92vh; */
-    }
-  }
-
-  @media (max-height: 668px) and (max-width: 376px) {
-    .hero-section {
-      /* min-height: 112vh; */
-    }
-  }
-
-  @media (max-height: 761px) and (max-width: 360px) {
-    .hero-section {
-      /* min-height: 97vh; */
-    }
   }
 }
 </style>

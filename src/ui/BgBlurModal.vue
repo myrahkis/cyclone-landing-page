@@ -3,11 +3,9 @@ const { closeModal } = defineProps({ closeModal: Function })
 </script>
 
 <template>
-  <!-- <Teleport to="body"> -->
     <div class="modal-bg" @click.stop="closeModal">
       <slot></slot>
     </div>
-  <!-- </Teleport> -->
 </template>
 
 <style scoped>

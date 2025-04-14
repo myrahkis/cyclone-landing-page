@@ -17,7 +17,6 @@ const gradientStyle = computed(() => ({
 
 <template>
   <section class="description-section" :style="gradientStyle">
-    <!-- <SkrewImg /> -->
     <h2 v-if="showHeader">
       Циклонный фильтр для пылесоса SN50T3/ <br />Циклонный фильтр с двойной фильтрацией
     </h2>
@@ -43,7 +42,6 @@ const gradientStyle = computed(() => ({
 <style scoped>
 .description-section {
   position: relative;
-  /* min-height: 100vh;  */
   color: white;
   padding: 3.5rem;
 }
@@ -79,18 +77,6 @@ const gradientStyle = computed(() => ({
   grid-column: 1 / 3;
   grid-row: 2;
 }
-/* .cell-img::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse 70% 120% at bottom,
-    #d6d6d6 1%,
-    #bbbbbb 10%,
-    #8f8f8f 20%,
-    transparent 80%
-  );
-} */
 
 /* (480px–767px) */
 @media (max-width: 767px) {

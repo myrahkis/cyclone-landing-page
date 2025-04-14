@@ -1,4 +1,5 @@
 <script setup>
+import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 import Header from './components/Header.vue'
 import IntroductorySectionLayout from './components/IntroductorySectionLayout.vue'
 import DoubleFunctionalSystemLayout from './components/DoubleFunctionalSystemLayout.vue'
@@ -7,7 +8,6 @@ import VideoSection from './components/VideoSection.vue'
 import AboutUsSection from './components/AboutUsSection.vue'
 import ContactsSection from './components/ContactsSection.vue'
 import Footer from './components/Footer.vue'
-import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 import OpenedHeaderMobile from './components/OpenedHeaderMobile.vue'
 
 const openMenu = ref(false)
@@ -98,7 +98,6 @@ window.addEventListener('scroll', handleScroll)
 
 <style scoped>
 .up-btn {
-  /* display: none; */
   position: fixed;
   bottom: 5%;
   right: 3%;
