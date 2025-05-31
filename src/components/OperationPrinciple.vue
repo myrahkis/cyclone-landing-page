@@ -13,7 +13,11 @@
         </p>
       </div>
       <div class="grid-cell cell-img">
-        <img src="/how-filter-works.png" alt="Схема работы фильтра" class="how-works-img" />
+        <img
+          src="/OtherPhotos/how-filter-works.png"
+          alt="Схема работы фильтра"
+          class="how-works-img"
+        />
       </div>
       <div class="grid-cell info-cell">
         <p>
@@ -41,7 +45,7 @@
   min-height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   color: white;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
 }
 .operation-principle-grid {
   display: grid;

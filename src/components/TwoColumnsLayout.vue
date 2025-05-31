@@ -44,7 +44,7 @@ const rowStyle = computed(() => ({
   position: relative;
   display: flex;
   color: white;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
 }
 .floor-varient-flex {
   display: flex;

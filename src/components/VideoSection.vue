@@ -8,7 +8,11 @@ const showVideo = ref(false)
   <section class="video-section" id="overviews">
     <div class="video-elem">
       <div class="preview-wrapper" v-if="!showVideo" @click.prevent.stop="showVideo = true">
-        <img class="video-preview" src="/youtube-preview.webp" alt="Превью ютуб видео" />
+        <img
+          class="video-preview"
+          src="/OtherPhotos/youtube-preview.webp"
+          alt="Превью ютуб видео"
+        />
       </div>
       <iframe
         v-else
@@ -25,7 +29,7 @@ const showVideo = ref(false)
 
 <style scoped>
 .video-section {
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   display: flex;
   flex-direction: column;

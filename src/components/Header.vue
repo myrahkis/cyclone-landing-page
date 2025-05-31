@@ -27,7 +27,7 @@ defineExpose({
     <div class="header-desktop">
       <a href="#" class="logo-link" @click.prevent="goUp">
         <div class="logo-wrapper">
-          <img src="/logo-color.png" alt="лого" class="logo" />
+          <img src="/OtherPhotos/logo-color.png" alt="лого" class="logo" />
           <p class="logo-text">
             У нас есть то, <br />
             о чём Вы не знали!
@@ -51,7 +51,7 @@ defineExpose({
     <div class="header-mobile">
       <a href="#home" class="logo-link">
         <div class="logo-wrapper">
-          <img src="/logo-color.png" alt="лого" class="logo" />
+          <img src="/OtherPhotos/logo-color.png" alt="лого" class="logo" />
           <p class="logo-text">
             У нас есть то, <br />
             о чём Вы не знали!
@@ -59,7 +59,7 @@ defineExpose({
         </div>
       </a>
       <button class="menu-btn" @click="toggleMenu">
-        <img src="/menu.png" alt="меню" />
+        <img src="/OtherPhotos/menu.png" alt="меню" />
       </button>
     </div>
   </header>
@@ -152,6 +152,12 @@ defineExpose({
 }
 .phone {
   font-size: clamp(1.8rem, 2vw, 2.1rem);
+}
+
+@media (min-width: 1600px) {
+  .header {
+    padding: var(--padding-vertical-big-screens) var(--sections-padding);
+  }
 }
 
 /* (1024px–1279px) */

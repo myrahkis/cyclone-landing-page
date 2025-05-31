@@ -42,7 +42,7 @@ const gradientStyle = computed(() => ({
 .description-section {
   position: relative;
   color: white;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
 }
 .desc-grid {
   display: grid;

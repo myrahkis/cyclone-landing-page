@@ -52,7 +52,7 @@ const gradientStyle = computed(() => ({
   display: flex;
   flex-direction: column;
   color: white;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
 }
 
 .thrid-grid {

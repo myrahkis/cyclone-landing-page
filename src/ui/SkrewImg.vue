@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <img src="/10.png" alt="" class="skrew-img" />
+  <img src="/OtherPhotos/10.png" alt="" class="skrew-img" />
 </template>
 
 <style scoped>

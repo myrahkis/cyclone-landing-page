@@ -4,35 +4,19 @@ import TwoLongCellsLayout from './TwoLongCellsLayout.vue'
 import TwoLongCellsWOnePhotoRev from './TwoLongCellsWOnePhotoRev.vue'
 
 const metalBarrelSlides = [
-  `${import.meta.env.BASE_URL}Barrels/metalBarrel1.png`,
-  `${import.meta.env.BASE_URL}Barrels/metalBarrel2.png`,
-  `${import.meta.env.BASE_URL}Barrels/metalBarrel3.png`,
+  `/Barrels/metalBarrel1.png`,
+  `/Barrels/metalBarrel2.png`,
+  `/Barrels/metalBarrel3.png`,
 ]
 const plasticBarrelSlides = [
-  `${import.meta.env.BASE_URL}Barrels/plasticBarrel1.png`,
-  `${import.meta.env.BASE_URL}Barrels/plasticBarrel2.png`,
-  `${import.meta.env.BASE_URL}Barrels/plasticBarrel3.png`,
+  `/Barrels/plasticBarrel1.png`,
+  `/Barrels/plasticBarrel2.png`,
+  `/Barrels/plasticBarrel3.png`,
 ]
-const blackHosesSlides = [
-  `${import.meta.env.BASE_URL}Hoses/blackHose1.png`,
-  `${import.meta.env.BASE_URL}Hoses/blackHose2.png`,
-  `${import.meta.env.BASE_URL}Hoses/blackHose3.png`,
-]
-const whiteHosesSlides = [
-  `${import.meta.env.BASE_URL}Hoses/whiteHose1.png`,
-  `${import.meta.env.BASE_URL}Hoses/whiteHose2.png`,
-  `${import.meta.env.BASE_URL}Hoses/whiteHose3.png`,
-]
-const cartSlides = [
-  `${import.meta.env.BASE_URL}Carts/cart1.png`,
-  `${import.meta.env.BASE_URL}Carts/cart2.png`,
-  `${import.meta.env.BASE_URL}Carts/cart3.png`,
-  `${import.meta.env.BASE_URL}Carts/cart4.png`,
-]
-const adapterSlides = [
-  `${import.meta.env.BASE_URL}Adapter/adapter1.png`,
-  `${import.meta.env.BASE_URL}Adapter/adapter2.png`,
-]
+const blackHosesSlides = [`/Hoses/blackHose1.png`, `/Hoses/blackHose2.png`, `/Hoses/blackHose3.png`]
+const whiteHosesSlides = [`/Hoses/whiteHose1.png`, `/Hoses/whiteHose2.png`, `/Hoses/whiteHose3.png`]
+const cartSlides = [`/Carts/cart1.png`, `/Carts/cart2.png`, `/Carts/cart3.png`, `/Carts/cart4.png`]
+const adapterSlides = [`/Adapter/adapter1.png`, `/Adapter/adapter2.png`]
 </script>
 
 <template>

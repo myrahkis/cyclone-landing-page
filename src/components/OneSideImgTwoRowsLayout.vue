@@ -26,7 +26,7 @@ const equipments = [
     <div class="fourth-grid">
       <div class="grid-cell img-cell">
         <img
-          src="/one-side-img.png"
+          src="/OtherPhotos/one-side-img.png"
           alt="Двухфункциональная система двойной фильтрации"
           class="img"
         />
@@ -66,7 +66,7 @@ const equipments = [
   position: relative;
   color: white;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
 }
 
 .fourth-grid {

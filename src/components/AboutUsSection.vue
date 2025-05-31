@@ -27,9 +27,9 @@
         </p>
       </div>
     </div>
-    <img src="/brand-character.png" alt="" class="brand-character" />
-    <img src="/11.png" alt="" class="skrew-big" />
-    <img src="/12.png" alt="" class="skrew-sm" />
+    <img src="/OtherPhotos/brand-character.png" alt="" class="brand-character" />
+    <img src="/OtherPhotos/11.png" alt="" class="skrew-big" />
+    <img src="/OtherPhotos/12.png" alt="" class="skrew-sm" />
   </section>
 </template>
 
@@ -38,7 +38,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
   height: min-content;
   color: white;
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));

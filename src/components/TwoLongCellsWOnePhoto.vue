@@ -21,7 +21,7 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
         </ul>
       </div>
       <div class="grid-cell img-cell-1">
-        <img src="/bundling.png" alt="Комплектация фильтра" class="img" />
+        <img src="/OtherPhotos/bundling.png" alt="Комплектация фильтра" class="img" />
       </div>
       <div class="grid-cell img-cell-2">
         <PhotoCarousel
@@ -47,7 +47,7 @@ const { nozzleSlides, equipments1, equipments2 } = defineProps({
 <style scoped>
 .third-section {
   color: white;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 .thrid-grid {

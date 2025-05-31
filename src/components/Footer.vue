@@ -31,8 +31,8 @@ function closeDataProcessingPolicyModal() {
     <div class="footer-container">
       <div class="lower-footer">
         <div class="info-block">
-          <div class="idk">
-            <img src="/logo-gray.png" alt="лого" class="logo" />
+          <div class="logo-reqs-wrapper">
+            <img src="/OtherPhotos/logo-gray.png" alt="лого" class="logo" />
             <p class="data-text">
               ИП Колосова Юлия Романовна <br />
               ИНН: 771508405997 <br />
@@ -88,7 +88,7 @@ function closeDataProcessingPolicyModal() {
     rgba(0, 0, 0, 0.6) 85%,
     rgba(0, 0, 0, 0.4) 100%
   );
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
   justify-content: end;
   gap: 2rem;
 }
@@ -97,7 +97,7 @@ function closeDataProcessingPolicyModal() {
   flex-direction: column;
   justify-content: space-between;
   align-self: flex-end;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens);
   border: 3px solid white;
   border-radius: 1.9rem;
   width: 100%;
@@ -116,7 +116,7 @@ function closeDataProcessingPolicyModal() {
   align-items: flex-start;
   justify-content: space-between;
 }
-.idk {
+.logo-reqs-wrapper {
   display: flex;
   gap: clamp(2rem, 5vw, 8rem);
 }

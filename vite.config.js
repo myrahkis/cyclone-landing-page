@@ -10,11 +10,14 @@ dotenv.config()
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), ...(import.meta.env.VITE_APP_MODE === 'development' ? [vueDevTools()] : [])],
+  define: {
+    'process.env.VITE_APP_MODE': JSON.stringify(process.env.VITE_APP_MODE || 'development'),
+  },
+  plugins: [vue(), ...(process.VITE_APP_MODE === 'development' ? [vueDevTools()] : [])],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  base: '/cyclone-landing-page/',
+  // base: '/cyclone-landing-page/',
 })

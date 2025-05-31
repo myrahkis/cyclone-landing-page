@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'Museo Sans';
-  src: font_url('fonts/._museosanscyrl-500.ttf') format('ttf');
+  src: font_url('/fonts/._museosanscyrl-500.ttf') format('ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Museo Sans';
-  src: font_url('fonts/._museosanscyrl-700.ttf') format('ttf');
+  src: font_url('/fonts/._museosanscyrl-700.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Museo Sans';
-  src: font_url('fonts/._museosanscyrl-900.ttf') format('ttf');
+  src: font_url('/fonts/._museosanscyrl-900.ttf') format('ttf');
   font-weight: 900;
   font-style: normal;
 }

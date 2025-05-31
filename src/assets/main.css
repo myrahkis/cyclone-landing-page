@@ -5,6 +5,8 @@
   --brand-blue-color: #c0dcec;
   --brand-yellow-color: #fff6bf;
   --gray-color: #c1c1c1;
+  --sections-padding: 3.5rem;
+  --padding-vertical-big-screens: 3.5rem;
 }
 
 *,
@@ -52,6 +54,7 @@ p {
   font-weight: 400;
   width: fit-content;
   text-align: justify;
+  hyphens: auto;
 }
 
 button {
@@ -62,6 +65,27 @@ button:disabled {
 }
 
 @media (min-width: 1600px) {
+  :root {
+    --sections-padding: 15rem;
+  }
+}
+@media (min-width: 1800px) {
+  :root {
+    --sections-padding: 25rem;
+  }
+}
+@media (min-width: 2200px) {
+  :root {
+    --sections-padding: 40rem;
+  }
+}
+@media (min-width: 3000px) {
+  :root {
+    --sections-padding: 75rem;
+  }
+}
+
+/* @media (min-width: 1600px) {
   h1 {
     font-size: clamp(3.5rem, 5vw, 7rem);
     line-height: clamp(4rem, 6vw, 8rem);
@@ -123,7 +147,7 @@ button:disabled {
   p {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
   }
-}
+} */
 
 /* (1280px–1439px) */
 @media (max-width: 1439px) {

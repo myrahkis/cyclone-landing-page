@@ -52,7 +52,7 @@ const gridStyle = computed(() => ({
 <style scoped>
 .third-section {
   color: white;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
 }
 .thrid-grid {
   display: grid;

@@ -4,12 +4,12 @@ import SocialsIcons from './SocialsIcons.vue'
 
 <template>
   <div class="container">
-      <a
-        href="https://othertool.ru/home_master/tsiklonnye-filtry-dlja-pylesosa"
-        target="_blank"
-        class="to-shop-btn"
-        >В магазин</a
-      >
+    <a
+      href="https://othertool.ru/home_master/tsiklonnye-filtry-dlja-pylesosa"
+      target="_blank"
+      class="to-shop-btn"
+      >В магазин</a
+    >
     <p class="text">+7 495 641-55-66</p>
     <p class="text">example@othertool.pro</p>
     <p class="text">Пн-Пт: 09:00 – 19:00, Сб: 10:00 – 18:00, Вс — выходной</p>
@@ -27,7 +27,7 @@ import SocialsIcons from './SocialsIcons.vue'
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
   color: white;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
   padding-top: 15rem;
 }
 .contacts-wrapper {
@@ -55,6 +55,6 @@ import SocialsIcons from './SocialsIcons.vue'
   }
 }
 .text {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 </style>

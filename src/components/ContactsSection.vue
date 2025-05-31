@@ -77,7 +77,7 @@ function closeModal() {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
   color: white;
   background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }

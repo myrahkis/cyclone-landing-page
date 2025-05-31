@@ -1,7 +1,7 @@
 <script setup>
-const fullImgPath1 = `${import.meta.env.BASE_URL}hero-bg.webp`
-const fullImgPath2 = `${import.meta.env.BASE_URL}hero-clear.webp`
-const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
+const fullImgPath1 = `/OtherPhotos/hero-bg.webp`
+const fullImgPath2 = `/OtherPhotos/hero-clear.webp`
+const fullImgPath3 = `/OtherPhotos/hero-bg.webp`
 </script>
 
 <template>
@@ -47,7 +47,7 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
   color: var(--white-color);
 }
 .hero-section::before {
@@ -118,13 +118,41 @@ const fullImgPath3 = `${import.meta.env.BASE_URL}hero-bg.webp`
 }
 
 @media (min-width: 1600px) {
-  .hero-section {
-    min-height: 110vh;
+  .clear-img {
+    padding-bottom: 45%;
+    background-size: 95%;
   }
 }
 @media (min-width: 1800px) {
-  .hero-section {
-    min-height: 115vh;
+  .clear-img {
+    bottom: 2%;
+    right: 1%;
+    width: 50%;
+    padding-bottom: 45%;
+    background-size: 96%;
+  }
+  .texts {
+    margin-bottom: 25%;
+  }
+}
+@media (min-width: 2200px) {
+  .hero-section::before {
+    background-size: 60%;
+  }
+  .clear-img {
+    bottom: 2%;
+    right: 1%;
+    width: 50%;
+    padding-bottom: 50%;
+    background-size: 100%;
+  }
+  .texts {
+    margin-bottom: 35%;
+  }
+}
+@media (min-width: 3000px) {
+  .hero-section::before {
+    background-size: 50%;
   }
 }
 

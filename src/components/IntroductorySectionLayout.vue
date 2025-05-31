@@ -39,22 +39,18 @@ const howFilterWorksTexts = [
 ]
 
 const cyclone_SN50T3F_slides = [
-  `${import.meta.env.BASE_URL}CycloneSN50T3F/how-filter-works.png`,
-  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-1.png`,
-  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-2.png`,
-  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-4.png`,
-  `${import.meta.env.BASE_URL}CycloneSN50T3F/CycloneSN50T3F-5.png`,
+  `/CycloneSN50T3F/how-filter-works.png`,
+  `/CycloneSN50T3F/CycloneSN50T3F-1.png`,
+  `/CycloneSN50T3F/CycloneSN50T3F-2.png`,
+  `/CycloneSN50T3F/CycloneSN50T3F-4.png`,
+  `/CycloneSN50T3F/CycloneSN50T3F-5.png`,
 ]
 
-const nozzleSlides = [
-  `${import.meta.env.BASE_URL}Nozzle/nozzle1.png`,
-  `${import.meta.env.BASE_URL}Nozzle/nozzle2.png`,
-  `${import.meta.env.BASE_URL}Nozzle/nozzle3.png`,
-]
+const nozzleSlides = [`/Nozzle/nozzle1.png`, `/Nozzle/nozzle2.png`, `/Nozzle/nozzle3.png`]
 
 const doubleCycloneSlides = [
-  `${import.meta.env.BASE_URL}DoubleCyclone/doubleCyclone1.png`,
-  `${import.meta.env.BASE_URL}DoubleCyclone/doubleCyclone2.png`,
+  `/DoubleCyclone/doubleCyclone1.png`,
+  `/DoubleCyclone/doubleCyclone2.png`,
 ]
 </script>
 

@@ -58,7 +58,7 @@ const { cartSlides, adapterSlides } = defineProps({
 <style scoped>
 .third-section {
   color: white;
-  padding: 3.5rem;
+  padding: var(--padding-vertical-big-screens) var(--sections-padding);
   background: linear-gradient(to top, rgba(0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 .thrid-grid {

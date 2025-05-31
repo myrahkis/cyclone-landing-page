@@ -23,7 +23,7 @@ const howFilterWorksTexts = [
   >
     <template #photo-place>
       <img
-        src="/how-double-filter-works.png"
+        src="/OtherPhotos/how-double-filter-works.png"
         alt="Схема работы циклонного фильтра с двойной фильтрацией"
         class="double-filter"
       />
